@@ -5,5 +5,19 @@
   "main": "index.js",
   "repository": "https://github.com/zbw322092/node-web-app-client.git",
   "author": "Bowen Zhong <bz4e14@soton.ac.uk>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-inferno": "^3.3.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "inferno": "^3.10.1",
+    "inferno-component": "^3.10.1",
+    "inferno-router": "^3.10.1",
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1"
+  }
 }
