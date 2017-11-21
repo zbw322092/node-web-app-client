@@ -2,6 +2,7 @@ const path = require('path');
 const paths = require('../../config/paths.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -18,7 +19,17 @@ module.exports = {
     hints: false
   },
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.less$/,
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: "css-loader", options: { sourceMap: true }},
+            { loader: "less-loader", options: { sourceMap: true }}
+          ]
+        })),
+      },
       {
         test: /\.tsx?$/,
         use: [
@@ -35,6 +46,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin({
+      filename: "[name].bundle.css",
+      allChunks: true
+    }),
     new CleanWebpackPlugin(
       [paths.public], {
         verbose: true
