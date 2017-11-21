@@ -31,10 +31,30 @@ module.exports = {
         })),
       },
       {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 5000,
+              fallback: 'file-loader',
+              context: paths.src,
+              name: `[path][name]-[hash:8].[ext]`
+            }
+          }
+        ]
+      },
+      {
         test: /\.tsx?$/,
         use: [
           'babel-loader', 
-          { loader: 'ts-loader', options: { configFile: paths.tsconfigFile, logInfoToStdOut: true } }
+          { 
+            loader: 'ts-loader', 
+            options: { 
+              configFile: paths.tsconfigFile, 
+              logInfoToStdOut: true 
+            } 
+          }
         ],
         exclude: /node_modules/
       },
