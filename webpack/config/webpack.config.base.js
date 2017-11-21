@@ -1,6 +1,7 @@
 const path = require('path');
 const paths = require('../../config/paths.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -34,6 +35,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(
+      [paths.public], {
+        verbose: true
+      }
+    ),
     new HtmlWebpackPlugin({
       template: paths.defaultTemplate,
       inject: 'body'
