@@ -1,10 +1,10 @@
 const path = require('path');
-const paths = require('../config/paths.js');
+const paths = require('../../config/paths.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.resolve(process.cwd(), './app/index.tsx')
+    index: path.resolve(process.cwd(), './src/index.tsx')
   },
   output: {
     path: paths.public,
@@ -20,19 +20,22 @@ module.exports = {
     loaders: [
       {
         test: /\.tsx?$/,
-        loaders: ['babel-loader', 'ts-loader'],
+        use: [
+          'babel-loader', 
+          { loader: 'ts-loader', options: { configFile: paths.tsconfigFile, logInfoToStdOut: true } }
+        ],
         exclude: /node_modules/
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
+        use: 'babel-loader',
         exclude: /node_modules/
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './plugins/index.template.ejs'),
+      template: paths.defaultTemplate,
       inject: 'body'
     })
   ]

@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const baseConfig = require('./webpack.config.base.js');
-const paths = require('../config/paths.js');
+const paths = require('../../config/paths.js');
 
 module.exports = merge(baseConfig, {
   devServer: {
@@ -16,11 +16,11 @@ module.exports = merge(baseConfig, {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(
-      [paths.public + '/*.*'], {
-        verbose: true
-      }
-    ),
+    // new CleanWebpackPlugin(
+    //   [paths.public], {
+    //     verbose: true
+    //   }
+    // ),
     new webpack.HotModuleReplacementPlugin()
   ]
 });
