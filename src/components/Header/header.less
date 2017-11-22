@@ -1,14 +1,60 @@
+@imgPath: '../../assets/components/Header';
+
 .header {
   width: 100%;
   height: 70px;
-  font-size:14px;
-  color:#333333;
+  font-size: 14px;
+  color: #333333;
+  box-shadow: 0 9px 34px 0 rgba(0,0,0,0.08);
+
+  .company-logo {
+    position: relative;
+    display: inline-block;
+    width: 86px;
+    height: 41px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('@{imgPath}/icon-company-logo-gloden.png') no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20%;
+  }
+
+  nav {
+    position: relative;
+    width: 45%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    float: right;
+    margin-right: 25%;
+
+    .lang {
+      margin-left: 6%;
+
+      .blue {
+        color: #00a9f4;
+      }
+    }
+  }
 
   a {
     text-decoration: none;
-    line-height: 70px;
   }
+
   a:visited {
-    color:#333333;
+    color: #333333;
+  }
+  a:hover,
+  a.selected {
+    .hover-underline {
+      background:#343434;
+      width:28px;
+      height:2px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+    }
   }
 }
