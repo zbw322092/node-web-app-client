@@ -20,3 +20,5 @@ https://medium.com/a-beginners-guide-for-webpack-2/extract-text-plugin-668e7cd5f
 [1] CSS background-size contain
 https://developer.mozilla.org/en-US/docs/Web/CSS/background-size#contain <br>
 
+[2] Disable color change of anchor tag when visited
+https://stackoverflow.com/a/7291903/6498272 <br>
