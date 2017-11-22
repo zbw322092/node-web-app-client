@@ -15,3 +15,8 @@ http://tomasalabes.me/blog/web-development/2016/09/13/Webpack-Series-Part-4.html
 
 [3] Extract Text Plugin
 https://medium.com/a-beginners-guide-for-webpack-2/extract-text-plugin-668e7cd5f551 <br>
+
+# CSS
+[1] CSS background-size contain
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-size#contain <br>
+

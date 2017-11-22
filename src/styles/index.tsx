@@ -1,1 +1,1 @@
-import './components';
+import './main.less';

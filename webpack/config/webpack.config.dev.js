@@ -8,6 +8,7 @@ module.exports = merge(baseConfig, {
     contentBase: paths.public,
     compress: true,
     historyApiFallback: true,
+    host: 'me.dev.com',
     port: 9000,
     watchOptions: {
       ignored: /node_modules/,

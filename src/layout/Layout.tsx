@@ -1,10 +1,10 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/Header/index';
+import Footer from '../components/Footer/index';
 
 export default function({ children }) {
   return <div>
       <Header/>
-      <main>
+      <main className="wrapper">
         { children }
       </main>
       <Footer/>

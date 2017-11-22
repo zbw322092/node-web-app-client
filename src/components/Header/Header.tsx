@@ -1,4 +1,5 @@
 import Component from 'inferno-component'
+import './header.less';
 
 export default class Header extends Component<any, any> {
   render() {

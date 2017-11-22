@@ -1,0 +1,91 @@
+@imgPath: '../../assets/components/Footer';
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 654px;
+  background-image: url('@{imgPath}/bg-footer.png');
+  background-repeat:  no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  .info-row {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    width: 100%;
+    top: 270px;
+    .info-unit {
+      display: inline-block;
+      width: 230px;
+      font-size:14px;
+      color:#ffffff;
+      text-align:center;
+      vertical-align: top;
+      margin-top: 30px;
+      .unit-icon {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+    }
+    .left-unit {
+      .unit-icon {
+        background-image: url('@{imgPath}/icon-location.png');
+        background-size: 100% 100%;
+      }
+    }
+    .mid-unit {
+      margin-left: 40px;
+      margin-right: 40px;
+      .unit-icon {
+        background-image: url('@{imgPath}/icon-email.png');
+        background-size: 100% 100%;
+      }
+    }
+    .right-unit {
+      .unit-icon {
+        background-image: url('@{imgPath}/icon-tel.png');
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  .icon-wechat-logo {
+    position: relative;
+    top: 310px;
+    width: 18px;
+    height: 15px;
+    background-image: url('@{imgPath}/icon-wechat-logo.png');
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .icon-QR-code {
+    position: relative;
+    top: 320px;
+    width: 87px;
+    height: 87px;
+    background-image: url('@{imgPath}/icon-QR-code.png');
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-copyright {
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    bottom: 0;
+    line-height: 56px;
+    text-align: center;
+    opacity:0.5;
+    font-size:14px;
+    color:#ffffff;
+  }
+}
