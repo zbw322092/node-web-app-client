@@ -1,0 +1,79 @@
+@import '../common.less';
+
+.view-product {
+  .product-nav {
+    width: 100%;
+    height: 138px;
+    background: #f5f5f5;
+    .nav-container {
+      position: relative;
+      display: flex;
+      width: 70%;
+      top: 50%;
+      transform: translateY(-50%);
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav-unit {
+      position: relative;
+      width: 150px;
+      height: 100%;
+      cursor: pointer;
+      .nav-icon {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        top: 40%;
+        transform: translateY(-50%);
+      }
+      .nav-text {
+        position: absolute;
+        width: 100%;
+        bottom: 24px;
+        font-family:PingFangSC-Regular;
+        font-size:14px;
+        color:#333333;
+        text-align:center;
+      }
+    }
+    .generate-icons(6);
+    .generate-icons(@n, @i: 1) when (@i =< @n) {
+      .icon-product-nav-@{i} {
+        .background('views/product/icon-product-nav-@{i}.png');
+        background-size: contain !important;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+      }
+      .generate-icons(@n, (@i + 1));
+    }
+    .icon-product-nav-1 {
+      width: 43px;
+      height: 43px;
+    }
+    .icon-product-nav-2 {
+      width: 31px;
+      height: 44px;
+    }
+    .icon-product-nav-3 {
+      width: 50px;
+      height: 33px;
+    }
+    .icon-product-nav-4 {
+      width: 28px;
+      height: 37px;
+    }
+    .icon-product-nav-5 {
+      width: 40px;
+      height: 33px;
+    }
+    .icon-product-nav-6 {
+      width: 41px;
+      height: 43px;
+    }
+
+  }
+}

@@ -13,7 +13,7 @@ interface targetCustomerProps {
 };
 
 interface rowItem {
-	itemClass: string,
+	itemClass: 'icon-private-placement' | 'icon-public-placement' | 'icon-quantitative-trading' | 'icon-quantitative-organization',
 	itemText: string
 };
 

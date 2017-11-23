@@ -26,3 +26,6 @@ https://stackoverflow.com/a/7291903/6498272 <br>
 [3] How do I prevent the padding property from changing width or height in CSS?
 https://stackoverflow.com/a/12034794/6498272 <br>
 
+# React/Inferno
+[1] Scroll to top on route change?
+https://github.com/ReactTraining/react-router/issues/2019 <br>

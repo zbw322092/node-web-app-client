@@ -7,7 +7,7 @@ const browserHistory = createBrowserHistory();
 
 export default class App extends Component<any, any> {
   render() {
-    return <Router history={ browserHistory }>
+    return <Router history={ browserHistory } onUpdate={() => window.scrollTo(0, 0)} >
       {routes}
     </Router>
   }
