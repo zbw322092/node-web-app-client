@@ -22,3 +22,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/background-size#contain <br>
 
 [2] Disable color change of anchor tag when visited
 https://stackoverflow.com/a/7291903/6498272 <br>
+
+[3] How do I prevent the padding property from changing width or height in CSS?
+https://stackoverflow.com/a/12034794/6498272 <br>
+

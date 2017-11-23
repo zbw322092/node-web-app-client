@@ -1,0 +1,205 @@
+@import (reference) '../common.less';
+
+.view-home {
+  .home-top-banner {
+    width: 100%;
+    height: 638px;
+    .background('views/home/img-home-top-banner.png');
+
+    .slogan-cn {
+      position: relative;
+      top: 289px;
+      font-family:PingFangSC-Medium;
+      font-size:40px;
+      color:#333333;
+      text-align: center;
+    }
+    .slogan-en {
+      position: relative;
+      top: 289px;
+      font-family:HiraKakuPro-W3;
+      font-size:24px;
+      color:#333333;
+      text-align:center;
+    }
+  }
+}
+
+.view-home {
+  .home-target-customer {
+    width: 100%;
+    height: 590px;
+    background: #ffffff;
+    box-sizing: border-box;
+    padding-top: 106px;
+
+    .title {
+      font-family:PingFangSC-Regular;
+      font-size:28px;
+      color:#333333;
+      text-align:center;
+    }
+    .sub-title {
+      font-family:PingFangSC-Light;
+      font-size:18px;
+      color:#666666;
+      text-align:center;
+      margin-top: 10px;
+    }
+
+    .row-flex {
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+      .row-unit {
+        .row-icon {
+          width: 132px;
+          height: 153px;
+        }
+        .row-text {
+          font-family:PingFangSC-Light;
+          font-size:18px;
+          color:#333333;
+          text-align:center;
+          margin-top: 25px;
+        }
+
+        .icon-private-placement {
+          .background('views/home/icon-private-placement.png');
+        }
+        .icon-public-placement {
+          .background('views/home/icon-public-placement.png');
+        }
+        .icon-quantitative-trading {
+          .background('views/home/icon-quantitative-trading.png');
+        }
+        .icon-quantitative-organization {
+          .background('views/home/icon-quantitative-organization.png');
+        }
+
+      }
+    }
+  }
+}
+
+.view-home {
+  .home-slogan-panel {
+    width: 100%;
+    height: 500px;
+    .background('views/home/img-home-slogan-panel.png');
+
+    .slogan-text {
+      position: relative;
+      top: 60px;
+      text-align: center;
+      .main-text {
+        font-family:PingFangSC-Medium;
+        font-size:28px;
+        color:#333333;
+      }
+      .sub-text {
+        font-family:PingFangSC-Light;
+        font-size:18px;
+        color:#666666;
+      }
+      .second-group-text {
+        margin-top: 23px;
+      }
+    }
+  }
+}
+
+.view-home {
+  .home-we-offer {
+    width: 100%;
+    height: 588px;
+    box-sizing: border-box;
+    background: #ffffff;
+    padding-top: 76px;
+
+    .panel-title {
+      text-align: center;
+      font-family:PingFangSC-Regular;
+      font-size:28px;
+      color:#333333;
+    }
+    .panel-sub-title {
+      font-family:PingFangSC-Light;
+      font-size:18px;
+      color:#666666;
+      text-align:center;
+    }
+
+    .info-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 55px;
+      
+      .list-unit {
+        display: table;
+        height: 76px;
+      }
+
+      .unit-icon {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+      }
+      .unit-text {
+        display: table-cell;
+        vertical-align: middle;
+        font-family:PingFangSC-Light;
+        font-size:12px;
+        color:#333333;
+        text-align:left;
+        padding-left: 15px;
+      }
+
+      .generate-icons(8);
+      .generate-icons(@n, @i: 1) when (@i =< @n) {
+        .icon-we-offer-@{i} {
+          .background('views/home/icon-we-offer-@{i}.png');
+        }
+        .generate-icons(@n, (@i + 1));
+      }
+
+      .left-list,
+      .right-list {
+        display: inline-block;
+        width: 45%
+      }
+    }
+
+    .check-product {
+      width: 179px;
+      height: 75px;
+      line-height: 75px;
+      .background('views/home/btn-blue-bg.png');
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 28px;
+
+      font-family:PingFangSC-Regular;
+      font-size:14px;
+      color:#ffffff;
+      text-align:center;
+
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+      }
+      a:visited {
+        color:#ffffff;
+      }
+    }
+  }
+}
