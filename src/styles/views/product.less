@@ -43,8 +43,6 @@
     .generate-icons(@n, @i: 1) when (@i =< @n) {
       .icon-product-nav-@{i} {
         .background('views/product/icon-product-nav-@{i}.png');
-        background-size: contain !important;
-        background-repeat: no-repeat;
         width: 100%;
         height: 0;
       }
@@ -75,5 +73,196 @@
       height: 43px;
     }
 
+  }
+}
+
+.view-product {
+  .product-panel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    box-sizing: border-box;
+
+    .product-title {
+      font-family:PingFangSC-Semibold;
+      font-size:36px;
+      color:#333333;
+    }
+    .product-sub-title {
+      font-family:PingFangSC-Regular;
+      font-size:24px;
+      color:#333333;
+    }
+    .product-desc {
+      font-family:HiraKakuPro-W3;
+      font-size:14px;
+      color:#999999;
+      overflow-wrap: break-word;
+      text-align: left;
+    }
+
+    .generate-bg(6);
+    .generate-bg(@n, @i: 1) when (@i =< @n) {
+      .product-bg-@{i} {
+        .background('views/product/img-product-bg-@{i}.png');
+      }
+      .generate-bg(@n, (@i + 1));
+    }
+  }
+
+  .product-1-bosaidong {
+    .content-container {
+      position: relative;
+      display: inline-block;
+      float: left;
+      left: 27%;
+      top: 175px;
+      width: 310px;
+      .product-desc {
+        margin-top: 20px;
+      }
+    }
+    .product-bg-1 {
+      position: relative;
+      display: inline-block;
+      float: left;
+      width: 494px;
+      height: 343px;
+      top: 112px;
+      left: 30%;
+    }
+  }
+  .product-2-zhice {
+    .content-container {
+      position: relative;
+      display: inline-block;
+      width: 337px;
+      left: 54%;
+      top: 220px;
+      z-index: 1000;
+      .product-title {
+        color: #ffffff !important;
+      }
+      .product-sub-title {
+        color: #ffffff !important;
+      }
+      .product-desc {
+        color: #ffffff !important;
+        margin-top: 10px;
+      }
+    }
+    .product-bg-2 {
+      position: absolute;
+      width: 1000px;
+      height: 461px;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+  }
+  .product-3-zhiyan {
+    .content-container {
+      position: relative;
+      display: inline-block;
+      float: left;
+      left: 27%;
+      top: 161px;
+      width: 310px;
+      .product-desc {
+        margin-top: 20px;
+      }
+    }
+    .product-bg-3 {
+      position: relative;
+      display: inline-block;
+      width: 346px;
+      height: 457px;
+      top: 80px;
+      left: 35%;
+      float: left;
+    }
+  }
+  .product-4-shangceyun {
+    .content-container {
+      position: relative;
+      left: 54%;
+      top: 184px;
+      width: 377px;
+      z-index: 100;
+      
+      .product-desc {
+        margin-top: 20px;
+      }
+    }
+    .product-bg-4 {
+      position: absolute;
+      width: 100%;
+      height: 600px;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+  .product-5-zhixu {
+    .content-container {
+      position: relative;
+      display: inline-block;
+      float: left;
+      left: 25%;
+      top: 181px;
+      width: 310px;
+      .product-desc {
+        margin-top: 20px;
+      }
+    }
+    .product-bg-5 {
+      position: relative;
+      display: inline-block;
+      width: 499px;
+      height: 372px;
+      left: 28%;
+      top: 93px;
+      float: left;
+    }
+  }
+  .product-6-zhiyue {
+    .content-container {
+      position: relative;
+      display: inline-block;
+      left: 56%;
+      top: 248px;
+      width: 310px;
+      z-index: 1000;
+      .product-desc {
+        margin-top: 20px;
+      }
+      .product-title {
+        color: #ffffff !important;
+      }
+      .product-sub-title {
+        color: #ffffff !important;
+      }
+      .product-desc {
+        color: #ffffff !important;
+        margin-top: 10px;
+      }
+    }
+    .product-bg-6 {
+      position: absolute;
+      width: 960px;
+      height: 459px;
+      top: 75px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+  }
+
+  .panel-bg-white {
+    background: #ffffff;
+  }
+  .panel-bg-light-grey {
+    background: #f8f8f8;
   }
 }
