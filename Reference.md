@@ -35,3 +35,8 @@ https://stackoverflow.com/a/3917059/6498272 <br>
 # React/Inferno
 [1] Scroll to top on route change?
 https://github.com/ReactTraining/react-router/issues/2019 <br>
+
+# typescript
+[1] Typescript error TS2339: Property 'webkitURL' does not exist on type 'Window'
+https://stackoverflow.com/a/38811032/6498272 <br/>
+https://stackoverflow.com/a/45270062/6498272 <br/>
