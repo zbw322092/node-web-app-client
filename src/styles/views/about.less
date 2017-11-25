@@ -224,3 +224,81 @@
 
   }
 }
+
+.view-about {
+  .partners {
+    width: 100%;
+    height: 365px;
+
+    .panel-icon {
+      position: absolute;
+      width: 117px;
+      height: 123px;
+      .background('views/about/icon-partners.png');
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: -60px;
+    }
+
+    .panel-title {
+      position: relative;
+      top: 45px;
+      font-family:PingFangSC-Regular;
+      font-size:28px;
+      color:#333333;
+      text-align:center;
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 90px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .partner-1 {
+        width: 350px;
+        height: 70px;
+        .background('views/about/icon-partner-1.png');
+      }
+      .partner-2 {
+        width: 253px;
+        height: 76px;
+        .background('views/about/icon-partner-2.png');
+      }
+      .partner-3 {
+        width: 247px;
+        height: 79px;
+        .background('views/about/icon-partner-3.png');
+      }
+    }
+  }
+}
+
+.view-about {
+  .our-mission {
+    position: relative;
+    width: 100%;
+    height: 499px;
+    .background('views/about/img-our-mission.png');
+
+    .panel-title {
+      position: relative;
+      font-family:PingFangSC-Regular;
+      font-size:36px;
+      color:#ffffff;
+      text-align:center;
+      top: 50px;
+    }
+    .panel-sub-title {
+      position: relative;
+      font-family:PingFangSC-Regular;
+      font-size:14px;
+      color:#ffffff;
+      text-align:center;
+      top: 60px;
+    }
+  }
+}

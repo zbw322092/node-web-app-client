@@ -19,6 +19,10 @@ interface TeamIntroObj {
 	content: string;
 }
 
+interface Partners {
+	parentsArr: Array<string>
+}
+
 export default class About extends Component<any, any> {
 	render() {
 
@@ -97,6 +101,27 @@ export default class About extends Component<any, any> {
 			</div>
 		};
 
+		const Partners = (props: Partners) => {
+			return <div className="partners">
+				<div className="panel-icon"></div>
+				<div className="panel-title">战略合作伙伴</div>
+				<div className="icon-container">
+					{
+						props.parentsArr.map((item) => {
+							return <div className={`icon-partners ${item}`}></div>
+						})
+					}
+				</div>
+			</div>
+		};
+
+		const OurMission = (props) => {
+			return <div className="our-mission">
+				<div className="panel-title">我们的使命</div>
+				<div className="panel-sub-title">您专心策略，我们专注技术</div>
+			</div>
+		};
+
 		const whoWeAreIntro = {
 			intro: `上海闪策信息科技有限公司是为中国证券与期货市场提供自动
 			化交易系统基础架构与服务的专业金融技术服务公司。闪策科技的目标是成为中国一流
@@ -104,7 +129,7 @@ export default class About extends Component<any, any> {
 			上海闪策信息科技有限公司是2017年第13届中国（深圳）国际期货大会赞助商`
 		};
 
-		const teamIntroArr:Array<TeamIntroObj> = [
+		const teamIntroArr: Array<TeamIntroObj> = [
 			{
 				title: '15年',
 				subTitle: '15年以上管理经验',
@@ -124,7 +149,7 @@ export default class About extends Component<any, any> {
 				content: `闪策的开发、运维团队由资深研发人员组成，他们均毕业于国内外知名院校，包括复旦大学、
 				上海交通大学、南京大学、中国科学院、同济大学等， 其中90%的成员拥有硕士学位。`
 			}
-		]
+		];
 
 
 		return <div class="view-about">
@@ -137,6 +162,11 @@ export default class About extends Component<any, any> {
 				sloganCn="闪策 · 岂止于快"
 				sloganEn="SHANCE · FAST AND MORE" />
 			<GreatTeam introArr={teamIntroArr} />
+			<SloganPanel
+				sloganCn="闪策 · 荣誉始于信任"
+				sloganEn="SHANCE · HONOR BEGINS WITH TRUST" />
+			<Partners parentsArr={['partner-1','partner-2','partner-3']} />
+			<OurMission/>
 		</div>;
 	}
 };
