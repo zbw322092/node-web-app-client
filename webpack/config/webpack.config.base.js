@@ -21,6 +21,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: "css-loader", options: { sourceMap: true } }
+          ]
+        }))
+      },
+      {
         test: /\.less$/,
         use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
           fallback: 'style-loader',

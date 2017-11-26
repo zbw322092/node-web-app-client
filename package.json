@@ -13,7 +13,8 @@
   "dependencies": {
     "inferno": "^3.4.3",
     "inferno-component": "^3.4.3",
-    "inferno-router": "^3.10.1"
+    "inferno-router": "^3.10.1",
+    "purecss": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",

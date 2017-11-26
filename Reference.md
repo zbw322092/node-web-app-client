@@ -32,9 +32,26 @@ https://css-tricks.com/snippets/css/transparent-background-images/ <br>
 [5] How to make div not larger than its contents?
 https://stackoverflow.com/a/3917059/6498272 <br>
 
+## responsive
+[1] Responsive Web Design Basics
+https://developers.google.com/web/fundamentals/design-and-ux/responsive/ <br>
+
+[2] Responsive Images
+https://developers.google.com/web/fundamentals/design-and-ux/responsive/images <br>
+
+[3] Minimal CSS Framework
+https://css-tricks.com/forums/topic/minimal-css-framework/ <br>
+
+
+
+
 # React/Inferno
 [1] Scroll to top on route change?
 https://github.com/ReactTraining/react-router/issues/2019 <br>
+
+[2] Using 3d party react components with inferno
+https://github.com/infernojs/inferno/issues/700 <br>
+
 
 # typescript
 [1] Typescript error TS2339: Property 'webkitURL' does not exist on type 'Window'
