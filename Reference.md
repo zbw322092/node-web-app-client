@@ -42,7 +42,11 @@ https://developers.google.com/web/fundamentals/design-and-ux/responsive/images <
 [3] Minimal CSS Framework
 https://css-tricks.com/forums/topic/minimal-css-framework/ <br>
 
+[4] 7 habits of highly effective media queries
+http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/ <br>
 
+[5] Perfect Full Page Background Image
+https://css-tricks.com/perfect-full-page-background-image/ <br>
 
 
 # React/Inferno

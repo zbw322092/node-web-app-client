@@ -37,8 +37,10 @@ export default class Home extends Component<any, any> {
 
 		const TopBanner = (props: topBannerProps) => {
 			return <div className="home-top-banner">
-				<div className="slogan-cn">{props.sloganCn}</div>
-				<div className="slogan-en">{props.sloganEn}</div>
+				<div className="panel-container">
+					<div className="slogan-cn">{props.sloganCn}</div>
+					<div className="slogan-en">{props.sloganEn}</div>
+				</div>
 			</div>
 		};
 
@@ -51,7 +53,7 @@ export default class Home extends Component<any, any> {
 						props.rowArr.map((item) => {
 							return <div className="row-unit">
 								<div className={`row-icon ${item.itemClass}`}></div>
-								<div className="row-text" dangerouslySetInnerHTML={{__html: item.itemText}}></div>
+								<div className="row-text" dangerouslySetInnerHTML={{ __html: item.itemText }}></div>
 							</div>
 						})
 					}
@@ -97,7 +99,7 @@ export default class Home extends Component<any, any> {
 					</div>
 				</div>
 				<div className="check-product">
-					<Link to="/product">{ props.btnText }</Link>
+					<Link to="/product">{props.btnText}</Link>
 				</div>
 			</div>
 		};
