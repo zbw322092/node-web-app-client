@@ -48,6 +48,19 @@ http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/ <br>
 [5] Perfect Full Page Background Image
 https://css-tricks.com/perfect-full-page-background-image/ <br>
 
+[6] Responsive React
+https://medium.com/@mustwin/responsive-react-9b56d63c4edc <br>
+
+[7] CSS Units (CSS Lengths: rems, ems, pixels, percents, and more)
+https://www.youtube.com/watch?v=qrduUUdxBSY <br>
+
+## todo
+[1] Responsive Web Design
+https://alistapart.com/article/responsive-web-design/ <br>
+
+[2] course
+https://classroom.udacity.com/courses/ud893 <br>
+
 
 # React/Inferno
 [1] Scroll to top on route change?

@@ -48,10 +48,10 @@ export default class Home extends Component<any, any> {
 			return <div className="home-target-customer">
 				<div className="title">{props.title}</div>
 				<div className="sub-title">{props.subTitle}</div>
-				<div className="row-flex">
+				<div className="pure-g row-flex">
 					{
 						props.rowArr.map((item) => {
-							return <div className="row-unit">
+							return <div className="pure-u-1-4 pure-u-md-1-2 pure-u-sm-1 row-unit">
 								<div className={`row-icon ${item.itemClass}`}></div>
 								<div className="row-text" dangerouslySetInnerHTML={{ __html: item.itemText }}></div>
 							</div>
