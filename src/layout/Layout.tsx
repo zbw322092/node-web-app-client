@@ -1,12 +1,12 @@
-import Header from '../components/Header/index';
-import Footer from '../components/Footer/index';
+// import Header from '../components/Header/index';
+// import Footer from '../components/Footer/index';
 
 export default function({ children }) {
   return <div>
-      <Header/>
+      {/* <Header/> */}
       <main className="wrapper">
         { children }
       </main>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
 };

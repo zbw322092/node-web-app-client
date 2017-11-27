@@ -9,3 +9,9 @@
   background: url('@{imgPath}/@{picName}') no-repeat center center;
   background-size: cover;
 }
+
+.smallThanMedium(@rules) {
+  @media screen and (max-width: 64em)	 {
+    @rules();
+  }
+}

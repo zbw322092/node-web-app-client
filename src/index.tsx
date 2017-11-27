@@ -1,4 +1,3 @@
-import 'purecss/build/pure.css';
 import Inferno from 'inferno';
 import './styles';
 import App from './App';

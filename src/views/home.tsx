@@ -51,7 +51,7 @@ export default class Home extends Component<any, any> {
 				<div className="pure-g row-flex">
 					{
 						props.rowArr.map((item) => {
-							return <div className="pure-u-1-4 pure-u-md-1-2 pure-u-sm-1 row-unit">
+							return <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 row-unit">
 								<div className={`row-icon ${item.itemClass}`}></div>
 								<div className="row-text" dangerouslySetInnerHTML={{ __html: item.itemText }}></div>
 							</div>
@@ -76,8 +76,8 @@ export default class Home extends Component<any, any> {
 			return <div className="home-we-offer">
 				<div className="panel-title">{props.title}</div>
 				<div className="panel-sub-title">{props.subTitle}</div>
-				<div className="info-list">
-					<div className="left-list">
+				<div className="pure-g info-list">
+					<div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 left-list">
 						{
 							props.offerObj.leftList.map((item) => {
 								return <div className="list-unit">
@@ -87,7 +87,7 @@ export default class Home extends Component<any, any> {
 							})
 						}
 					</div>
-					<div className="right-list">
+					<div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 right-list">
 						{
 							props.offerObj.rightList.map((item) => {
 								return <div className="list-unit">
