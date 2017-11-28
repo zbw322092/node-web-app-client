@@ -60,6 +60,12 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ <br>
 [9] How to prevent line breaks in list items using CSS
 https://stackoverflow.com/a/1383147/6498272 <br>
 
+[10] Window.matchMedia()
+https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia <br>
+
+[11] how to make div background image responsive
+https://stackoverflow.com/a/22006657/6498272 <br>
+
 ## todo
 [1] Responsive Web Design
 https://alistapart.com/article/responsive-web-design/ <br>

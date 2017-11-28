@@ -1,4 +1,5 @@
 import Inferno from 'inferno';
+import '../lib/matchMedia';
 import './styles';
 import App from './App';
 

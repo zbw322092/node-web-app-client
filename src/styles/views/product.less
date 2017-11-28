@@ -116,6 +116,16 @@
       overflow-wrap: break-word;
       text-align: left;
     }
+
+    .panel-img {
+      .narrowerThanSmall({
+        display: block;
+        position: relative;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      });
+    }
   }
 
   // Product 1
@@ -123,13 +133,14 @@
     // text
     .text-container {
       position: relative;
-      padding-top: 29%;
+      top: 29%;
       width: 310px;
       float: right;
       margin-right: 15%;
       .narrowerThanSmall({
         float: none;
         width: 90%;
+        top: 0;
         padding-top: 20%;
         margin-left: auto;
         margin-right: auto;
@@ -143,20 +154,12 @@
     // image
     .img-container {
       position: relative;
-      padding-top: 18%;
+      top: 18%;
+      padding-bottom: 10%;
       .narrowerThanSmall({
         padding-top: 10%;
+        top: 0;
       });
-
-      .product-bg-1 {
-        .narrowerThanSmall({
-          display: block;
-          position: relative;
-          max-width: 80%;
-          margin-left: auto;
-          margin-right: auto;
-        });
-      }
     }
   }
   .product-2-zhice {
@@ -186,63 +189,119 @@
       z-index: 0;
     }
   }
+
+  // Product 3
   .product-3-zhiyan {
     .text-container {
       position: relative;
-      display: inline-block;
-      float: left;
-      left: 27%;
-      top: 161px;
+      float: right;
+      top: 26%;
       width: 310px;
+      margin-right: 15%;
+
+      .narrowerThanSmall({
+        float: none;
+        width: 90%;
+        top: 0;
+        padding-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+      });
       .product-desc {
         margin-top: 20px;
       }
     }
-    .product-bg-3 {
+
+    // image
+    .img-container {
       position: relative;
-      display: inline-block;
-      top: 80px;
-      left: 35%;
-      float: left;
+      top: 13%;
+      padding-bottom: 10%;
+      .narrowerThanSmall({
+        margin-top: 10%;
+        top: 0;
+      });
     }
   }
+
+  // 尚策云
   .product-4-shangceyun {
     .text-container {
-      position: relative;
-      left: 54%;
-      top: 184px;
+      position: absolute;
+      right: 20%;
+      top: 30.6%;
       width: 377px;
       z-index: 100;
+      text-shadow: 0px 0px 8px rgba(255,255,255,0.3);
+
+      .narrowerThanSmall({
+        position: relative;
+        width: 90%;
+        left: 0;
+        top: 0;
+        padding-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+      });
       
       .product-desc {
         margin-top: 20px;
       }
     }
-    .product-bg-4 {
+    .img-container {
       position: absolute;
       top: 0;
       left: 0;
+      .backgroundCover('views/product/img-product-bg-4.png');
+      width: 100%;
+      height: 100%;
       z-index: 0;
+
+      .narrowerThanSmall({
+        position: relative;
+        top: 0;
+        background-image: none;
+        padding-bottom: 10%;
+        padding-top: 10%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: none;
+      });
     }
+
   }
   .product-5-zhixu {
     .text-container {
       position: relative;
-      display: inline-block;
-      float: left;
-      left: 25%;
-      top: 181px;
+      float: right;
+      top: 30%;
+      margin-right: 15%;
       width: 310px;
+      
+      .narrowerThanSmall({
+        float: none;
+        width: 90%;
+        margin-top: 20%;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+      });
+
       .product-desc {
         margin-top: 20px;
       }
     }
-    .product-bg-5 {
+
+    // image
+    .img-container {
       position: relative;
-      display: inline-block;
-      left: 28%;
-      top: 93px;
-      float: left;
+      top: 15.5%;
+      padding-bottom: 10%;
+      .narrowerThanSmall({
+        margin-top: 10%;
+        top: 0;
+      });
     }
   }
   .product-6-zhiyue {
