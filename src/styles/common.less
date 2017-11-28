@@ -10,8 +10,23 @@
   background-size: cover;
 }
 
-.smallThanMedium(@rules) {
+.narrowerThanMedium(@rules) {
   @media screen and (max-width: 64em)	 {
+    @rules();
+  }
+}
+
+.narrowerThanSmall(@rules) {
+  @media screen and (max-width: 48em)	 {
+    @rules();
+  }
+}
+
+.iphone5Screen(@rules) {
+  @media only screen 
+  and (min-device-width : 320px) 
+  and (max-device-width : 568px) 
+  and (orientation : portrait) {
     @rules();
   }
 }

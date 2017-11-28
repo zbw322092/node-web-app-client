@@ -54,6 +54,12 @@ https://medium.com/@mustwin/responsive-react-9b56d63c4edc <br>
 [7] CSS Units (CSS Lengths: rems, ems, pixels, percents, and more)
 https://www.youtube.com/watch?v=qrduUUdxBSY <br>
 
+[8] Media Queries for Standard Devices
+https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ <br>
+
+[9] How to prevent line breaks in list items using CSS
+https://stackoverflow.com/a/1383147/6498272 <br>
+
 ## todo
 [1] Responsive Web Design
 https://alistapart.com/article/responsive-web-design/ <br>
