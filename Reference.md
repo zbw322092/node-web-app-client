@@ -81,6 +81,9 @@ https://github.com/ReactTraining/react-router/issues/2019 <br>
 [2] Using 3d party react components with inferno
 https://github.com/infernojs/inferno/issues/700 <br>
 
+[3] Calling setState in render causes infinite loop
+https://github.com/facebook/react/issues/5591 <br>
+
 
 # typescript
 [1] Typescript error TS2339: Property 'webkitURL' does not exist on type 'Window'

@@ -162,31 +162,82 @@
       });
     }
   }
+
+  // product 2 智策
   .product-2-zhice {
     .text-container {
-      position: relative;
-      display: inline-block;
-      width: 337px;
-      left: 54%;
-      top: 220px;
+      position: absolute;
+      max-width: 371px;
+      min-height: 245px;
+      background:rgba(0,0,0,0.4);
+      right: 28.6%;
+      top: 36.6%;
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       z-index: 1000;
       .product-title {
         color: #ffffff !important;
+        .narrowerThanSmall({
+          color: #333333 !important;
+        });
       }
       .product-sub-title {
         color: #ffffff !important;
+        .narrowerThanSmall({
+          color: #333333 !important;
+        });
       }
       .product-desc {
         color: #ffffff !important;
-        margin-top: 10px;
+        margin-top: 20px;
+        .narrowerThanSmall({
+          color: #999999 !important;
+        });
       }
+
+      .narrowerThanSmall({
+        position: relative;
+        width: 90%;
+        max-width: 100%;
+        right: 0;
+        top: 0;
+        padding: 0;
+        background: none;
+        padding-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+      });
+      
     }
-    .product-bg-2 {
+
+    .img-container {
       position: absolute;
-      top: 60px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate3d(-50%, -50%, 0);
+      .backgroundCover('views/product/img-product-bg-2.png');
+      width: 942px;
+      height: 461px;
       z-index: 0;
+
+      .narrowerThanSmall({
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        background-image: none;
+        background-image: none;
+        padding-bottom: 10%;
+        padding-top: 10%;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: none;
+      });
     }
   }
 
@@ -306,32 +357,78 @@
   }
   .product-6-zhiyue {
     .text-container {
-      position: relative;
-      display: inline-block;
-      left: 56%;
-      top: 248px;
-      width: 310px;
+      position: absolute;
+      max-width: 353px;
+      min-height: 234px;
+      background:rgba(0,0,0,0.4);
+      right: 28.6%;
+      top: 30%;
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       z-index: 1000;
-      .product-desc {
-        margin-top: 20px;
-      }
       .product-title {
         color: #ffffff !important;
+        .narrowerThanSmall({
+          color: #333333 !important;
+        });
       }
       .product-sub-title {
         color: #ffffff !important;
+        .narrowerThanSmall({
+          color: #333333 !important;
+        });
       }
       .product-desc {
         color: #ffffff !important;
-        margin-top: 10px;
+        margin-top: 20px;
+        .narrowerThanSmall({
+          color: #999999 !important;
+        });
       }
+
+      .narrowerThanSmall({
+        position: relative;
+        width: 90%;
+        max-width: 100%;
+        right: 0;
+        top: 0;
+        padding: 0;
+        background: none;
+        padding-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+      });
+      
     }
-    .product-bg-6 {
+
+    .img-container {
       position: absolute;
-      top: 75px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate3d(-50%, -50%, 0);
+      .backgroundCover('views/product/img-product-bg-6.png');
+      width: 835px;
+      height: 439px;
       z-index: 0;
+
+      .narrowerThanSmall({
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        background-image: none;
+        background-image: none;
+        padding-bottom: 10%;
+        padding-top: 10%;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: none;
+      });
     }
   }
 
