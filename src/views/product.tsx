@@ -95,7 +95,6 @@ export default class Product extends Component<any, any> {
 		};
 
 		const ProductPanel = (props: ProductPanelArr) => {
-			console.log('props.productPanelArr', props.productPanelArr);
 			return <div className="panel-container">
 				{
 					props.productPanelArr.map((item, i) => {
