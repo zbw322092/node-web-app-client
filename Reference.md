@@ -84,8 +84,26 @@ https://github.com/infernojs/inferno/issues/700 <br>
 [3] Calling setState in render causes infinite loop
 https://github.com/facebook/react/issues/5591 <br>
 
+## todo
+[1] Refs and the DOM
+https://reactjs.org/docs/refs-and-the-dom.html <br>
+
 
 # typescript
 [1] Typescript error TS2339: Property 'webkitURL' does not exist on type 'Window'
 https://stackoverflow.com/a/38811032/6498272 <br/>
 https://stackoverflow.com/a/45270062/6498272 <br/>
+
+# JS
+[1] Element.scrollIntoView()
+https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView <br>
+
+## todo
+[1] Babel and CommonJS modules
+http://2ality.com/2015/12/babel-commonjs.html <br>
+
+[2] react-scroll-to-component
+https://github.com/flyingant/react-scroll-to-component <br>
+
+[3] Page scrolling in vanilla JavaScript
+https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/ <br>

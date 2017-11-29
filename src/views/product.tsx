@@ -1,4 +1,5 @@
 import Component from 'inferno-component';
+
 declare function require(path: string);
 
 
@@ -7,9 +8,9 @@ interface ProductNavArr {
 }
 
 interface ProductNavProps {
-	iconClass: string,
-	productName: string,
-	clickHandler: () => any
+	productId: 'bosaidong' | 'zhice' | 'zhiyan' | 'shangceyun' | 'zhixu' | 'zhiyue';
+	productName: string;
+	iconClass: string;
 }
 
 interface ProductPanelProps {
@@ -42,6 +43,7 @@ export default class Product extends Component<any, any> {
 	}
 
 	componentDidMount() {
+		// add media query listener
 		let narrowerThanSmall = matchMedia('only screen and (max-width: 48em)');
 		if (narrowerThanSmall.matches) {
 			this.setState({
@@ -65,13 +67,24 @@ export default class Product extends Component<any, any> {
 		});
 	}
 
+	navClickHandler = (productId:string): void => {	
+		let productElement = document.getElementById(productId);
+		if (productElement !== null) {
+			productElement.scrollIntoView({
+				behavior: 'smooth',
+				block: "start",
+				inline: "start"
+			});
+		}
+	}
+
 	render() {
 		const ProductNav = (props: ProductNavArr) => {
 			return <div className="product-nav">
 				<div className="pure-g nav-container">
 					{
 						props.productArr.map((item) => {
-							return <div className="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6 nav-unit" onClick={item.clickHandler}>
+							return <div className="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6 nav-unit" onClick={this.navClickHandler.bind(this, item.productId)}>
 								<div className={`nav-icon ${item.iconClass}`}></div>
 								<div className="nav-text">{item.productName}</div>
 							</div>
@@ -91,11 +104,13 @@ export default class Product extends Component<any, any> {
 							productImgPanel = <img className={`pure-image panel-img ${item.bgImgClass}`}
 								src={require(`../assets/views/product/img-product-bg-${i + 1}.png`)} ></img>
 						} else if (item.bgModel === 'stackUp') {
-							productImgPanel = <img className={`pure-image panel-img ${item.bgImgClass}`} style={{'display': this.state.displaySmallProductImg}}
+							productImgPanel = <img className={`pure-image panel-img ${item.bgImgClass}`} style={{ 'display': this.state.displaySmallProductImg }}
 								src={require(`../assets/views/product/img-product-bg-${i + 1}-small.png`)} ></img>
 						}
 
-						return <div id={item.productId} className={`pure-g product-panel ${item.productClassName} ${BgClassName[item.bgColor]}`}>
+						return <div
+							id={item.productId}
+							className={`pure-g product-panel ${item.productClassName} ${BgClassName[item.bgColor]}`}>
 							<div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 left-panel">
 								<div className="text-container">
 									<div className="product-title" dangerouslySetInnerHTML={{ __html: item.productTitle }}></div>
@@ -112,39 +127,38 @@ export default class Product extends Component<any, any> {
 					})
 				}
 			</div>
-
 		};
 
 		const productNavArr: Array<ProductNavProps> = [
 			{
+				productId: 'bosaidong',
 				iconClass: 'icon-product-nav-1',
 				productName: '波塞东POSEIDON',
-				clickHandler: () => { window.alert('here') }
 			},
 			{
+				productId: 'zhice',
 				iconClass: 'icon-product-nav-2',
-				productName: '智策INTELLIQUANT',
-				clickHandler: () => { window.alert('here') }
+				productName: '智策INTELLIQUANT'
 			},
 			{
-				iconClass: 'icon-product-nav-3',
-				productName: '尚策云INTELLICLOUD',
-				clickHandler: () => { window.alert('here') }
-			},
-			{
+				productId: 'zhiyan',
 				iconClass: 'icon-product-nav-4',
-				productName: '智衍',
-				clickHandler: () => { window.alert('here') }
+				productName: '智衍'
 			},
 			{
+				productId: 'shangceyun',
+				iconClass: 'icon-product-nav-3',
+				productName: '尚策云INTELLICLOUD'
+			},
+			{
+				productId: 'zhixu',
 				iconClass: 'icon-product-nav-5',
-				productName: '智旭',
-				clickHandler: () => { window.alert('here') }
+				productName: '智旭'
 			},
 			{
+				productId: 'zhiyue',
 				iconClass: 'icon-product-nav-6',
-				productName: '智跃INTELLIDATA',
-				clickHandler: () => { window.alert('here') }
+				productName: '智跃INTELLIDATA'
 			}
 		];
 

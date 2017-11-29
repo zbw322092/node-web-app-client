@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"target": "ESNEXT",
 		"module": "ESNEXT",
-		"allowJs": false,
+		"allowJs": true,
 		"allowSyntheticDefaultImports": true,
 		"preserveConstEnums": true,
 		"sourceMap": true,
