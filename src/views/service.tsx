@@ -37,6 +37,7 @@ export default class Service extends Component<any, any> {
 				<div className="panel-img">
 					<div className="brief-intro">闪策通过开创性的新方法，设计下一代基于云的分析技术，
 					利用其大数据和超低延迟交易的经验，着力于构建未来的金融生态系统。</div>
+					<div className="separator"></div>
 					<div className="brief-intro-en">From pioneering new approaches to design the
 					next generation of cloud based analytics, ShanCe leverages its deep experience with ultra low latency
 					trading and big data to build financial ecosystems of the future.</div>
@@ -44,19 +45,66 @@ export default class Service extends Component<any, any> {
 			</div>
 		};
 
-		// const PlatformService = (props) => {
-		// 	return <div class="platform-service">
-		// 		<div className="icon-our-services"></div>
-		// 		<div className="panel-title">平台服务</div>
-		// 		<div className="service-name name-1">策略开发接口</div>
-		// 		<div className="service-name name-2">技术支持</div>
-		// 		<div className="service-name name-3">回测与仿真</div>
-		// 		<div className="service-name name-4">高效交易平台</div>
-		// 		<div className="service-name name-5">行情数据</div>
-		// 		<div className="service-name name-6">严密风控</div>
-		// 		<div className="service-name name-7">撮合引擎</div>
-		// 	</div>
-		// };
+		const PlatformService = (props) => {
+			return <div class="platform-service">
+				<div class="panel-wrapper">
+					<div className="icon-our-services"></div>
+					<div className="panel-title">平台服务</div>
+				</div>
+				<div className="small-panel-container">
+					<div className="pure-g container-row">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-1">
+							<div className="unit-container">
+								<div className="unit-icon"></div>
+								<div className="unit-title">策略开发接口</div>
+							</div>
+						</div>
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-2">
+							<div className="unit-container">
+								<div className="unit-icon"></div>
+								<div className="unit-title">技术支持</div>
+							</div>
+						</div>
+					</div>
+					<div className="pure-g container-row">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-3">
+							<div className="unit-container">
+								<div className="unit-icon"></div>
+								<div className="unit-title">回测与仿真</div>
+							</div>
+						</div>
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-4">
+							<div className="unit-container">
+								<div className="unit-icon"></div>
+								<div className="unit-title">高效交易平台</div>
+							</div>
+						</div>
+					</div>
+					<div className="pure-g container-row">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-5">
+							<div className="unit-container">
+								<div className="unit-icon"></div>
+								<div className="unit-title">行情数据</div>
+							</div>
+						</div>
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-6">
+							<div className="unit-container">
+								<div className="unit-icon"></div>
+								<div className="unit-title">严密风控</div>
+							</div>
+							</div>
+					</div>
+					<div className="pure-g container-row">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-7">
+							<div className="unit-container">
+								<div className="unit-icon"></div>
+								<div className="unit-title">撮合引擎</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		};
 
 		// const OurProductWhitePanel = (props) => {
 		// 	return <div className="product-white-panel">
@@ -141,8 +189,8 @@ export default class Service extends Component<any, any> {
 
 		return <div className="view-service">
 			<TopPanel />
-			{/* <PlatformService />
-			<OurProductWhitePanel />
+			<PlatformService />
+			{/* <OurProductWhitePanel />
 			<PlatformCharacteristic characteristicPropsArr={characteristicPropsArr} /> */}
 		</div>;
 	}

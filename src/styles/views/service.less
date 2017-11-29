@@ -61,7 +61,6 @@
     }
     .brief-intro {
       position: absolute;
-      display: inline-block;
       width: 310px;
       top: 103px;
       left: 646px;
@@ -82,9 +81,25 @@
         margin-right: auto;
       });
     }
+    .separator {
+      position: absolute;
+      background:#80c6b2;
+      width:53px;
+      height:3px;
+      top: 219px;
+      left: 646px;
+
+      .narrowerThanMedium({
+        position: relative;
+        display: block;
+        left: 0;
+        top: 0;
+        left: 5%;
+        margin-top: 20px;
+      });
+    }
     .brief-intro-en {
       position: absolute;
-      display: inline-block;
       width: 310px;
       top: 233px;
       left: 646px;
@@ -104,6 +119,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
+        margin-bottom: 100px;
       });
     }
   }
@@ -112,34 +128,142 @@
 .view-service {
   .platform-service {
     position: relative;
-    width: 100%;
-    height: 958px;
-    .background('views/service/img-platform-service.png');
-    .icon-our-services {
-      position: relative;
-      width: 181px;
-      height: 204px;
-      .background('views/service/icon-service-light.png');
-      top: 25px;
-      margin-left: auto;
-      margin-right: auto;
+    .panel-wrapper {
+      width: 100vw;
+      height: 49.9vw;
+      .backgroundCover('views/service/img-platform-service.png');
+      .icon-our-services {
+        position: relative;
+        width: 9.42%;
+        height: 21.3%;
+        .background('views/service/icon-service-light.png');
+        top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+  
+        .narrowerThanMedium({
+          top: 10.2%;
+          width: 24.1%;
+          height: 46.26%
+        });
+      }
+  
+      .narrowerThanMedium({
+        width: 100vw;
+        height: 58.8vw;
+        background-image: url('../../assets/views/service/img-platform-service-small.png');
+        background-size: cover;
+      });
+  
+      .panel-title {
+        display: none;
+  
+        .narrowerThanMedium({
+          display: block;
+          width: 100%;
+          font-family:PingFangSC-Medium;
+          font-size:30px;
+          color:#ffffff;
+          text-align:center;
+          // margin-top: 80px;
+          margin-top: 12.7%;
+        });
+      }
     }
-    .panel-title {
-      margin-top: 205px;
-      font-family:PingFangSC-Medium;
-      font-size:36px;
-      color:#ffffff;
-      text-align:center;
-    }
-    .service-name {
-      position: absolute;
-      font-family:PingFangSC-Semibold;
-      font-size:18px;
-      color:#ffffff;
-      text-align:center;
-    }
-    .name-1 {
-      left: 100% * (655/1920);
+
+    .small-panel-container {
+      display: none;
+      .narrowerThanMedium({
+        display: block;
+      });
+
+      .container-row {
+        border-bottom:1px solid #e4e4e4;
+      }
+      
+      .service-unit {
+        position: relative;
+        height: 300px;
+      }
+
+      .unit-container {
+        position: absolute;
+        bottom: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+
+        .unit-icon {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 35px;
+        }
+
+        .unit-title {
+          width: 100%;
+          font-family:PingFangSC-Semibold;
+          font-size:22px;
+          color:#333333;
+          text-align: center;
+        }
+      }
+
+      .service-1 {
+        .unit-icon {
+          width: 88px;
+          height: 88px;
+          .background('views/service/icon-service-1.png');
+        }
+      }
+
+      .service-2 {
+        .unit-icon {
+          width: 100px;
+          height: 100px;
+          .background('views/service/icon-service-2.png');
+        }
+      }
+
+      .service-3 {
+        .unit-icon {
+          width: 93px;
+          height: 93px;
+          .background('views/service/icon-service-3.png');
+        }
+      }
+
+      .service-4 {
+        .unit-icon {
+          width: 102px;
+          height: 108px;
+          .background('views/service/icon-service-4.png');
+        }
+      }
+
+      .service-5 {
+        .unit-icon {
+          width: 92px;
+          height: 92px;
+          .background('views/service/icon-service-5.png');
+        }
+      }
+
+      .service-6 {
+        .unit-icon {
+          width: 103px;
+          height: 103px;
+          .background('views/service/icon-service-6.png');
+        }
+      }
+
+      .service-7 {
+        .unit-icon {
+          width: 103px;
+          height: 103px;
+          .background('views/service/icon-service-7.png');
+        }
+      }
+
     }
   }
 }

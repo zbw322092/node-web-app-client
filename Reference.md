@@ -66,12 +66,25 @@ https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia <br>
 [11] how to make div background image responsive
 https://stackoverflow.com/a/22006657/6498272 <br>
 
+[12] Maintain the aspect ratio of a div with CSS
+https://stackoverflow.com/a/23673392/6498272 <br>
+
+[13] Height equal to dynamic width (CSS fluid layout) [duplicate]
+https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout <br>
+
+
 ## todo
 [1] Responsive Web Design
 https://alistapart.com/article/responsive-web-design/ <br>
 
 [2] course
 https://classroom.udacity.com/courses/ud893 <br>
+
+[3] Creating Intrinsic Ratios for Video
+https://alistapart.com/article/creating-intrinsic-ratios-for-video <br>
+
+[4] CSS vw and vh Units: Are They Worth Using Yet?
+https://www.weareconvoy.com/2014/07/css-vw-and-vh-units-are-they-worth-using-yet/ <br>
 
 
 # React/Inferno
