@@ -1,4 +1,5 @@
 import Component from 'inferno-component';
+import * as tingle from '../../lib/dialog/tingle';
 
 declare function require(path: string);
 
@@ -17,6 +18,63 @@ export default class Service extends Component<any, any> {
 	constructor(props) {
 		super(props);
 		this.state = { seletorActiveIndex: 0 };
+	}
+
+	characteristicPopup = (tag: string): void => {
+
+		let modal = new tingle.modal({
+			footer: false,
+			closeMethods: ['overlay', 'escape'],
+			cssClass: ['service-dialog'],
+			onClose: () => {
+				modal.destroy();
+			}
+		});
+
+		const contentMap = {
+			service1: `<div class="dialog-title">策略开发接口</div><div class="close-sign"></div>
+			<div class="dialog-content">● 闪策系统基于国际先进标准开发，提供一套完整的标准开发接口。您只需要专心注重策略的研发，无需考虑自身的代码与不同的交易渠道或平台之间的兼容问题。<br/>
+			● 策略开发的过程中，闪策提供的示例代码搭建的策略框架可以帮助您快速上手。内容详尽的API文档则可以帮助您深入了解实现各种功能的途径和方法。</div>`,
+			service2: `<div class="dialog-title">技术支持</div><div class="close-sign"></div>
+			<div class="dialog-content">● 闪策为您从初步开发到交易所实盘交易提供一站式的全流程贴心服务。<br/>
+			● 闪策技术支持团队将为尽力为您解决在策略开发过程中遇到困惑与问题。<br/>
+			● 实盘的过程中，闪策技术人员将第一时间发现并协助处理您交易过程遇到的问题。<br/>
+			● 您可以通过服务热线、网络、微信等多渠道获取我们完善的双语咨询和支持服务。</div>`,
+			service3: `<div class="dialog-title">回测与仿真</div><div class="close-sign"></div>
+			<div class="dialog-content">● 闪策系统回测环境集成了丰富全面的历史数据，系统可同时重播所有交易所的数据，可以帮助您对策略中富有创造力的想法实现初步的验证和调试。<br/>
+			● 仿真交易系统依托全面模拟的实盘环境，可以对策略进行最真实的检验，结合灵活易用的日志分析工具，为您策略优化与性能提升提供完整的支持。<br/>
+			● 回测、仿真、实盘系统深度融合，同样的策略文件、同样的操作方法，在不同模式下运行可以做到无缝切换，极大提高用您策略的开发与研究效率。</div>`,
+			service4: `<div class="dialog-title">高效交易平台</div><div class="close-sign"></div>
+			<div class="dialog-content">● 闪策的一站式交易解决方案是一个支持低延迟Feed，基于事件的C ++ API，以及基于云的模拟和互联光纤网络的完全托管的超高性能交易平台。<br/>
+			● 通过强大的硬件与高效的系统软件紧密结合、持续优化而打造出高效、低延时的交易通道是您策略先人一步的制胜法宝。<br/>
+			● 经过多年检验的稳定系统与安全架构为您策略的完美实现保驾护航。</div>`,
+			service5: `<div class="dialog-title">行情数据</div><div class="close-sign"></div>
+			<div class="dialog-content">● 闪策提供全平台多档实时高速交易行情，丰富完善的数据为您省去了后顾之忧。<br/>
+			● 统一的标准化的数据格式，免去解析不同格式行情的麻烦，让您更专注于高效的策略开发之中。</div>`,
+			service6: `<div class="dialog-title">严密风控</div><div class="close-sign"></div>
+			<div class="dialog-content">● 闪策提供完全自动化的在线风控，同时应用于硬件和软件配置。 平台允许用户灵活定制多层级、分账户风险控制系统，在全面满足您需求的同时将交易的风险降到最低。<br/>
+			● 闪策还为您提供可视化的实时交易监控工具，交易情况一目了然，尽在掌握。</div>`,
+			service7: `<div class="dialog-title">撮合引擎</div><div class="close-sign"></div>
+			<div class="dialog-content">● 闪策的撮合引擎是一个完全托管的低延迟解决方案，提供具高度灵活性和可扩展性和一整套监控和分析工具。<br/>
+			● 具有强大的撮合分析和订单跟踪工具，以减少故障排除延迟。支持从小范围到大范围部署，保证您的成本效益。<br/>
+			● 高度可定制化的设计允许广泛的订单类型和匹配逻辑，多样的数据分析和可视化工具使操作人员能够快速满足客户需求并更有效地进行第三方查询。</div>`
+		};
+
+		modal.setContent(contentMap[tag]);
+
+		modal.open();
+
+		setTimeout(() => {
+			modal.checkOverflow();
+		}, 500);
+
+		let dialogElement = document.querySelector('.close-sign');
+		if (dialogElement) {
+			dialogElement.addEventListener('click', () => {
+				modal.close();
+			});
+		}
+		
 	}
 
 	selectorClickHandler = (index, e) => {
@@ -50,16 +108,25 @@ export default class Service extends Component<any, any> {
 				<div class="panel-wrapper">
 					<div className="icon-our-services"></div>
 					<div className="panel-title">平台服务</div>
+					<div className="click-area area-1" onClick={this.characteristicPopup.bind(this,'service1')}></div>
+					<div className="click-area area-2" onClick={this.characteristicPopup.bind(this,'service2')}></div>
+					<div className="click-area area-3" onClick={this.characteristicPopup.bind(this,'service3')}></div>
+					<div className="click-area area-4" onClick={this.characteristicPopup.bind(this,'service4')}></div>
+					<div className="click-area area-5" onClick={this.characteristicPopup.bind(this,'service5')}></div>
+					<div className="click-area area-6" onClick={this.characteristicPopup.bind(this,'service6')}></div>
+					<div className="click-area area-7" onClick={this.characteristicPopup.bind(this,'service7')}></div>
 				</div>
 				<div className="small-panel-container">
 					<div className="pure-g container-row">
-						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-1">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-1"
+						onClick={this.characteristicPopup.bind(this,'service1')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
 								<div className="unit-title">策略开发接口</div>
 							</div>
 						</div>
-						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-2">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-2"
+						onClick={this.characteristicPopup.bind(this,'service2')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
 								<div className="unit-title">技术支持</div>
@@ -67,13 +134,15 @@ export default class Service extends Component<any, any> {
 						</div>
 					</div>
 					<div className="pure-g container-row">
-						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-3">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-3"
+						onClick={this.characteristicPopup.bind(this,'service3')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
 								<div className="unit-title">回测与仿真</div>
 							</div>
 						</div>
-						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-4">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-4"
+						onClick={this.characteristicPopup.bind(this,'service4')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
 								<div className="unit-title">高效交易平台</div>
@@ -81,13 +150,15 @@ export default class Service extends Component<any, any> {
 						</div>
 					</div>
 					<div className="pure-g container-row">
-						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-5">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-5"
+						onClick={this.characteristicPopup.bind(this,'service5')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
 								<div className="unit-title">行情数据</div>
 							</div>
 						</div>
-						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-6">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-6"
+						onClick={this.characteristicPopup.bind(this,'service6')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
 								<div className="unit-title">严密风控</div>
@@ -95,7 +166,8 @@ export default class Service extends Component<any, any> {
 						</div>
 					</div>
 					<div className="pure-g container-row">
-						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-7">
+						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-7"
+						onClick={this.characteristicPopup.bind(this,'service7')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
 								<div className="unit-title">撮合引擎</div>

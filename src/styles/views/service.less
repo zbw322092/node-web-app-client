@@ -169,6 +169,47 @@
           margin-top: 12.7%;
         });
       }
+
+      .click-area {
+        position: absolute;
+        width: 7.0vw;
+        height: 7.0vw;
+        cursor: pointer;
+
+        .narrowerThanMedium({
+          display: none;
+        });
+      }
+      .area-1 {
+        top: 19vw;
+        left: 33vw;
+      }
+      .area-2 {
+        top: 19vw;
+        right: 33vw;
+      }
+
+      .area-3 {
+        top: 27vw;
+        left: 39.5vw;
+      }
+      .area-4 {
+        top: 27vw;
+        right: 39.5vw;
+      }
+
+      .area-5 {
+        top: 35vw;
+        left: 32.5vw;
+      }
+      .area-6 {
+        top: 35vw;
+        left: 46.5vw;
+      }
+      .area-7 {
+        top: 35vw;
+        right: 32.5vw;
+      }
     }
 
     .small-panel-container {
@@ -183,12 +224,12 @@
       
       .service-unit {
         position: relative;
-        height: 300px;
+        height: 150px;
       }
 
       .unit-container {
         position: absolute;
-        bottom: 72px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
@@ -196,13 +237,13 @@
         .unit-icon {
           margin-left: auto;
           margin-right: auto;
-          margin-bottom: 35px;
+          // margin-bottom: 35px;
         }
 
         .unit-title {
           width: 100%;
           font-family:PingFangSC-Semibold;
-          font-size:22px;
+          font-size:16px;
           color:#333333;
           text-align: center;
         }
@@ -212,7 +253,11 @@
         .unit-icon {
           width: 88px;
           height: 88px;
+          // width: 44px;
+          // height: 44px;
           .background('views/service/icon-service-1.png');
+          background-size: 50% 50% !important;
+          background-position: center center;
         }
       }
 
@@ -221,6 +266,8 @@
           width: 100px;
           height: 100px;
           .background('views/service/icon-service-2.png');
+          background-size: 50% 50% !important;
+          background-position: center center;
         }
       }
 
@@ -229,6 +276,8 @@
           width: 93px;
           height: 93px;
           .background('views/service/icon-service-3.png');
+          background-size: 50% 50% !important;
+          background-position: center center;
         }
       }
 
@@ -237,6 +286,8 @@
           width: 102px;
           height: 108px;
           .background('views/service/icon-service-4.png');
+          background-size: 50% 50% !important;
+          background-position: center center;
         }
       }
 
@@ -245,6 +296,8 @@
           width: 92px;
           height: 92px;
           .background('views/service/icon-service-5.png');
+          background-size: 50% 50% !important;
+          background-position: center center;
         }
       }
 
@@ -253,6 +306,8 @@
           width: 103px;
           height: 103px;
           .background('views/service/icon-service-6.png');
+          background-size: 50% 50% !important;
+          background-position: center center;
         }
       }
 
@@ -261,6 +316,8 @@
           width: 103px;
           height: 103px;
           .background('views/service/icon-service-7.png');
+          background-size: 50% 50% !important;
+          background-position: center center;
         }
       }
 
@@ -461,7 +518,8 @@
       .narrowerThanMedium({
         top: 0;
         left: 0;
-        width: 310px;
+        width: 95%;
+        max-width: 319px;
         float: none;
         margin-left: auto;
         margin-right: auto;
@@ -486,5 +544,63 @@
       }
     }
 
+  }
+}
+
+.service-dialog {
+  background: none !important;
+  .narrowerThanMedium({
+    background: rgba(0, 0, 0, .8) !important;
+  });
+
+
+  .tingle-modal-box {
+    background:rgb(255, 255, 255);
+    -webkit-box-shadow: 4px -3px 10px 0px rgba(50, 50, 50, 0.6);
+    -moz-box-shadow:    4px -3px 10px 0px rgba(50, 50, 50, 0.6);
+    box-shadow:         4px -3px 10px 0px rgba(50, 50, 50, 0.6);
+    border-radius:11px;
+
+    .narrowerThanMedium({
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    });
+  }
+
+  .close-sign {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    .background('views/service/icon-close-sign.png');
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    .narrowerThanMedium({
+      width: 20px;
+      height: 20px;
+    });
+  }
+  .dialog-title {
+    font-family:PingFangSC-Medium;
+    font-size:36px;
+    color:#333333;
+    text-align:center;
+
+    .narrowerThanMedium({
+      font-size:28px;
+    });
+  }
+  .dialog-content {
+    font-family:HiraKakuPro-W3;
+    font-size:22px;
+    color:#666666;
+    text-align:left;
+    margin-top: 60px;
+
+    .narrowerThanMedium({
+      font-size:16px;
+    });
   }
 }
