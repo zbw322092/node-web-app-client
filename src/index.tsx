@@ -1,4 +1,5 @@
 import Inferno from 'inferno';
+import '../lib/pureCSS';
 import '../lib/matchMedia';
 import '../lib/dialog';
 import './styles';

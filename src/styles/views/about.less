@@ -5,7 +5,8 @@
     position: relative;
     width: 100%;
     height: 638px;
-    .background('views/about/img-who-we-are.png');
+    box-sizing: border-box;
+    .backgroundCover('views/about/img-who-we-are.png');
     margin-top: -70px;
     padding-top: 70px;
 
@@ -15,6 +16,10 @@
       color:#ffffff;
       text-align:center;
       margin-top: 142px;
+
+      .narrowerThanMedium({
+        margin-top: 20%;
+      });
     }
     .about-us-intro {
       margin-top: 20px;
@@ -25,10 +30,15 @@
       text-align:center;
       margin-left: auto;
       margin-right: auto;
+
+      .narrowerThanMedium({
+        width: 80%;
+      });
     }
 
     .scroll-down {
       position: absolute;
+      width: 100%;      
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
@@ -37,6 +47,7 @@
         font-size:20px;
         color:#ffffff;
         text-align:center;
+        width: 100%;
       }
       .scroll-icon {
         width: 34px;
@@ -60,6 +71,11 @@
     .slogan-container {
       display: table-cell;
       vertical-align: middle;
+
+      .narrowerThanMedium({
+        padding-left: 5%;
+        padding-right: 5%;
+      });
     }
 
     .slogan-ch {
@@ -83,7 +99,14 @@
     position: relative;
     width: 100%;
     height: 696px;
-    .background('views/about/img-management-team.png');
+    .backgroundCover('views/about/img-management-team.png');
+
+    .narrowerThanMedium({
+      background: url('../../assets/views/about/img-management-team-long-version.png') no-repeat center center;
+      background-size: cover;
+      width: 100%;
+      height: 1035px;
+    });
 
     .panel-icon {
       position: absolute;
@@ -105,9 +128,83 @@
     }
 
     .team-intro {
-      display: inline-block;
-      width: 310px;
-      float: left;
+      max-height: 100%;
+
+      .left-intro {
+        position: relative;
+        width: 241px;
+        height: 436px;
+        left: 45%;
+        top: 25%;
+        .background('views/about/img-frame-left.png');
+
+        .narrowerThanLG({
+          left: 20%;
+        });
+
+        .narrowerThanMedium({
+          width: 100%;
+          top: 0;
+          left: 0;
+          background: none; 
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 100px;
+        });
+
+        .intro-wrapper {
+          position: absolute;
+          top: 40px;
+          left: 50px;
+          width: 248px;
+
+          .narrowerThanMedium({
+            width: 80%;
+            left: 0;
+            padding-left: 10%;
+            padding-right: 10%;
+          });
+        }
+      }
+  
+      .right-intro {
+        position: relative;
+        width: 248px;
+        height: 436px;
+        left: 10%;
+        top: 25%;
+        .background('views/about/img-frame-right.png');
+
+        .narrowerThanLG({
+          left: 6%;
+        });
+
+        .narrowerThanMedium({
+          top: 0;
+          left: 0%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 20px;
+          background: none;
+          width: 100%;
+        });
+
+        .intro-wrapper {
+          position: absolute;
+          top: 40px;
+          left: 50px;
+          width: 312px;
+
+          .narrowerThanMedium({
+            width: 80%;
+            top: 20px;
+            left: 0;
+            padding-left: 10%;
+            padding-right: 10%;
+          });
+        }
+      }
+
       .intro-name {
         font-family:PingFangSC-Semibold;
         font-size:28px;
@@ -132,15 +229,6 @@
       }
     }
 
-    .left-intro {
-      margin-left: 100% * (605/1920);
-      margin-top: 170px;
-    }
-
-    .right-intro {
-      margin-left: 10%;
-      margin-top: 170px;
-    }
   }
 }
 
@@ -148,7 +236,11 @@
   .great-team {
     width: 100%;
     height: 600px;
-    .background('views/about/img-great-team.png');
+    .backgroundCover('views/about/img-great-team.png');
+
+    @media screen and (max-width: 59em)	 {
+      height: 1500px;
+    }
 
     .panel-icon {
       position: absolute;
@@ -177,13 +269,56 @@
       margin-left: auto;
       margin-right: auto;
       margin-top: 104px;
+
+      @media screen and (max-width: 81em)	 {
+        width: 75%;
+      }
+
+      @media screen and (max-width: 75em)	 {
+        width: 85%;
+      }
+
+      @media screen and (max-width: 66.25em)	 {
+        width: 95%;
+      }
+
+      @media screen and (max-width: 59em)	 {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 50px;
+      }
+
+      .content-wrapper {
+        @media screen and (max-width: 59em)	 {
+          width: 100%;
+        } 
+      }
+
       .team-intro {
         position: relative;
         background:#ffffff;
         box-shadow:0 0 23px 0 rgba(0,0,0,0.28);
         width:294px;
-        height:373px;
+        height:380px;
+
+        @media screen and (max-width: 59em)	 {
+          width:50%;
+          height:auto;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 80px;
+        }
         
+        @media screen and (max-width: 43em)	 {
+          margin-top: 100px;
+          width:80%;
+        }
+
+        @media screen and (max-width: 25em)	 {
+          margin-top: 80px;
+          width:90%;
+        }
+
         .top-line {
           position: absolute;
           width: 75px;
@@ -199,7 +334,7 @@
           font-size:48px;
           color:#454545;
           text-align:center;
-          margin-top: 35px;
+          padding-top: 30px;
         }
         .intro-sub-title {
           font-family:PingFangSC-Regular;
@@ -218,6 +353,11 @@
           text-align:left;
           margin-left: auto;
           margin-right: auto;
+
+          @media screen and (max-width: 59em)	 {
+            width:80%;
+            padding-bottom: 20px;
+          }
         }
       }
     }
@@ -228,7 +368,9 @@
 .view-about {
   .partners {
     width: 100%;
-    height: 365px;
+    min-height: 365px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
 
     .panel-icon {
       position: absolute;
@@ -253,10 +395,14 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin-top: 90px;
+      margin-top: 50px;
       width: 80%;
       margin-left: auto;
       margin-right: auto;
+
+      .icon-partners {
+        margin-top: 40px;
+      }
 
       .partner-1 {
         width: 350px;
@@ -282,7 +428,7 @@
     position: relative;
     width: 100%;
     height: 499px;
-    .background('views/about/img-our-mission.png');
+    .backgroundCover('views/about/img-our-mission.png');
 
     .panel-title {
       position: relative;

@@ -53,29 +53,40 @@ export default class About extends Component<any, any> {
 			return <div className="management-team">
 				<div className="panel-icon"></div>
 				<div className="panel-title">管理团队</div>
-				<div class="team-intro left-intro">
-					<div className="intro-name">吴学华	Joanna</div>
-					<div className="intro-position">首席执行官 CEO</div>
-					<div className="intro-content">吴学华女士，本科毕业于北方交通大学经济与工商管理学院。
-						在北电、西门子、微软等知名的IT与通讯跨国公司有近20年丰富的工作和管理经验。闪策成立之前，她曾在微软工
-						作了近八年，负责重要行业的战略拓展与大型金融机构的市场销售管理工作，在推动微软中国金融行业业务快速
-						增长与可持续发展方面取得了卓越业绩，屡获微软全球及大中华区嘉奖。具有全球化视野，在以科技创新为引领，
-						推动金融业务发展的探索和实践中积累了丰富的经验。工作之余，她曾多次在全国歌唱比赛中获奖。在2015年和2016年
-						分别参加过纽约国际马拉松和芝加哥国际马拉松并取得优异成绩。</div>
+				<div className="pure-g">
+					<div class="pure-u-1 pure-u-md-1-2 team-intro">
+						<div className="left-intro">
+							<div class="intro-wrapper">
+								<div className="intro-name">吴学华	Joanna</div>
+								<div className="intro-position">首席执行官 CEO</div>
+								<div className="intro-content">吴学华女士，本科毕业于北方交通大学经济与工商管理学院。
+								在北电、西门子、微软等知名的IT与通讯跨国公司有近20年丰富的工作和管理经验。闪策成立之前，她曾在微软工
+								作了近八年，负责重要行业的战略拓展与大型金融机构的市场销售管理工作，在推动微软中国金融行业业务快速
+								增长与可持续发展方面取得了卓越业绩，屡获微软全球及大中华区嘉奖。具有全球化视野，在以科技创新为引领，
+								推动金融业务发展的探索和实践中积累了丰富的经验。工作之余，她曾多次在全国歌唱比赛中获奖。在2015年和2016年
+								分别参加过纽约国际马拉松和芝加哥国际马拉松并取得优异成绩。</div>
+							</div>
+						</div>
+					</div>
+					<div class="pure-u-1 pure-u-md-1-2 team-intro">
+						<div className="right-intro">
+							<div class="intro-wrapper">
+								<div className="intro-name">刘可 Ke</div>
+								<div className="intro-position">技术总监 CTO</div>
+								<div className="intro-content">刘可，毕业于复旦大学计算机科学系本科，后赴美留学，在
+								纽约州立大学计算机科学专业获得博士学位并有短暂博士后研究经历，在无线几何路由、超高宽带无线
+								通讯协议和无线通讯安全方面有一定的研究成果， 博士研究期间参与了WiMedia UWB(无线超高宽带）
+								协议的制定工作。而后，先后就任于比利时KBC金融产品（美国）、彭博社（美国） 及英国巴克莱资本
+								（美国）等公司。在巴克莱资本任职期间，担任算法交易智能路由技术组负责人（Tech Lead and People
+								Manager, Vice President)，拥有丰富的证券交易独立报盘系统的开发管理经验，特别是在智能路由、
+								交易执行算法开发运行和风险管控等方面积累了大量的第一手知识和经验。他参与开发的系统包括：巴克莱
+								暗池LX2，巴克莱股票与期权智能路由，巴克莱算法交易系统基础架构，时间敏感算法，暗流访问算法，等等；
+								并参与设计开发了巴克莱新一代全域智能报盘系统等。</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="team-intro right-intro">
-					<div className="intro-name">刘可 Ke</div>
-					<div className="intro-position">技术总监 CTO</div>
-					<div className="intro-content">刘可，毕业于复旦大学计算机科学系本科，后赴美留学，在
-						纽约州立大学计算机科学专业获得博士学位并有短暂博士后研究经历，在无线几何路由、超高宽带无线
-						通讯协议和无线通讯安全方面有一定的研究成果， 博士研究期间参与了WiMedia UWB(无线超高宽带）
-						协议的制定工作。而后，先后就任于比利时KBC金融产品（美国）、彭博社（美国） 及英国巴克莱资本
-						（美国）等公司。在巴克莱资本任职期间，担任算法交易智能路由技术组负责人（Tech Lead and People
-						Manager, Vice President)，拥有丰富的证券交易独立报盘系统的开发管理经验，特别是在智能路由、
-						交易执行算法开发运行和风险管控等方面积累了大量的第一手知识和经验。他参与开发的系统包括：巴克莱
-						暗池LX2，巴克莱股票与期权智能路由，巴克莱算法交易系统基础架构，时间敏感算法，暗流访问算法，等等；
-						并参与设计开发了巴克莱新一代全域智能报盘系统等。</div>
-				</div>
+
 			</div>
 		};
 
@@ -86,15 +97,18 @@ export default class About extends Component<any, any> {
 				<div className="intro-container">
 					{
 						props.introArr.map((item) => {
-							return <div className="team-intro">
-								<div className="top-line"></div>
-								<div className="intro-title"
-									dangerouslySetInnerHTML={{ __html: item.title }}></div>
-								<div className="intro-sub-title"
-									dangerouslySetInnerHTML={{ __html: item.subTitle }}></div>
-								<div className="intro-content"
-									dangerouslySetInnerHTML={{ __html: item.content }}></div>
+							return <div className="content-wrapper">
+								<div className="team-intro">
+									<div className="top-line"></div>
+									<div className="intro-title"
+										dangerouslySetInnerHTML={{ __html: item.title }}></div>
+									<div className="intro-sub-title"
+										dangerouslySetInnerHTML={{ __html: item.subTitle }}></div>
+									<div className="intro-content"
+										dangerouslySetInnerHTML={{ __html: item.content }}></div>
+								</div>
 							</div>
+
 						})
 					}
 				</div>
@@ -165,8 +179,8 @@ export default class About extends Component<any, any> {
 			<SloganPanel
 				sloganCn="闪策 · 荣誉始于信任"
 				sloganEn="SHANCE · HONOR BEGINS WITH TRUST" />
-			<Partners parentsArr={['partner-1','partner-2','partner-3']} />
-			<OurMission/>
+			<Partners parentsArr={['partner-1', 'partner-2', 'partner-3']} />
+			<OurMission />
 		</div>;
 	}
 };
