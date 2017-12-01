@@ -47,6 +47,8 @@ https://stackoverflow.com/a/17915911/6498272 <br>
 [10] Margin on child element moves parent element
 https://stackoverflow.com/questions/1762539/margin-on-child-element-moves-parent-element <br>
 
+[11] How do you keep parents of floated elements from collapsing? [duplicate]
+https://stackoverflow.com/a/11597829/6498272 <br>
 
 ## responsive
 [1] Responsive Web Design Basics

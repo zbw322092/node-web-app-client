@@ -69,11 +69,14 @@
 .view-join-us {
   .job-detail {
     width: 100%;
+    min-height: 100vh;
     background: #f8f8f8;
-    padding-top: 60px;
-    padding-bottom: 68px;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    box-sizing: border-box;
 
     .content-wrapper {
+      position: relative;
       max-width: 1005px;
       margin-left: auto;
       margin-right: auto;
@@ -86,9 +89,17 @@
       box-shadow:0 0 28px 0 rgba(0,0,0,0.09);
       width:500px;
       height:614px;
-      margin-left: auto;
-      margin-right: auto;
       overflow: hidden;
+
+      .narrowerThanLG({
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      });
+
+      @media screen and (max-width: 500px) {
+        width:95%;
+      }
 
       .work-here {
         width: 422px;
@@ -97,6 +108,10 @@
         margin-top: 90px;
         margin-left: auto;
         margin-right: auto;
+
+        @media screen and (max-width: 500px) {
+          width:95%;
+        }
       }
 
       .job-title-list {
@@ -147,6 +162,16 @@
       overflow: scroll;
       box-sizing: border-box;
 
+      .narrowerThanLG({
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      });
+
+      @media screen and (max-width: 500px) {
+        width:95%;
+      }
+
       .content-wrapper {
         width: 90%;
         padding-top: 5%;
@@ -173,5 +198,176 @@
         margin-top: 20px;
       }
     }
+  }
+}
+
+.view-join-us {
+  .work-environment {
+    height: 100vh;
+    background: #ffffff;
+    box-sizing: border-box;
+    padding-top: 11.6vh;
+
+    .panel-slogan {
+      font-family:PingFangSC-Light;
+      font-size:24px;
+      color:#333333;
+      text-align:center;
+      margin-bottom: 8.8vh;
+    }
+
+    .slogan-row {
+      width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .narrowerThanMedium({
+        width: auto;
+      });
+
+      .img-container {
+        position: relative;
+        .text-container {
+          top: 50%;
+          transform: translateY(-50%);
+          padding-left: 15px;
+
+          .narrowerThanMedium({
+            text-align: center;
+            padding-left: 0;
+            width: 100%;
+          });
+        }
+      }
+
+      .img-container-1 {
+        float: left;
+        .narrowerThanMedium({
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+        });
+      }
+
+      .img-container-3 {
+        float: left;
+
+        .narrowerThanMedium({
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+        });
+      }
+
+      .img-container-2 {
+        float: right;
+
+        .narrowerThanMedium({
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+        });
+      }
+      .img-container-4 {
+        float: right;
+
+        .narrowerThanMedium({
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+        });
+      }
+
+      .slogan-unit {
+        position: relative;
+        display: inline-block;
+
+        .narrowerThanMedium({
+          display: block;
+        });
+      }
+
+      .text-container {
+        position: absolute;
+        font-family:PingFangSC-Semibold;
+        color:#ffffff;
+        text-shadow:0 2px 4px rgba(0,0,0,0.50);
+        text-align:left;
+
+        .main-text {
+          font-size: 28px;
+        }
+        .sub-text {
+          font-size: 16px;
+        }
+      }
+
+      .unit-1 {
+        .narrowerThanMedium({
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 4vh;
+          max-width: 95%;
+          height: auto;
+        });
+      }
+
+      .unit-2 {
+        .narrowerThanMedium({
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 4vh;
+          max-width: 95%;
+          height: auto;
+        });
+      }
+
+      .unit-3 {
+        margin-top: 2vh;
+
+        .narrowerThanMedium({
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 4vh;
+          max-width: 95%;
+          height: auto;
+        });
+      }
+
+      .unit-4 {
+        margin-top: 2vh;
+
+        .narrowerThanMedium({
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 4vh;
+          max-width: 95%;
+          height: auto;
+        });
+      }
+
+    }
+
+    .slogan-row::after {
+      content: " ";
+      display: block; 
+      height: 0; 
+      clear: both;
+    }
+
+    .bottom-slogan {
+      margin-top: 10.3vh;
+      font-family:PingFangSC-Regular;
+      font-size:24px;
+      color:#666666;
+      text-align:center;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
   }
 }

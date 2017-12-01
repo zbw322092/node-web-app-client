@@ -1,4 +1,5 @@
 import Component from 'inferno-component';
+declare function require(path: string);
 
 interface JobDetailProps {
 	jobDetail: Array<JobDetailObj>
@@ -66,9 +67,9 @@ export default class JoinUs extends Component<any, any> {
 								props.jobDetail.map((item, index) => {
 									const elementClassName = index === this.state.activeJobIndex ? 'dark-bg' : '';
 
-									return <div 
-									className={`job-title-unit ${elementClassName}`}
-									onClick={this.showJobContent.bind(this,index)}>
+									return <div
+										className={`job-title-unit ${elementClassName}`}
+										onClick={this.showJobContent.bind(this, index)}>
 										<div>{item.jobTitle}</div>
 									</div>
 
@@ -85,15 +86,59 @@ export default class JoinUs extends Component<any, any> {
 						{
 							props.jobDetail.map((item, index) => {
 								const elementClassName = index === this.state.activeJobIndex ? '' : 'content-not-display';
-									return <div className={`content-wrapper ${elementClassName}`}>
-										<div class="job-title">{item.jobTitle}</div>
-										<div className="job-content" dangerouslySetInnerHTML={{ __html: item.jobContent }}>
-										</div>
+								return <div className={`content-wrapper ${elementClassName}`}>
+									<div class="job-title">{item.jobTitle}</div>
+									<div className="job-content" dangerouslySetInnerHTML={{ __html: item.jobContent }}>
 									</div>
+								</div>
 							})
 						}
 					</div>
 				</div>
+			</div>
+		};
+
+		const WorkEnvironment = () => {
+			return <div className="work-environment">
+				<div className="panel-slogan">不来感受一下太可惜！</div>
+				<div className="slogan-row">
+					<div className="img-container img-container-1">
+						<img className="slogan-unit unit-1"
+							src={require(`../assets/views/joinus/img-work-env-1.png`)}></img>
+						<div class="text-container">
+							<div class="main-text">员工福利</div>
+							<div class="sub-text">每周欢乐午餐 欢乐分离时刻</div>
+						</div>
+					</div>
+
+					<div className="img-container img-container-2">
+						<img className="slogan-unit unit-2"
+							src={require(`../assets/views/joinus/img-work-env-2.png`)}></img>
+						<div class="text-container">
+							<div class="main-text">保险保障</div>
+							<div class="sub-text">关爱您如同关爱家人</div>
+						</div>
+					</div>
+				</div>
+				<div className="slogan-row">
+					<div className="img-container img-container-3">
+						<img className="slogan-unit unit-3"
+							src={require(`../assets/views/joinus/img-work-env-3.png`)}></img>
+						<div class="text-container">
+							<div class="main-text">我们赞成生活工作两不误</div>
+							<div class="sub-text">每周欢乐午餐 欢乐分离时刻</div>
+						</div>
+					</div>
+					<div className="img-container img-container-4">
+						<img className="slogan-unit unit-4"
+							src={require(`../assets/views/joinus/img-work-env-4.png`)}></img>
+						<div class="text-container">
+							<div class="main-text">人性化的工作制</div>
+							<div class="sub-text">扁平化管理</div>
+						</div>
+					</div>
+				</div>
+				<div className="bottom-slogan">SHANCE · OUTSTANDING · EXTRAORDINARY</div>
 			</div>
 		};
 
@@ -260,6 +305,7 @@ export default class JoinUs extends Component<any, any> {
 		return <div className="view-join-us">
 			<TopScrollPanel />
 			<JobDetail jobDetail={jobDetail} />
+			<WorkEnvironment />
 		</div>;
 	}
 };
