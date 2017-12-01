@@ -32,6 +32,12 @@ https://css-tricks.com/snippets/css/transparent-background-images/ <br>
 [5] How to make div not larger than its contents?
 https://stackoverflow.com/a/3917059/6498272 <br>
 
+[6] The Shapes of CSS
+https://css-tricks.com/examples/ShapesOfCSS/ <br>
+
+[7] Infinite All-CSS Scrolling Slideshow
+https://css-tricks.com/infinite-all-css-scrolling-slideshow/ <br>
+
 ## responsive
 [1] Responsive Web Design Basics
 https://developers.google.com/web/fundamentals/design-and-ux/responsive/ <br>
@@ -85,6 +91,11 @@ https://alistapart.com/article/creating-intrinsic-ratios-for-video <br>
 
 [4] CSS vw and vh Units: Are They Worth Using Yet?
 https://www.weareconvoy.com/2014/07/css-vw-and-vh-units-are-they-worth-using-yet/ <br>
+
+[5] Sticky Positioning with Nothing but CSS
+https://webdesign.tutsplus.com/tutorials/sticky-positioning-with-nothing-but-css--cms-24042 <br>
+
+
 
 
 # React/Inferno

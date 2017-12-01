@@ -1,0 +1,103 @@
+@import (reference) '../common.less';
+
+.view-join-us {
+  .top-scroll-panel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .my-skills-shape {
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      border-left: 144px solid transparent;
+      border-right: 144px solid transparent;
+      border-top: 248px solid #fe5532;
+      opacity: 1;
+      z-index: 1000;
+    }
+
+    .my-skills-text {
+      position: absolute;
+      font-family:PingFangSC-Semibold;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      font-size:35px;
+      color:#000000;
+      letter-spacing:0.9px;
+      z-index: 1500;
+      margin-top: -35px;
+    }
+
+    .text-scroll-wrapper {
+      position: absolute;
+      max-width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      animation: slideshow 120s linear infinite;
+      .jobs-container {
+        .job {
+          font-family:PingFangSC-Semibold;
+          font-size:35px;
+          letter-spacing:0.9px;
+          line-height:67px;
+        }
+    
+        .red-text {
+          color:#f44c3f;
+        }
+    
+        .dark-text {
+          color:#333333;
+        }
+      }
+    }
+
+    @keyframes slideshow {
+      0%    { top: 0; }
+      100%  { top: -2000%; }
+    }
+  }
+
+  .job-detail {
+    width: 100%;
+    background: #f8f8f8;
+    padding-top: 60px;
+    padding-bottom: 68px;
+
+    .content-wrapper {
+      max-width: 1005px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .job-title-panel {
+      position: relative;
+      display: inline-block;
+      background:#fe5532;
+      box-shadow:0 0 28px 0 rgba(0,0,0,0.09);
+      width:500px;
+      height:614px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .job-content-panel {
+      position: relative;
+      display: inline-block;
+      width:500px;
+      height:614px;
+      box-shadow:0 0 28px 0 rgba(0,0,0,0.09);
+      background: #ffffff;
+      font-family:PingFangSC-Semibold;
+      font-size:24px;
+      color:#333333;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
