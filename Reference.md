@@ -38,6 +38,16 @@ https://css-tricks.com/examples/ShapesOfCSS/ <br>
 [7] Infinite All-CSS Scrolling Slideshow
 https://css-tricks.com/infinite-all-css-scrolling-slideshow/ <br>
 
+[8] border-collapse
+https://css-tricks.com/almanac/properties/b/border-collapse/ <br>
+
+[9] How to make borders collapse (on a div)?
+https://stackoverflow.com/a/17915911/6498272 <br>
+
+[10] Margin on child element moves parent element
+https://stackoverflow.com/questions/1762539/margin-on-child-element-moves-parent-element <br>
+
+
 ## responsive
 [1] Responsive Web Design Basics
 https://developers.google.com/web/fundamentals/design-and-ux/responsive/ <br>

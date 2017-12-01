@@ -39,7 +39,7 @@
       max-width: 100%;
       padding-left: 5%;
       padding-right: 5%;
-      animation: slideshow 120s linear infinite;
+      animation: slideshow 200s linear infinite;
       .jobs-container {
         .job {
           font-family:PingFangSC-Semibold;
@@ -63,7 +63,10 @@
       100%  { top: -2000%; }
     }
   }
+}
 
+
+.view-join-us {
   .job-detail {
     width: 100%;
     background: #f8f8f8;
@@ -85,6 +88,54 @@
       height:614px;
       margin-left: auto;
       margin-right: auto;
+      overflow: hidden;
+
+      .work-here {
+        width: 422px;
+        height: 40px;
+        .background('views/joinus/icon-we-work-here.png');
+        margin-top: 90px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .job-title-list {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        border-collapse: collapse;
+        .job-title-unit {
+          display: table-row;
+          cursor: pointer;
+          
+          div {
+            display: table-cell;
+            width: 215px;
+            border: 1px solid #333333;
+            height: 50px;
+            font-family:PingFangSC-Semibold;
+            font-size:18px;
+            color:#ffffff;
+            text-align:center;
+            vertical-align: middle;            
+          }
+        }
+
+        .dark-bg {
+          background:#000000;
+        }
+      }
+
+      .job-contact {
+        position: relative;
+        font-family:PingFangSC-Semibold;
+        font-size:18px;
+        color:#000000;
+        text-align:center;
+        margin-top: 62px;
+        overflow: hidden;
+      }
     }
     .job-content-panel {
       position: relative;
@@ -93,11 +144,34 @@
       height:614px;
       box-shadow:0 0 28px 0 rgba(0,0,0,0.09);
       background: #ffffff;
-      font-family:PingFangSC-Semibold;
-      font-size:24px;
-      color:#333333;
-      margin-left: auto;
-      margin-right: auto;
+      overflow: scroll;
+      box-sizing: border-box;
+
+      .content-wrapper {
+        width: 90%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .content-not-display {
+        display: none;
+      }
+
+      .job-title {
+        font-family:PingFangSC-Semibold;
+        font-size:24px;
+        color:#333333;
+        text-align:left;
+      }
+      .job-content {
+        font-family:PingFangSC-Semibold;
+        font-size:14px;
+        color:#666666;
+        text-align:left;
+        margin-top: 20px;
+      }
     }
   }
 }
