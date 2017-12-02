@@ -1,0 +1,2 @@
+import './zh';
+import './en';

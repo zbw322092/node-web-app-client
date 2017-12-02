@@ -1,5 +1,6 @@
 import Component from 'inferno-component';
 import { Link } from 'inferno-router';
+import i18n from '../../i18n';
 
 interface topBannerProps {
 	sloganCn: string;
@@ -33,12 +34,38 @@ interface weOfferList {
 };
 
 export default class Home extends Component<any, any> {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      lng: 'zh'
+    }
+  }
+
+  componentDidMount() {
+    i18n.on('languageChanged', this.onLanguageChanged)
+  }
+
+  componentWillUnmount() {
+    i18n.off('languageChanged', this.onLanguageChanged)
+  }
+
+  onLanguageChanged(lng) {
+		console.log(lng)
+    this.setState({
+      lng: lng
+    })
+  }
+
+
 	render() {
+		let lng = this.state.lng;		
 
 		const TopBanner = (props: topBannerProps) => {
-			return <div className="home-top-banner">
+			return <div className="home-top-banner" onClick={this.onLanguageChanged.bind(this,'en')}>
 				<div className="panel-container">
-					<div className="slogan-cn">{props.sloganCn}</div>
+					{/* <div className="slogan-cn">{props.sloganCn}</div> */}
+					<div className="slogan-cn">{ i18n.t('home.label', {lng}) }</div>
 					<div className="slogan-en">{props.sloganEn}</div>
 				</div>
 			</div>

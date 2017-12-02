@@ -50,6 +50,9 @@ https://stackoverflow.com/questions/1762539/margin-on-child-element-moves-parent
 [11] How do you keep parents of floated elements from collapsing? [duplicate]
 https://stackoverflow.com/a/11597829/6498272 <br>
 
+[12] Text Blocks Over Image
+https://css-tricks.com/text-blocks-over-image/ <br>
+
 ## responsive
 [1] Responsive Web Design Basics
 https://developers.google.com/web/fundamentals/design-and-ux/responsive/ <br>

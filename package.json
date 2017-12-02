@@ -11,6 +11,7 @@
     "start": "webpack-dev-server --config webpack/config/webpack.config.dev.js --inline"
   },
   "dependencies": {
+    "i18next": "^10.2.1",
     "inferno": "^3.4.3",
     "inferno-component": "^3.4.3",
     "inferno-router": "^3.10.1",
