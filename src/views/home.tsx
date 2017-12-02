@@ -59,13 +59,13 @@ export default class Home extends Component<any, any> {
 
 
 	render() {
-		let lng = this.state.lng;		
+		// let lng = this.state.lng;		
 
 		const TopBanner = (props: topBannerProps) => {
 			return <div className="home-top-banner" onClick={this.onLanguageChanged.bind(this,'en')}>
 				<div className="panel-container">
-					{/* <div className="slogan-cn">{props.sloganCn}</div> */}
-					<div className="slogan-cn">{ i18n.t('home.label', {lng}) }</div>
+					<div className="slogan-cn">{props.sloganCn}</div>
+					{/* <div className="slogan-cn">{ i18n.t('home.label', {lng}) }</div> */}
 					<div className="slogan-en">{props.sloganEn}</div>
 				</div>
 			</div>

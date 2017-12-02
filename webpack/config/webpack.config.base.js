@@ -3,6 +3,8 @@ const paths = require('../../config/paths.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ENV = process.env.NODE_ENV || 'development';
+const isProd = ENV === 'production';
 
 module.exports = {
   entry: {
@@ -10,7 +12,7 @@ module.exports = {
   },
   output: {
     path: paths.public,
-    filename: "[name].bundle.js"
+    filename: `[name].[hash].bundle.js`
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
@@ -25,7 +27,7 @@ module.exports = {
         use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            { loader: "css-loader", options: { sourceMap: true } }
+            { loader: "css-loader", options: { minimize: isProd, sourceMap: true } }
           ]
         }))
       },
@@ -34,7 +36,7 @@ module.exports = {
         use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            { loader: "css-loader", options: { sourceMap: true }},
+            { loader: "css-loader", options: { minimize: isProd, sourceMap: true }},
             { 
               loader: "postcss-loader", 
               options: {
@@ -85,11 +87,12 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: "[name].bundle.css",
+      filename: `[name].[hash].bundle.css`,
       allChunks: true
     }),
     new CleanWebpackPlugin(
       [paths.public], {
+        root: process.cwd(),
         verbose: true
       }
     ),
