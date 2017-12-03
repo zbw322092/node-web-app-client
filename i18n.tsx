@@ -7,7 +7,9 @@ i18next
     },
     "debug": true,
     "whitelist": ['zh-CN', 'en-US'],
-    "lng": "zh-CN"
+    "load": "currentOnly",
+    "lng": "zh-CN",
+    "fallbackLng": "zh-CN"
   })
 
 export default i18next;

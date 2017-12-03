@@ -38,7 +38,7 @@ export default class Home extends Component<any, any> {
 	constructor(props) {
 		super(props)
 		this.state = {
-			lng: 'zh-CN'
+			lng: i18n.language
 		}
 	}
 
@@ -47,7 +47,7 @@ export default class Home extends Component<any, any> {
 	}
 
 	componentWillMount() {
-		i18n.addResources('zh-CN', 'translation', {
+		i18n.addResourceBundle('zh-CN', 'translation', {
 			sloganCn: '闪策 · 闪耀策略的光芒',
 			sloganEn: 'SHANCE · MAKE YOUR STRATEGY SHINE',
 			targetCustomerTitle: '定位于高端用户',
@@ -58,8 +58,10 @@ export default class Home extends Component<any, any> {
 				text3: '专业量化交易<br/>自营团队',
 				text4: '量化机构'
 			},
-			sloganPanelMainText: '您专心策略',
-			sloganPanelSubText: '我们专注技术',
+			sloganPanelMainText1: '您专心策略',
+			sloganPanelSubText1: 'You Own Strategy',
+			sloganPanelMainText2: '我们专注技术',
+			sloganPanelSubText2: 'We Pursue Technology',
 			weOfferTitle: '我们提供',
 			weOfferSubTitle: '闪策 · 基于API的交易系统解决方案和服务的独立供应商',
 			weOfferListText: {
@@ -75,42 +77,45 @@ export default class Home extends Component<any, any> {
 			weOfferBtnText: '查看产品介绍'
 		});
 
-		i18n.addResources('en-US', 'translation', {
+		i18n.addResourceBundle('en-US', 'translation', {
 			sloganCn: 'SHANCE · MAKE YOUR STRATEGY SHINE',
 			sloganEn: '闪策 · 闪耀策略的光芒',
-			targetCustomerTitle: 'soooooooooooo',
-			targetCustomerSubTitle: 'tttatatatatatatatatatatdttdtdt',
+			targetCustomerTitle: 'Designed For High-end Users',
+			targetCustomerSubTitle: 'SHANCE · GLOBAL LEADER HIGH PERFORMANCE QUANTITATIVE TRADING SYSTEM SOLUTIONS',
 			targetCustomerItemtext: {
-				text1: '私募',
-				text2: '公募',
-				text3: '专业量化交易<br/>自营团队',
-				text4: '量化机构'
+				"text1": 'private placement',
+				"text2": 'public offering',
+				"text3": 'quantitative trading institution',
+				"text4": 'professional quantitative<br/>trading team'
 			},
-			sloganPanelMainText: '您专心策略',
-			sloganPanelSubText: '我们专注技术',
-			weOfferTitle: '我们提供',
-			weOfferSubTitle: '闪策 · 基于API的交易系统解决方案和服务的独立供应商',
+			sloganPanelMainText1: 'You Own Strategy',
+			sloganPanelSubText1: '',
+			sloganPanelMainText2: 'We Pursue Technology',
+			sloganPanelSubText2: '',
+			weOfferTitle: 'We Provide',
+			weOfferSubTitle: `SHANCE · LEADING INDEPENDENT PROVIDER OF API-BASED 
+			MARKET DATA AND TRADING SYSTEM SERVICES`,
 			weOfferListText: {
-				text1: '高度定制化的超低延迟市场行情数据解决方案，微秒级时间戳',
-				text2: '经过实战检验、高速高效、高性能表现的平台',
-				text3: '用于市场行情数据传输的优化的二进制协议',
-				text4: '顶尖硬件设备（服务器及网络设备）及完美调优的运行环境',
-				text5: '对股票、期货、期权交易的支持',
-				text6: '全球覆盖，同一套通用API',
-				text7: '结合光纤和微波技术的优化的市场行情数据链',
-				text8: '与上海证券交易所及中国所有期货交易所的低延迟通道'
+				text1: `Highly customizable ultra-low latency market data solutions, 
+				microseconds timestamps`,
+				text2: `Stable, high-speed, efficient high-performance platform`,
+				text3: `Optimized binary protocol for market data dissemination`,
+				text4: `Top hardware (server and network infrastructure) and perfectly-tuned operating environment`,
+				text5: `Support stocks, futures and options trading`,
+				text6: `Global coverage & Single API`,
+				text7: `Optimized Market Data Chain, combining fiber and microwave technologies`,
+				text8: `Low-delay channels to Shanghai Stock Exchange and all futures exchanges in China`
 			},
-			weOfferBtnText: '查看产品介绍'
+			weOfferBtnText: `View product introduction`
 		});
 
 		i18n.off('languageChanged', this.onLanguageChanged.bind(this))
 	}
 
 	onLanguageChanged(lng) {
-		console.log(lng)
 		this.setState({
 			lng: lng
-		})
+		});
 	}
 
 
@@ -118,10 +123,10 @@ export default class Home extends Component<any, any> {
 		let lng = this.state.lng;
 
 		const TopBanner = (props: topBannerProps) => {
-			return <div className="home-top-banner" onClick={this.onLanguageChanged.bind(this, 'en-US')}>
+			return <div className="home-top-banner">
 				<div className="panel-container">
-					<div className="slogan-cn">{i18n.t('sloganCn', { lng })}</div>
-					<div className="slogan-en">{i18n.t('sloganEn', { lng })}</div>
+					<div className="slogan-cn">{props.sloganCn}</div>
+					<div className="slogan-en">{props.sloganEn}</div>
 				</div>
 			</div>
 		};
@@ -146,18 +151,18 @@ export default class Home extends Component<any, any> {
 		const SloganPanel = (props) => {
 			return <div className="home-slogan-panel">
 				<div className="slogan-text">
-					<div className="main-text">您专心策略</div>
-					<div className="sub-text">You Own Strategy</div>
-					<div className="main-text second-group-text">我们专注技术</div>
-					<div className="sub-text">We Pursue Technology</div>
+					<div className="main-text">{i18n.t('sloganPanelMainText1', { lng })}</div>
+					<div className="sub-text">{i18n.t('sloganPanelSubText1', { lng })}</div>
+					<div className="main-text second-group-text">{i18n.t('sloganPanelMainText2', { lng })}</div>
+					<div className="sub-text">{i18n.t('sloganPanelSubText2', { lng })}</div>
 				</div>
 			</div>
 		};
 
 		const WeOffer = (props: weOfferProps) => {
 			return <div className="home-we-offer">
-				<div className="panel-title">{props.title}</div>
-				<div className="panel-sub-title">{props.subTitle}</div>
+				<div className="panel-title">{i18n.t('weOfferTitle', { lng })}</div>
+				<div className="panel-sub-title">{i18n.t('weOfferSubTitle', { lng })}</div>
 				<div className="pure-g info-list">
 					<div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 left-list">
 						{
@@ -189,19 +194,19 @@ export default class Home extends Component<any, any> {
 		const TargetCustomerRowArr = [
 			{
 				itemClass: 'icon-private-placement',
-				itemText: '私募'
+				itemText: i18n.t('targetCustomerItemtext.text1', { lng })
 			},
 			{
 				itemClass: 'icon-public-placement',
-				itemText: '公募'
+				itemText: i18n.t('targetCustomerItemtext.text2', { lng })
 			},
 			{
 				itemClass: 'icon-quantitative-trading',
-				itemText: '专业量化交易<br/>自营团队'
+				itemText: i18n.t('targetCustomerItemtext.text3', { lng })
 			},
 			{
 				itemClass: 'icon-quantitative-organization',
-				itemText: '量化机构'
+				itemText: i18n.t('targetCustomerItemtext.text4', { lng })
 			}
 		];
 
@@ -209,54 +214,56 @@ export default class Home extends Component<any, any> {
 			leftList: [
 				{
 					itemClass: 'icon-we-offer-1',
-					itemText: '高度定制化的超低延迟市场行情数据解决方案，微秒级时间戳'
+					itemText: i18n.t('weOfferListText.text1', { lng })
 				},
 				{
 					itemClass: 'icon-we-offer-3',
-					itemText: '用于市场行情数据传输的优化的二进制协议'
+					itemText: i18n.t('weOfferListText.text3', { lng })
 				},
 				{
 					itemClass: 'icon-we-offer-5',
-					itemText: '对股票、期货、期权交易的支持'
+					itemText: i18n.t('weOfferListText.text5', { lng })
 				},
 				{
 					itemClass: 'icon-we-offer-7',
-					itemText: '结合光纤和微波技术的优化的市场行情数据链'
+					itemText: i18n.t('weOfferListText.text7', { lng })
 				}
 			],
 			rightList: [
 				{
 					itemClass: 'icon-we-offer-2',
-					itemText: '经过实战检验、高速高效、高性能表现的平台'
+					itemText: i18n.t('weOfferListText.text2', { lng })
 				},
 				{
 					itemClass: 'icon-we-offer-4',
-					itemText: '顶尖硬件设备（服务器及网络设备）及完美调优的运行环境'
+					itemText: i18n.t('weOfferListText.text4', { lng })
 				},
 				{
 					itemClass: 'icon-we-offer-6',
-					itemText: '全球覆盖，同一套通用API'
+					itemText: i18n.t('weOfferListText.text6', { lng })
 				},
 				{
 					itemClass: 'icon-we-offer-8',
-					itemText: '与上海证券交易所及中国所有期货交易所的低延迟通道'
+					itemText: i18n.t('weOfferListText.text8', { lng })
 				}
 			]
 		};
 
 
 		return <div className="view-home">
-			<TopBanner sloganCn="闪策 · 闪耀策略的光芒" sloganEn="SHANCE · MAKE YOUR STRATEGY SHINE" />
+			<TopBanner 
+			sloganCn={i18n.t('sloganCn', { lng })} 
+			sloganEn={i18n.t('sloganEn', { lng })} />
 			<TargetCustomer
-				title="定位于高端用户"
-				subTitle="闪策 · 低延迟高性能量化交易系统解决方案的世界一流领军者"
+				title={i18n.t('targetCustomerTitle', { lng })}
+				subTitle={i18n.t('targetCustomerSubTitle', { lng })}
 				rowArr={TargetCustomerRowArr} />
 			<SloganPanel />
 			<WeOffer
-				title="我们提供"
-				subTitle="闪策 · 基于API的交易系统解决方案和服务的独立供应商"
+				title={i18n.t('weOfferTitle', { lng })}
+				subTitle={i18n.t('weOfferSubTitle', { lng })}
 				offerObj={weOfferObj}
-				btnText="查看产品介绍" />
+				btnText={i18n.t('weOfferBtnText', { lng })} />
 		</div>;
 	}
 };
