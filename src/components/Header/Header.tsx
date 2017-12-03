@@ -1,13 +1,15 @@
 import Component from 'inferno-component'
 import { Link } from 'inferno-router';
 import './header.less';
+import i18n from '../../../i18n';
 
 export default class Header extends Component<any, any> {
 
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false
+      menuOpen: false,
+      langSelected: 'zh-CN'
     };
   }
 
@@ -23,6 +25,22 @@ export default class Header extends Component<any, any> {
     });
   }
 
+  changeToZh = () => {
+    this.setState({
+      menuOpen: false,
+      langSelected: 'zh-CN'
+    });
+    i18n.changeLanguage('zh-CN');
+  }
+
+  changeToEn = () => {
+    this.setState({
+      menuOpen: false,
+      langSelected: 'en-US'
+    });
+    i18n.changeLanguage('en-US');
+  }
+
   render() {
     return (
       <div className="header">
@@ -36,8 +54,10 @@ export default class Header extends Component<any, any> {
           <Link activeClassName="selected" onClick={this.navHandler} to="/contact">联系我们<div className="hover-underline"></div></Link>
 
           <span class="lang">
-            <a className="lang-cn blue" onClick={this.navHandler}>中文</a>
-            <a className="lang-en" onClick={this.navHandler}>/ENGLISH</a>
+            <a className={`lang-cn ${this.state.langSelected === 'zh-CN' ? 'blue' : ''}`} 
+            onClick={this.changeToZh}>中文</a>
+            <a className={`lang-en ${this.state.langSelected === 'en-US' ? 'blue' : ''}`} 
+            onClick={this.changeToEn}>/ENGLISH</a>
           </span>
           <a className="login" onClick={this.navHandler}>登录</a>
         </nav>

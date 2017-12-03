@@ -5,19 +5,9 @@ i18next
     "interpolation": {
       "escapeValue": false,
     },
-    "lng": "zh",
-    "resources": {
-      "zh": {
-        "translation": {
-          "home": { "label": "首页", },
-        },
-      },
-      "en": {
-        "translation": {
-          "home": { "label": "Home", },
-        },
-      },
-    },
+    "debug": true,
+    "whitelist": ['zh-CN', 'en-US'],
+    "lng": "zh-CN"
   })
 
-export default i18next
+export default i18next;
