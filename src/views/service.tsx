@@ -1,5 +1,6 @@
 import Component from 'inferno-component';
 import * as tingle from '../../lib/dialog/tingle';
+import i18n from '../../i18n';
 
 declare function require(path: string);
 
@@ -17,7 +18,26 @@ export default class Service extends Component<any, any> {
 
 	constructor(props) {
 		super(props);
-		this.state = { seletorActiveIndex: 0 };
+		this.state = { 
+			seletorActiveIndex: 0,
+			lng: i18n.language
+		};
+	}
+
+	componentDidMount() {
+		i18n.on('languageChanged', this.onLanguageChanged.bind(this));
+	}
+
+	componentWillMount() {
+		i18n.addResourceBundle('zh-CN', 'translation', {
+
+		});
+
+		i18n.addResourceBundle('en-US', 'translation', {
+
+		});
+
+		i18n.off('languageChanged', this.onLanguageChanged.bind(this))
 	}
 
 	characteristicPopup = (tag: string): void => {
@@ -85,7 +105,14 @@ export default class Service extends Component<any, any> {
 		console.log('this.setState.seletorActiveIndex: ', this.state.seletorActiveIndex);
 	}
 
+	onLanguageChanged(lng) {
+		this.setState({
+			lng: lng
+		});
+	}
+
 	render() {
+		// let lng = this.state.lng;
 
 		const TopPanel = (props) => {
 			return <div className="service-top-panel">
