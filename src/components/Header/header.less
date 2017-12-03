@@ -1,16 +1,16 @@
+@import (reference) '../responsive.less';
 @imgPath: '../../assets/components/Header';
 
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 70px;
   top: 0;
-  z-index: 1000;
+  z-index: 100000;
   font-size: 14px;
+  background: #ffffff;;
   color: #333333;
   box-shadow: 0 9px 34px 0 rgba(0,0,0,0.08);
-  z-index: 1000;
-  background: #ffffff;
 
   .company-logo {
     position: relative;
@@ -22,6 +22,9 @@
     background: url('@{imgPath}/icon-company-logo-gloden.png') no-repeat;
     background-size: 100% 100%;
     margin-left: 20%;
+    .narrowerThanLG({ 
+      margin-left: 10%; 
+    });
   }
 
   nav {
@@ -34,14 +37,56 @@
     flex-wrap: nowrap;
     float: right;
     margin-right: 25%;
+    .narrowerThanLG({
+      width: 60%; 
+      margin-right: 15%;
+      border-bottom: 1px solid #e4e4e4;
+    });
+    .narrowerThanMedium({
+      position: absolute;
+      display: block;
+      visibility: hidden;
+      width: 100%;
+      top: 70px;
+      overflow-y: hidden;
+      transform: none;
+      margin-left: auto;
+      margin-right: auto;
+      background: #ffffff;
+    });
+
+    a {
+      .narrowerThanMedium({
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+      });
+    }
 
     .lang {
       margin-left: 6%;
+      cursor: pointer;
 
       .blue {
         color: #00a9f4;
       }
     }
+
+    .login {
+      cursor: pointer;
+    }
+  }
+
+  .show-toggle-nav {
+    visibility: visible;
+    animation: showToggleNav 0.2s linear;
+  }
+
+  @keyframes showToggleNav {
+    0%    { height: 0; }
+    100%  { height: 360px; }
   }
 
   a {
@@ -53,16 +98,77 @@
   a:visited {
     color: #333333;
   }
-  a:hover,
-  a.selected {
+
+  a.selected,
+  a:hover {
     .hover-underline {
       position: absolute;
-      background:#343434;
-      width:28px;
-      height:2px;
+      background: #343434;
+      width: 28px;
+      height: 2px;
       left: 50%;
       transform: translateX(-50%);
       margin-top: 6px;
+
+      .narrowerThanMedium({
+        position: relative;
+        // left: 0;
+        // transform: none;
+        margin-top: -8px;
+      });
     }
   }
+
+
+  // menu toggle
+  .custom-menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    display: none;
+
+    .narrowerThanMedium({ 
+      display: block;
+    });
+  }
+
+  .custom-menu-toggle .bar {
+    background-color: #333;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+  }
+
+  .custom-menu-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  .custom-menu-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .custom-menu-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
 }
