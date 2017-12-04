@@ -17,7 +17,8 @@ export default class JoinUs extends Component<any, any> {
 	constructor(props) {
 		super(props);
 		this.state = {
-			activeJobIndex: 0
+			activeJobIndex: 0,
+			lng: i18n.language
 		};
 	}
 

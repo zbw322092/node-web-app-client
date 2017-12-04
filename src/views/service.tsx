@@ -313,6 +313,8 @@ export default class Service extends Component<any, any> {
 			fontSize: this.state.lng === 'en-US' ? '18px' : '36px'
 		}
 
+		let platformServiceEn = this.state.lng === 'en-US' ? 'platform-service-en' : '';
+
 		const TopPanel = (props) => {
 			return <div className="service-top-panel">
 				<div className="small-img-container">
@@ -327,8 +329,8 @@ export default class Service extends Component<any, any> {
 		};
 
 		const PlatformService = (props) => {
-			return <div class="platform-service">
-				<div class="panel-wrapper">
+			return <div className={`platform-service ${platformServiceEn}`}>
+				<div className="panel-wrapper">
 					<div className="icon-our-services"></div>
 					<div className="panel-title">{i18n.t('serviceTitle', {lng})}</div>
 					<div className="click-area area-1" onClick={this.servicePopup.bind(this,'service1')}></div>

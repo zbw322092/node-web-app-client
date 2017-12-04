@@ -1,4 +1,5 @@
 import Component from 'inferno-component';
+import i18n from '../../i18n';
 
 interface Window {
 	BMap?: any;
@@ -11,6 +12,14 @@ interface Window {
 declare const window: Window;
 
 export default class Contact extends Component<any, any> {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			lng: i18n.language
+		};
+	}
+
 
 	baiduMap() {
 		const BMap = window.BMap;
@@ -58,14 +67,47 @@ export default class Contact extends Component<any, any> {
 	}
 
 	componentDidMount() {
-		this.baiduMap();
+		setTimeout(() => {
+			this.baiduMap();
+		},100);
+		i18n.on('languageChanged', this.onLanguageChanged.bind(this));
+	}
+
+	componentWillMount() {
+		i18n.addResourceBundle('zh-CN', 'translation',{
+			contactTopBannerText: '联系我们，了解我们如何通过技术帮助您提升交易表现。',
+			contactInfoLocation: '地址：中国上海市浦东新区世纪大道1198号世纪汇一座1002单元',
+			contactInfoTel1: '电话：+86 21 6859 7600（人事行政部）',
+			contactInfoTel2: '+86 21 6859 7706（产品市场部）',
+			contactInfoEmail: '邮件：info@shancetech.com'
+		});
+
+		i18n.addResourceBundle('en-US', 'translation', {
+			contactTopBannerText: `Contact us to see how we can help you to promote your 
+			trading performances.`,
+			contactInfoLocation: `Address：Unit 1002 Century Link Tower 1,1198 Century Avenue 
+			Pudong, Shanghai, China`,
+			contactInfoTel1: 'Phone： +86 21 6859 7600（ HR & Admin）',
+			contactInfoTel2: '+86 21 6859 7706（Product Marketing）',
+			contactInfoEmail: 'Email：info@shancetech.com'
+		});
+	}
+
+	onLanguageChanged(lng) {
+		setTimeout(() => {
+			this.baiduMap();
+		},100);
+		this.setState({
+			lng: lng
+		});
 	}
 
 	render() {
+		let lng = this.state.lng;
 
 		const ContactTopBanner = (props) => {
 			return <div className="contact-top">
-				<div className="panel-title">联系我们，了解我们如何通过技术帮助您提升交易表现。</div>
+				<div className="panel-title">{ i18n.t('contactTopBannerText', { lng }) }</div>
 			</div>
 		};
 
@@ -79,14 +121,14 @@ export default class Contact extends Component<any, any> {
 		const ContactInfo = (props) => {
 			return <div className="contact-info">
 				<div className="info-location">
-					地址：中国上海市浦东新区世纪大道1198号世纪汇一座1002单元
+					{ i18n.t('contactInfoLocation', { lng }) }
 				</div>
 				<div className="info-tel">
-					<div>电话：+86 21 6859 7600（人事行政部）</div>
-          <div>+86 21 6859 7706（产品市场部）</div>
+					<div>{ i18n.t('contactInfoTel1', { lng }) }</div>
+          <div>{ i18n.t('contactInfoTel2', { lng }) }</div>
 				</div>
 				<div className="info-email">
-					邮件：info@shancetech.com
+					{ i18n.t('contactInfoEmail', { lng }) }
 				</div>
 			</div>
 		};

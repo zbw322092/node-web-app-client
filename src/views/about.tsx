@@ -206,6 +206,7 @@ export default class About extends Component<any, any> {
 		let aboutUsIntroEn = lng === 'en-US' ? 'about-us-intro-en' : '';
 		let manageTeamEn = lng === 'en-US' ? 'manage-team-en' : '';
 		let greatTeamIntroEn = lng === 'en-US' ? 'team-intro-en' : '';
+		let ourMissionEn = lng === 'en-US' ? 'our-mission-en' : '';
 
 		const WhoWeAre = (props: WhoWeAreProps) => {
 			return <div className="about-us-panel">
@@ -298,7 +299,7 @@ export default class About extends Component<any, any> {
 		};
 
 		const OurMission = (props) => {
-			return <div className="our-mission">
+			return <div className={`our-mission ${ourMissionEn}`}>
 				<div className="panel-title">{ i18n.t('ourMission.title', { lng }) }</div>
 				<div className="panel-sub-title">{ i18n.t('ourMission.slogan', { lng }) }</div>
 			</div>

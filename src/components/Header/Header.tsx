@@ -94,8 +94,8 @@ export default class Header extends Component<any, any> {
           <span class="lang">
             <a className={`lang-cn ${this.state.lng === 'zh-CN' ? 'blue' : ''}`} 
             onClick={this.changeToZh}>中文</a>
-            <a className={`lang-en ${this.state.lng === 'en-US' ? 'blue' : ''}`} 
-            onClick={this.changeToEn}>/ENGLISH</a>
+            <span className="slash">/</span><a className={`lang-en ${this.state.lng === 'en-US' ? 'blue' : ''}`} 
+            onClick={this.changeToEn}>ENGLISH</a>
           </span>
           <a className="login" onClick={this.navHandler}>{i18n.t('login', { lng })}</a>
         </nav>

@@ -555,11 +555,17 @@
 }
 
 .view-about {
+  .our-mission-en {
+    background-image: url('../../assets/views/about/img-our-mission-en.png') !important;
+  }
   .our-mission {
     position: relative;
     width: 100%;
     height: 499px;
     .backgroundCover('views/about/img-our-mission.png');
+    .narrowerThanMedium({
+      background-position-x: 48% !important;
+    });
 
     .panel-title {
       position: relative;
