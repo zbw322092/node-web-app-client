@@ -33,7 +33,7 @@ export default class Header extends Component<any, any> {
       product: 'Products',
       service: 'Services',
       about: 'About Us',
-      joinus: 'Career at ShanCe',
+      joinus: 'Career',
       contact: 'Contact',
       login: 'LOGIN'
 		});
@@ -65,6 +65,7 @@ export default class Header extends Component<any, any> {
       lng: 'zh-CN'
     });
     i18n.changeLanguage('zh-CN');
+    localStorage.setItem('i18nextLng','zh-CN');
   }
 
   changeToEn = () => {
@@ -73,6 +74,7 @@ export default class Header extends Component<any, any> {
       lng: 'en-US'
     });
     i18n.changeLanguage('en-US');
+    localStorage.setItem('i18nextLng','en-US');
   }
 
   render() {

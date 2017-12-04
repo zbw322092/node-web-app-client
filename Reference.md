@@ -60,6 +60,9 @@ https://stackoverflow.com/a/11597829/6498272 <br>
 [12] Text Blocks Over Image
 https://css-tricks.com/text-blocks-over-image/ <br>
 
+[13] Vertically Center Multi-Lined Text
+https://css-tricks.com/vertically-center-multi-lined-text/ <br>
+
 ## responsive
 [1] Responsive Web Design Basics
 https://developers.google.com/web/fundamentals/design-and-ux/responsive/ <br>
