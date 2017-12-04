@@ -25,8 +25,7 @@ export default class JoinUs extends Component<any, any> {
 	showJobContent = (index) => {
 		console.log(index);
 		this.setState({
-			activeJobIndex: index,
-			lng: i18n.language
+			activeJobIndex: index
 		});
 	}
 
@@ -44,7 +43,7 @@ export default class JoinUs extends Component<any, any> {
 			job: {
 				job1: {
 					name: '前端开发工程师',
-					skills: 'JavaScript HTML5 CSS3 React Redux ',
+					skills: ' JavaScript HTML5 CSS3 React Redux ',
 					content: `
 						工作地点：上海<br /><br />
 						职位描述<br />
@@ -449,6 +448,18 @@ export default class JoinUs extends Component<any, any> {
 		});
 	}
 
+	showJobDetail (index) {
+		const jobDetailElement = document.getElementById('jobDetail');
+		if (jobDetailElement !== null) {
+			jobDetailElement.scrollIntoView({
+				behavior: 'smooth',
+				block: "start",
+				inline: "start"
+			});
+		}
+		this.showJobContent(index);
+	}
+
 	render() {
 		let lng = this.state.lng;
 
@@ -458,20 +469,20 @@ export default class JoinUs extends Component<any, any> {
 			while (i < 100) {
 				JobContainer.push(
 					<span className="jobs-container">
-						<span className="job job-1 dark-text">
-							<span className="red-text">{ i18n.t('job.job1.name', { lng }) }</span>{ i18n.t('job.job1.skills', { lng }) }
+						<span className="job job-1" onClick={this.showJobDetail.bind(this, 0)}>
+							<span className="red-text">{ i18n.t('job.job1.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job1.skills', { lng }) }</span>
 						</span>
-						<span className="job job-2 dark-text">
-							<span className="red-text">{ i18n.t('job.job2.name', { lng }) }</span>{ i18n.t('job.job2.skills', { lng }) }
+						<span className="job job-2" onClick={this.showJobDetail.bind(this, 1)}>
+							<span className="red-text">{ i18n.t('job.job2.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job2.skills', { lng }) }</span>
 						</span>
-						<span className="job job-3 dark-text">
-							<span className="red-text">{ i18n.t('job.job3.name', { lng }) }</span>{ i18n.t('job.job3.skills', { lng }) }
+						<span className="job job-3" onClick={this.showJobDetail.bind(this, 2)}>
+							<span className="red-text">{ i18n.t('job.job3.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job3.skills', { lng }) }</span>
 						</span>
-						<span className="job job-4 dark-text">
-							<span className="red-text">{ i18n.t('job.job4.name', { lng }) }</span>{ i18n.t('job.job4.skills', { lng }) }
+						<span className="job job-4" onClick={this.showJobDetail.bind(this, 3)}>
+							<span className="red-text">{ i18n.t('job.job4.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job4.skills', { lng }) }</span>
 						</span>
-						<span className="job job-5 dark-text">
-							<span className="red-text">{ i18n.t('job.job5.name', { lng }) }</span>{ i18n.t('job.job5.skills', { lng }) }
+						<span className="job job-5" onClick={this.showJobDetail.bind(this, 4)}>
+							<span className="red-text">{ i18n.t('job.job5.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job5.skills', { lng }) }</span>
 						</span>
 					</span>
 				);
@@ -491,7 +502,7 @@ export default class JoinUs extends Component<any, any> {
 		}
 
 		const JobDetail = (props: JobDetailProps) => {
-			return <div className="job-detail">
+			return <div id="jobDetail" className="job-detail">
 				<div className="content-wrapper">
 					<div className="job-title-panel">
 						<div class="work-here"></div>

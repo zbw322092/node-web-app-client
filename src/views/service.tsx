@@ -293,7 +293,6 @@ export default class Service extends Component<any, any> {
 		this.setState({
 			seletorActiveIndex: index
 		});
-		console.log('this.setState.seletorActiveIndex: ', this.state.seletorActiveIndex);
 	}
 
 	onLanguageChanged(lng) {

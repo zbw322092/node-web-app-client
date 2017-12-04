@@ -66,6 +66,9 @@ https://css-tricks.com/vertically-center-multi-lined-text/ <br>
 [14] Tab space instead of multiple non-breaking spaces (“nbsp”)?
 https://stackoverflow.com/a/1571662/6498272 <br>
 
+[15] Pause a WebKit animation on hover
+https://stackoverflow.com/questions/20052672/pause-a-webkit-animation-on-hover <br>
+
 ## responsive
 [1] Responsive Web Design Basics
 https://developers.google.com/web/fundamentals/design-and-ux/responsive/ <br>
