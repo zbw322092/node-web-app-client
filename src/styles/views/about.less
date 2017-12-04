@@ -21,6 +21,11 @@
         margin-top: 20%;
       });
     }
+    .panel-title-en {
+      .narrowerThanMedium({
+        margin-top: 5%;
+      });
+    }
     .about-us-intro {
       margin-top: 20px;
       width: 45%;
@@ -33,6 +38,12 @@
 
       .narrowerThanMedium({
         width: 80%;
+      });
+    }
+
+    .about-us-intro-en {
+      .narrowerThanMedium({
+        width: 95%;
       });
     }
 
@@ -106,6 +117,7 @@
       background-size: cover;
       width: 100%;
       height: 1035px;
+      margin-top: 50px;
     });
 
     .panel-icon {
@@ -184,7 +196,7 @@
           left: 0%;
           margin-left: auto;
           margin-right: auto;
-          margin-top: 20px;
+          // margin-top: 20px;
           background: none;
           width: 100%;
         });
@@ -230,16 +242,129 @@
     }
 
   }
+
+  // en override
+  .manage-team-en {
+    .narrowerThanLG({
+      background: url('../../assets/views/about/img-management-team-long-version.png') no-repeat center center;
+      background-size: cover;
+      width: 100%;
+      height: 1035px;
+      margin-top: 50px;
+    });
+
+    .team-intro {
+      max-height: 100%;
+
+      .left-intro {
+        position: relative;
+        width: 241px;
+        height: 436px;
+        left: 35%;
+        top: 25%;
+        .background('views/about/img-frame-left.png');
+
+        .narrowerThanLG({
+          width: 100%;
+          top: 0;
+          left: 0;
+          background: none; 
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 100px;
+        });
+
+        .intro-wrapper {
+          position: absolute;
+          top: 40px;
+          left: 50px;
+          width: 248px;
+
+          .narrowerThanLG({
+            width: 80%;
+            top: 0;
+            left: 0;
+            padding-left: 10%;
+            padding-right: 10%;
+          });
+
+          .intro-content {
+            min-width: 400px;
+            .narrowerThanLG({
+              min-width: auto;
+            });
+          }
+
+        }
+      }
+  
+      .right-intro {
+        position: relative;
+        width: 248px;
+        height: 436px;
+        left: 20%;
+        top: 25%;
+        .background('views/about/img-frame-right.png');
+
+        .narrowerThanLG({
+          top: 40px;
+          left: 0%;
+          margin-left: auto;
+          margin-right: auto;
+          background: none;
+          width: 100%;
+        });
+
+        .intro-wrapper {
+          position: absolute;
+          top: 40px;
+          left: 50px;
+          width: 312px;
+
+          .narrowerThanLG({
+            width: 80%;
+            top: 20px;
+            left: 0;
+            padding-left: 10%;
+            padding-right: 10%;
+          });
+        }
+      }
+
+      .intro-name {
+        font-family:PingFangSC-Semibold;
+        font-size:28px;
+        color:#ffffff;
+        text-align:left;
+      }
+
+      .intro-position {
+        font-family:PingFangSC-Semibold;
+        font-size:18px;
+        color:#00a9f4;
+        text-align:left;
+        margin-top: 12px;
+      }
+
+      .intro-content {
+        font-family:PingFangSC-Regular;
+        font-size:12px;
+        color:#ffffff;
+        text-align:left;
+        margin-top: 25px;
+      }
+    }
+  }
 }
 
 .view-about {
   .great-team {
     width: 100%;
-    height: 600px;
+    min-height: 600px;
     .backgroundCover('views/about/img-great-team.png');
 
     @media screen and (max-width: 59em)	 {
-      height: 1500px;
+      min-height: 1500px;
     }
 
     .panel-icon {
@@ -292,6 +417,12 @@
         @media screen and (max-width: 59em)	 {
           width: 100%;
         } 
+      }
+
+      .team-intro-en {
+        height:auto;
+        min-height: 570px;
+        margin-bottom: 40px;
       }
 
       .team-intro {
