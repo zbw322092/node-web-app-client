@@ -53,10 +53,13 @@ export default class Header extends Component<any, any> {
     });
   }
 
-  navHandler = () => {
+  navHandler = (index) => {
     this.setState({
       menuOpen: false
     });
+    if (index==='login') {
+      window.location.href = 'http://202.101.23.226:81/xwiki/bin/login/XWiki/XWikiLogin;jsessionid=9A7F8A74DE73323DE99F02EC10200C29?srid=T3ou25o2&xredirect=%2Fxwiki%2Fbin%2Fview%2FMain%2F%3Fsrid%3DT3ou25o2';
+    }
   }
 
   changeToZh = () => {
@@ -97,7 +100,7 @@ export default class Header extends Component<any, any> {
             <span className="slash">/</span><a className={`lang-en ${this.state.lng === 'en-US' ? 'blue' : ''}`} 
             onClick={this.changeToEn}>ENGLISH</a>
           </span>
-          <a className="login" onClick={this.navHandler}>{i18n.t('login', { lng })}</a>
+          <a className="login" onClick={this.navHandler.bind(this, 'login')}>{i18n.t('login', { lng })}</a>
         </nav>
 
         <a href="#" className={this.state.menuOpen ? `custom-menu-toggle x` : `custom-menu-toggle`} 

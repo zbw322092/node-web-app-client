@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base.js');
 
@@ -21,6 +22,12 @@ module.exports = merge(baseConfig, {
         compress: {
           drop_console: true
         }
+      }
+    }),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      pngquant: {
+        quality: '80-90'
       }
     })
   ]
