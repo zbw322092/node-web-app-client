@@ -63,6 +63,9 @@ https://css-tricks.com/text-blocks-over-image/ <br>
 [13] Vertically Center Multi-Lined Text
 https://css-tricks.com/vertically-center-multi-lined-text/ <br>
 
+[14] Tab space instead of multiple non-breaking spaces (“nbsp”)?
+https://stackoverflow.com/a/1571662/6498272 <br>
+
 ## responsive
 [1] Responsive Web Design Basics
 https://developers.google.com/web/fundamentals/design-and-ux/responsive/ <br>

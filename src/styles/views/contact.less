@@ -14,6 +14,13 @@
       font-size:30px;
       color:#ffffff;
       text-align:center;
+
+      .narrowerThanMedium({
+        top: 60px;
+        font-size:22px;
+        padding-left: 10%;
+        padding-right: 10%;
+      });
     }
   }
 }
@@ -21,7 +28,8 @@
 .view-contact {
   .map-panel {
     position: relative;
-    width:915px;
+    max-width:915px;
+    // max-width: 100%;
     height:401px;
     background:#ffffff;
     box-shadow:0 0 33px 0 rgba(0,0,0,0.12);
@@ -32,12 +40,53 @@
 
     .map-container {
       position: relative;
-      width: 875px;
+      max-width: 875px;
       height: 369px;
       top: 16px;
       margin-left: auto;
       margin-right: auto;
       box-sizing: border-box;
+    }
+
+    .contact-info {
+      position: absolute;
+      padding: 15px;
+      opacity:0.5;
+      background:#000000;
+      max-width:327px;
+      // height:154px;
+      left: 451px;
+      top: 128px;
+      z-index: 10000;
+      font-family:PingFangSC-Regular;
+      font-size:12px;
+      color:#ffffff;
+      text-align:left;
+      box-sizing: border-box;
+
+      .info-tel {
+        margin-top: 15px;
+        div:nth-child(2) {
+          padding-left:2.3rem
+        }
+      }
+
+      .info-email {
+        margin-top: 15px;
+      }
+
+      @media screen and (max-width: 875px)	 {
+        left: auto;
+        right: 10%;
+        top: 32%;
+      }
+      @media screen and (max-width: 414px)	 {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        top: 45%;
+        min-width: 300px;
+      }
     }
   }
 }
