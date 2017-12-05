@@ -205,6 +205,7 @@ export default class About extends Component<any, any> {
 		let panelTitleEn = lng === 'en-US' ? 'panel-title-en' : '';
 		let aboutUsIntroEn = lng === 'en-US' ? 'about-us-intro-en' : '';
 		let manageTeamEn = lng === 'en-US' ? 'manage-team-en' : '';
+		let manageTeamMd = lng === 'en-US' ? '' : 'pure-u-md-1-2';
 		let greatTeamIntroEn = lng === 'en-US' ? 'team-intro-en' : '';
 		let ourMissionEn = lng === 'en-US' ? 'our-mission-en' : '';
 
@@ -236,7 +237,7 @@ export default class About extends Component<any, any> {
 				<div className="panel-icon"></div>
 				<div className="panel-title">{i18n.t('managementTeamTitle', {lng})}</div>
 				<div className="pure-g">
-					<div class="pure-u-1 pure-u-lg-1-2 team-intro">
+					<div class={`pure-u-1 ${manageTeamMd} pure-u-lg-1-2 team-intro`}>
 						<div className="left-intro">
 							<div class="intro-wrapper">
 								<div className="intro-name">{i18n.t('managementTeam.ceo.name', {lng})}</div>
@@ -245,7 +246,7 @@ export default class About extends Component<any, any> {
 							</div>
 						</div>
 					</div>
-					<div class="pure-u-1 pure-u-lg-1-2 team-intro">
+					<div class={`pure-u-1 ${manageTeamMd} pure-u-lg-1-2 team-intro`}>
 						<div className="right-intro">
 							<div class="intro-wrapper">
 							<div className="intro-name">{i18n.t('managementTeam.cto.name', {lng})}</div>
