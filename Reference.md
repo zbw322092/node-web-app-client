@@ -192,3 +192,8 @@ https://hackernoon.com/polyfills-everything-you-ever-wanted-to-know-or-maybe-a-b
 
 [2] Best way to include babel-polyfill?
 https://forum.shakacode.com/t/best-way-to-include-babel-polyfill/802 <br>
+
+## HTML
+Open link in new tab or window [duplicate]
+https://stackoverflow.com/a/15551842/6498272 <br>
+
