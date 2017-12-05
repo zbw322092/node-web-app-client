@@ -69,6 +69,12 @@ https://stackoverflow.com/a/1571662/6498272 <br>
 [15] Pause a WebKit animation on hover
 https://stackoverflow.com/questions/20052672/pause-a-webkit-animation-on-hover <br>
 
+[16] How to remove the default link color of the html hyperlink 'a' tag?
+https://stackoverflow.com/a/6722667/6498272 <br>
+
+[17] 如何优雅的选择字体(font-family)
+https://segmentfault.com/a/1190000006110417 <br>
+
 ## responsive
 [1] Responsive Web Design Basics
 https://developers.google.com/web/fundamentals/design-and-ux/responsive/ <br>
@@ -126,7 +132,8 @@ https://www.weareconvoy.com/2014/07/css-vw-and-vh-units-are-they-worth-using-yet
 [5] Sticky Positioning with Nothing but CSS
 https://webdesign.tutsplus.com/tutorials/sticky-positioning-with-nothing-but-css--cms-24042 <br>
 
-
+[6] Fundamentals of Design
+https://www.codeschool.com/courses/fundamentals-of-design <br>
 
 
 # React/Inferno
