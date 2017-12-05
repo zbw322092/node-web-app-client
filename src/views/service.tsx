@@ -1,4 +1,5 @@
 import Component from 'inferno-component';
+import { Link } from 'inferno-router';
 import * as tingle from '../../lib/dialog/tingle';
 import i18n from '../../i18n';
 
@@ -32,10 +33,10 @@ export default class Service extends Component<any, any> {
 		i18n.addResourceBundle('zh-CN', 'translation', {
 			serviceTop: {
 				textTop: `闪策通过开创性的新方法，设计下一代基于云的分析技术，
-				利用其大数据和超低延迟交易的经验，着力于构建未来的金融生态系统。`,
+				利用其大数据和超低延迟交易技术研究的经验，着力于构建未来的金融科技生态系统。`,
 				textBottom: `From pioneering new approaches to design the
-				next generation of cloud based analytics, ShanCe leverages its deep experience with ultra low latency
-				trading and big data to build financial ecosystems of the future.`
+				next generation of cloud based analytics, ShanCe leverages its deep experience 
+				with big data and low latency trading technology to build Fin-tech ecosystems of the future.`
 			},
 			serviceTitle: '平台服务',
 			serviceName: {
@@ -128,8 +129,8 @@ export default class Service extends Component<any, any> {
 		i18n.addResourceBundle('en-US', 'translation', {
 			serviceTop: {
 				textTop: `From pioneering new approaches to design the
-				next generation of cloud based analytics, ShanCe leverages its deep experience with ultra low latency
-				trading and big data to build financial ecosystems of the future.`,
+				next generation of cloud based analytics, ShanCe leverages its deep experience with big 
+				data and low latency trading technology to build Fin-tech ecosystems of the future.`,
 				textBottom: ''
 			},
 			serviceTitle: 'Platform and Services',
@@ -330,7 +331,9 @@ export default class Service extends Component<any, any> {
 		const PlatformService = (props) => {
 			return <div className={`platform-service ${platformServiceEn}`}>
 				<div className="panel-wrapper">
-					<div className="icon-our-services"></div>
+					<div className="icon-our-services">
+						<Link to="/product"></Link>
+					</div>
 					<div className="panel-title">{i18n.t('serviceTitle', {lng})}</div>
 					<div className="click-area area-1" onClick={this.servicePopup.bind(this,'service1')}></div>
 					<div className="click-area area-2" onClick={this.servicePopup.bind(this,'service2')}></div>
@@ -404,7 +407,9 @@ export default class Service extends Component<any, any> {
 
 		const OurProductWhitePanel = (props) => {
 			return <div className="product-white-panel">
-				<div className="panel-icon"></div>
+				<div className="panel-icon">
+					<Link to="/product"></Link>
+				</div>
 			</div>
 		};
 

@@ -341,7 +341,7 @@ export default class About extends Component<any, any> {
 			<SloganPanel
 				sloganCn={i18n.t('sloganPanel3Top', {lng})}
 				sloganEn={i18n.t('sloganPanel3Botton', {lng})} />
-			<Partners parentsArr={['partner-1', 'partner-2', 'partner-3']} />
+			<Partners parentsArr={['partner-1', 'partner-2', 'partner-3', 'partner-4', 'partner-5']} />
 			<OurMission />
 		</div>;
 	}
