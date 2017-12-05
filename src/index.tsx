@@ -1,3 +1,4 @@
+import "babel-polyfill";
 import Inferno from 'inferno';
 import '../lib/pureCSS';
 import '../lib/matchMedia';

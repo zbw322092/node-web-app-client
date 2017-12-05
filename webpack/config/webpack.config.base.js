@@ -67,8 +67,8 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: [
-          'babel-loader', 
-          { 
+          'babel-loader',
+          {
             loader: 'ts-loader', 
             options: { 
               configFile: paths.tsconfigFile, 
@@ -80,7 +80,9 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        use: 'babel-loader',
+        use: [
+          'babel-loader',
+        ],
         exclude: /node_modules/
       }
     ]

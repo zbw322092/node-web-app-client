@@ -6,6 +6,8 @@
     "transform-class-properties",
     "transform-object-rest-spread",
     "babel-plugin-syntax-jsx",
+    "transform-es3-property-literals",
+    "transform-es3-member-expression-literals",
     ["babel-plugin-inferno", { "imports": true }]
   ]
 }

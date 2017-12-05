@@ -169,3 +169,26 @@ https://github.com/flyingant/react-scroll-to-component <br>
 
 [3] Page scrolling in vanilla JavaScript
 https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/ <br>
+
+# browser compatibility
+[1] react-ie8
+https://github.com/xcatliu/react-ie8 <br/>
+
+[2] react 项目的一个ie8兼容性问题
+http://www.aliued.com/?p=3240 <br/>
+
+[3] 使用 ES6 的浏览器兼容性问题
+http://www.jianshu.com/p/85a4319e3bf4 <br/>
+
+[4] 浏览器内核控制标签meta说明
+http://se.360.cn/v6/help/meta.html <br/>
+
+[5] 识别为chrome内核
+http://browser.qq.com/wiki/index.html#!index.md <br/>
+
+## todo
+[1] Polyfills: everything you ever wanted to know, or maybe a bit less
+https://hackernoon.com/polyfills-everything-you-ever-wanted-to-know-or-maybe-a-bit-less-7c8de164e423 <br>
+
+[2] Best way to include babel-polyfill?
+https://forum.shakacode.com/t/best-way-to-include-babel-polyfill/802 <br>
