@@ -87,7 +87,7 @@ export default class Product extends Component<any, any> {
 					交易团队实现最佳交易表现，开发和整合新的交易策略，达到风控及合规要求，使运营成本合理化。`
 				},
 				product5: {
-					productTitle: '智旭期权交易系统',
+					productTitle: '智旭INTELLICATOR',
 					productSubTitle: '金融衍生品交易系统',
 					productDesc: `智旭期权量化交易系统（IntelliCator）是一个主打灵活、快速、可定制的金融衍生品交易系统，
 					集成多来源优化行情、快速量化交易、多维度立体风控、实时报表反馈、高精度仿真回测等特性，旨在为专业的交易团

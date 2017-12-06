@@ -2,6 +2,8 @@ import Component from 'inferno-component'
 import './footer.less';
 import i18n from '../../../i18n';
 
+declare function require(path: string);
+
 export default class Footer extends Component<any, any> {
 
   constructor(props) {
@@ -47,7 +49,9 @@ export default class Footer extends Component<any, any> {
 
     return (
       <div className="footer">
-        <div className="footer-top"></div>
+        {/* <div className="footer-top"></div> */}
+        <img className="footer-top"
+        src={require("../../assets/components/Footer/img-footer-top.png")}></img>
         <div className="footer-middle">
           <div className="info-row">
             <div className="info-unit left-unit">

@@ -42,7 +42,7 @@
       max-width: 100%;
       padding-left: 5%;
       padding-right: 5%;
-      animation: slideshow 200s linear infinite;
+      animation: slideshow 300s linear infinite;
       .jobs-container {
         .job {
           // font-family:PingFangSC-Semibold;
@@ -223,6 +223,12 @@
       }
     }
   }
+  .job-detail::after { 
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
+ }
 }
 
 .view-join-us {

@@ -21,7 +21,12 @@ interface TeamIntroObj {
 }
 
 interface Partners {
-	parentsArr: Array<string>
+	parentsArr: Array<PartnersObj>
+}
+
+interface PartnersObj {
+	className: 'string',
+	link: 'string'
 }
 
 export default class About extends Component<any, any> {
@@ -205,17 +210,17 @@ export default class About extends Component<any, any> {
 		let panelTitleEn = lng === 'en-US' ? 'panel-title-en' : '';
 		let aboutUsIntroEn = lng === 'en-US' ? 'about-us-intro-en' : '';
 		let manageTeamEn = lng === 'en-US' ? 'manage-team-en' : '';
-		let manageTeamMd = lng === 'en-US' ? '' : 'pure-u-md-1-2';
+		// let manageTeamMd = lng === 'en-US' ? '' : 'pure-u-md-1-2';
 		let greatTeamIntroEn = lng === 'en-US' ? 'team-intro-en' : '';
 		let ourMissionEn = lng === 'en-US' ? 'our-mission-en' : '';
 
 		const WhoWeAre = (props: WhoWeAreProps) => {
 			return <div className="about-us-panel">
-				<div className={`panel-title ${panelTitleEn}`}>{i18n.t('whoWeAreTitle', {lng})}</div>
+				<div className={`panel-title ${panelTitleEn}`}>{i18n.t('whoWeAreTitle', { lng })}</div>
 				<div className={`about-us-intro ${aboutUsIntroEn}`}
 					dangerouslySetInnerHTML={{ __html: props.intro }}></div>
 				<div className="scroll-down">
-					<div className="scroll-text">{i18n.t('whoWeAreScrollDown', {lng})}</div>
+					<div className="scroll-text">{i18n.t('whoWeAreScrollDown', { lng })}</div>
 					<div className="scroll-icon"></div>
 				</div>
 			</div>
@@ -235,23 +240,23 @@ export default class About extends Component<any, any> {
 		const ManagementTeam = (props) => {
 			return <div className={`management-team ${manageTeamEn}`}>
 				<div className="panel-icon"></div>
-				<div className="panel-title">{i18n.t('managementTeamTitle', {lng})}</div>
+				<div className="panel-title">{i18n.t('managementTeamTitle', { lng })}</div>
 				<div className="pure-g">
-					<div class={`pure-u-1 ${manageTeamMd} pure-u-lg-1-2 team-intro`}>
+					<div class={`pure-u-1 pure-u-lg-1-2 team-intro`}>
 						<div className="left-intro">
 							<div class="intro-wrapper">
-								<div className="intro-name">{i18n.t('managementTeam.ceo.name', {lng})}</div>
-								<div className="intro-position">{i18n.t('managementTeam.ceo.position', {lng})}</div>
-								<div className="intro-content" dangerouslySetInnerHTML={{ __html: i18n.t('managementTeam.ceo.content', {lng}) }}></div>
+								<div className="intro-name">{i18n.t('managementTeam.ceo.name', { lng })}</div>
+								<div className="intro-position">{i18n.t('managementTeam.ceo.position', { lng })}</div>
+								<div className="intro-content" dangerouslySetInnerHTML={{ __html: i18n.t('managementTeam.ceo.content', { lng }) }}></div>
 							</div>
 						</div>
 					</div>
-					<div class={`pure-u-1 ${manageTeamMd} pure-u-lg-1-2 team-intro`}>
+					<div class={`pure-u-1 pure-u-lg-1-2 team-intro`}>
 						<div className="right-intro">
 							<div class="intro-wrapper">
-							<div className="intro-name">{i18n.t('managementTeam.cto.name', {lng})}</div>
-							<div className="intro-position">{i18n.t('managementTeam.cto.position', {lng})}</div>
-							<div className="intro-content" dangerouslySetInnerHTML={{ __html: i18n.t('managementTeam.cto.content', {lng}) }}></div>
+								<div className="intro-name">{i18n.t('managementTeam.cto.name', { lng })}</div>
+								<div className="intro-position">{i18n.t('managementTeam.cto.position', { lng })}</div>
+								<div className="intro-content" dangerouslySetInnerHTML={{ __html: i18n.t('managementTeam.cto.content', { lng }) }}></div>
 							</div>
 						</div>
 					</div>
@@ -288,26 +293,51 @@ export default class About extends Component<any, any> {
 		const Partners = (props: Partners) => {
 			return <div className="partners">
 				<div className="panel-icon"></div>
-				<div className="panel-title">{ i18n.t('partnersTitle', { lng }) }</div>
+				<div className="panel-title">{i18n.t('partnersTitle', { lng })}</div>
 				<div className="icon-container">
 					{
 						props.parentsArr.map((item) => {
-							return <div className={`icon-partners ${item}`}></div>
+							return <div className={`icon-partners ${item.className}`}>
+								<a target="_blank" href={item.link} />
+							</div>
 						})
 					}
 				</div>
 			</div>
 		};
 
+		const partnersArr = [
+			{
+				className: 'partner-1',
+				link: 'http://www.wkjyqh.com/main/home/index.shtml'
+			},
+			{
+				className: 'partner-2',
+				link: 'http://www.xinhu.cn/'
+			},
+			{
+				className: 'partner-3',
+				link: 'http://www.gffcc.com/'
+			},
+			{
+				className: 'partner-4',
+				link: 'http://www.wkzq.com.cn/wkzq/web/index.aspx'
+			},
+			{
+				className: 'partner-5',
+				link: 'http://www.zszq.com/'
+			}
+		]
+
 		const OurMission = (props) => {
 			return <div className={`our-mission ${ourMissionEn}`}>
-				<div className="panel-title">{ i18n.t('ourMission.title', { lng }) }</div>
-				<div className="panel-sub-title">{ i18n.t('ourMission.slogan', { lng }) }</div>
+				<div className="panel-title">{i18n.t('ourMission.title', { lng })}</div>
+				<div className="panel-sub-title">{i18n.t('ourMission.slogan', { lng })}</div>
 			</div>
 		};
 
 		const whoWeAreIntro = {
-			intro: i18n.t('whoWeAreIntro', {lng})
+			intro: i18n.t('whoWeAreIntro', { lng })
 		};
 
 		const teamIntroArr: Array<TeamIntroObj> = [
@@ -332,17 +362,17 @@ export default class About extends Component<any, any> {
 		return <div class="view-about">
 			<WhoWeAre intro={whoWeAreIntro.intro} />
 			<SloganPanel
-				sloganCn={i18n.t('sloganPanel1Top', {lng})}
-				sloganEn={i18n.t('sloganPanel1Botton', {lng})} />
+				sloganCn={i18n.t('sloganPanel1Top', { lng })}
+				sloganEn={i18n.t('sloganPanel1Botton', { lng })} />
 			<ManagementTeam />
 			<SloganPanel
-				sloganCn={i18n.t('sloganPanel2Top', {lng})}
-				sloganEn={i18n.t('sloganPanel2Botton', {lng})} />
+				sloganCn={i18n.t('sloganPanel2Top', { lng })}
+				sloganEn={i18n.t('sloganPanel2Botton', { lng })} />
 			<GreatTeam introArr={teamIntroArr} />
 			<SloganPanel
-				sloganCn={i18n.t('sloganPanel3Top', {lng})}
-				sloganEn={i18n.t('sloganPanel3Botton', {lng})} />
-			<Partners parentsArr={['partner-1', 'partner-2', 'partner-3', 'partner-4', 'partner-5']} />
+				sloganCn={i18n.t('sloganPanel3Top', { lng })}
+				sloganEn={i18n.t('sloganPanel3Botton', { lng })} />
+			<Partners parentsArr={partnersArr} />
 			<OurMission />
 		</div>;
 	}

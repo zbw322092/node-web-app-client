@@ -65,7 +65,7 @@ export default class Home extends Component<any, any> {
 			weOfferTitle: '我们提供',
 			weOfferSubTitle: '闪策 · 基于API的交易系统解决方案和服务的独立供应商',
 			weOfferListText: {
-				text1: '高度定制化的超低延迟市场行情数据解决方案，微秒级时间戳',
+				text1: '高度定制化的超低延迟市场行情数据解决方案，纳秒级时间戳',
 				text2: '经过实战检验、高速高效、高性能表现的平台',
 				text3: '用于市场行情数据传输的优化的二进制协议',
 				text4: '顶尖硬件设备（服务器及网络设备）及完美调优的运行环境',
@@ -80,13 +80,13 @@ export default class Home extends Component<any, any> {
 		i18n.addResourceBundle('en-US', 'translation', {
 			sloganCn: 'SHANCE · MAKE YOUR STRATEGY SHINE',
 			sloganEn: '闪策 · 闪耀策略的光芒',
-			targetCustomerTitle: 'Designed For High-end Users',
+			targetCustomerTitle: 'Designed For Professinal Institutions',
 			targetCustomerSubTitle: 'SHANCE · GLOBAL LEADER HIGH PERFORMANCE QUANTITATIVE TRADING SYSTEM SOLUTIONS',
 			targetCustomerItemtext: {
-				"text1": 'private placement',
-				"text2": 'public offering',
-				"text3": 'quantitative trading institution',
-				"text4": 'professional quantitative<br/>trading team'
+				"text1": 'Private Equity Firm',
+				"text2": 'Public Equity Firm',
+				"text3": 'Quantitative Trading Institution',
+				"text4": 'Professional Quantitative<br/>Trading Team'
 			},
 			sloganPanelMainText1: 'You Own Strategy',
 			sloganPanelSubText1: '',

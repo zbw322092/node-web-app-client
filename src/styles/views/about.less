@@ -93,14 +93,12 @@
     }
 
     .slogan-ch {
-      // font-family:PingFangSC-Regular;
       .fontFamilyRegular();
       font-size:36px;
       color:#333333;
       text-align:center;
     }
     .slogan-en {
-      // font-family:PingFangSC-Regular;
       .fontFamilyRegular();
       font-size:24px;
       color:#666666;
@@ -117,12 +115,16 @@
     height: 696px;
     .backgroundCover('views/about/img-management-team.png');
 
-    .narrowerThanMedium({
+    .narrowerThanLG({
       background: url('../../assets/views/about/img-management-team-long-version.png') no-repeat center center;
       background-size: cover;
       width: 100%;
       height: 1035px;
       margin-top: 50px;
+    });
+
+    .narrowerThanMedium({
+      height: 1200px;
     });
 
     .panel-icon {
@@ -158,12 +160,8 @@
         .background('views/about/img-frame-left.png');
 
         .narrowerThanLG({
-          left: 20%;
-        });
-
-        .narrowerThanMedium({
           width: 100%;
-          top: 0;
+          top: 40px;
           left: 0;
           background: none; 
           margin-left: auto;
@@ -175,10 +173,11 @@
           position: absolute;
           top: 40px;
           left: 50px;
-          width: 248px;
+          width: 300px;
 
-          .narrowerThanMedium({
+          .narrowerThanLG({
             width: 80%;
+            top: 0;
             left: 0;
             padding-left: 10%;
             padding-right: 10%;
@@ -196,10 +195,6 @@
         .background('views/about/img-frame-right.png');
 
         .narrowerThanLG({
-          left: 6%;
-        });
-
-        .narrowerThanMedium({
           top: 0;
           left: 0%;
           margin-left: auto;
@@ -213,9 +208,9 @@
           position: absolute;
           top: 40px;
           left: 50px;
-          width: 312px;
+          width: 408px;
 
-          .narrowerThanMedium({
+          .narrowerThanLG({
             width: 80%;
             top: 20px;
             left: 0;
@@ -245,7 +240,7 @@
       .intro-content {
         // font-family:PingFangSC-Regular;
         .fontFamilyRegular();
-        font-size:12px;
+        font-size:14px;
         color:#ffffff;
         text-align:left;
         margin-top: 25px;
@@ -262,6 +257,10 @@
       width: 100%;
       height: 1035px;
       margin-top: 50px;
+    });
+
+    .narrowerThanMedium({
+      height: 1200px;
     });
 
     .team-intro {
@@ -364,7 +363,7 @@
       .intro-content {
         // font-family:PingFangSC-Regular;
         .fontFamilyRegular();
-        font-size:12px;
+        font-size:14px;
         color:#ffffff;
         text-align:left;
         margin-top: 25px;
@@ -554,6 +553,11 @@
 
       .icon-partners {
         margin-top: 40px;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
       }
 
       .partner-1 {
