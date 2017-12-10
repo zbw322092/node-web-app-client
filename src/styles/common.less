@@ -42,6 +42,15 @@
   }
 }
 
+.narrowerThanIphone6(@rules) {
+  @media only screen 
+  and (min-device-width : 320px) 
+  and (max-device-width : 414px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation : portrait) {
+    @rules();
+  }
+}
 
 .iphone5Screen(@rules) {
   @media only screen 
@@ -49,6 +58,26 @@
   and (max-device-width : 568px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation : portrait) {
+    @rules();
+  }
+}
+
+.iphone6Screen(@rules) {
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    @rules();
+  }
+}
+
+.iphone6PlusScreen(@rules) {
+  @media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
     @rules();
   }
 }

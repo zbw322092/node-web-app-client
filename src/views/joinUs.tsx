@@ -213,7 +213,7 @@ export default class JoinUs extends Component<any, any> {
 				},
 				slogan3: {
 					mainText: '我们赞成生活工作两不误',
-					subText: '每周欢乐午餐 欢乐分离时刻'
+					subText: '悠长假期: 世界那么大，请你去看看'
 				},
 				slogan4: {
 					mainText: '人性化的工作制',

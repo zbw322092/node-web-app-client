@@ -50,7 +50,7 @@ export default class Home extends Component<any, any> {
 		i18n.addResourceBundle('zh-CN', 'translation', {
 			sloganCn: '闪策 · 闪耀策略的光芒',
 			sloganEn: 'SHANCE · MAKE YOUR STRATEGY SHINE',
-			targetCustomerTitle: '定位于高端用户',
+			targetCustomerTitle: '定位于专业化用户',
 			targetCustomerSubTitle: '闪策 · 低延迟高性能量化交易系统解决方案的世界一流领军者',
 			targetCustomerItemtext: {
 				text1: '私募',
@@ -84,7 +84,7 @@ export default class Home extends Component<any, any> {
 			targetCustomerSubTitle: 'SHANCE · GLOBAL LEADER HIGH PERFORMANCE QUANTITATIVE TRADING SYSTEM SOLUTIONS',
 			targetCustomerItemtext: {
 				"text1": 'Private Equity Firm',
-				"text2": 'Public Equity Firm',
+				"text2": 'Mutual fund company',
 				"text3": 'Quantitative Trading Institution',
 				"text4": 'Professional Quantitative<br/>Trading Team'
 			},

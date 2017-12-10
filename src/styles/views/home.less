@@ -5,27 +5,38 @@
     display: flex;
     width: 100%;
     height: 100vh;
-    .backgroundCover('views/home/img-home-top-banner.png');
+    .backgroundCover('views/home/banner-tmp.jpg');
     flex-direction: column;
     justify-content: space-around;
 
     .slogan-cn {
-      // font-family:PingFangSC-Medium;
       .fontFamilyMedium();
       font-size:40px;
-      color:#333333;
+      color:#ffffff;
       text-align: center;
       padding-left: 10px;
       padding-right: 10px;
+      text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
+
+      .iphone5Screen({
+        font-size: 30px;
+      });
+      .iphone6Screen({
+        font-size: 36px;
+      });
+      .iphone6PlusScreen({
+        font-size: 40px;
+      });
     }
+
     .slogan-en {
-      // font-family:HiraKakuPro-W3;
       .fontFamilyRegular();
       font-size:24px;
-      color:#333333;
+      color:#ffffff;
       text-align:center;
       padding-left: 10px;
       padding-right: 10px;
+      text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
     }
   }
 }
@@ -40,14 +51,12 @@
     padding-bottom: 107px;
 
     .title {
-      // font-family:PingFangSC-Regular;
       .fontFamilyRegular();
       font-size:28px;
       color:#333333;
       text-align:center;
     }
     .sub-title {
-      // font-family:PingFangSC-Light;
       .fontFamilyLight();
       font-size:18px;
       color:#666666;
@@ -80,7 +89,6 @@
           margin-right: auto;
         }
         .row-text {
-          // font-family:PingFangSC-Light;
           .fontFamilyLight();
           font-size:18px;
           color:#333333;
@@ -117,13 +125,11 @@
       top: 60px;
       text-align: center;
       .main-text {
-        // font-family:PingFangSC-Medium;
         .fontFamilyMedium();
         font-size:28px;
         color:#333333;
       }
       .sub-text {
-        // font-family:PingFangSC-Light;
         .fontFamilyLight();
         font-size:18px;
         color:#666666;
@@ -145,13 +151,11 @@
 
     .panel-title {
       text-align: center;
-      // font-family:PingFangSC-Regular;
       .fontFamilyRegular();
       font-size:28px;
       color:#333333;
     }
     .panel-sub-title {
-      // font-family:PingFangSC-Light;
       .fontFamilyLight();
       font-size:18px;
       color:#666666;
@@ -183,7 +187,6 @@
       .unit-text {
         display: table-cell;
         vertical-align: middle;
-        // font-family:PingFangSC-Light;
         .fontFamilyLight();
         font-size:14px;
         color:#333333;
@@ -209,7 +212,6 @@
       margin-right: auto;
       margin-top: 28px;
 
-      // font-family:PingFangSC-Regular;
       .fontFamilyRegular();
       font-size:14px;
       color:#ffffff;
