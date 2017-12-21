@@ -80,11 +80,11 @@ export default class Home extends Component<any, any> {
 		i18n.addResourceBundle('en-US', 'translation', {
 			sloganCn: 'SHANCE · MAKE YOUR STRATEGY SHINE',
 			sloganEn: '闪策 · 闪耀策略的光芒',
-			targetCustomerTitle: 'Designed For Professinal Institutions',
-			targetCustomerSubTitle: 'SHANCE · GLOBAL LEADER HIGH PERFORMANCE QUANTITATIVE TRADING SYSTEM SOLUTIONS',
+			targetCustomerTitle: 'Designed For Professional Institutions',
+			targetCustomerSubTitle: 'SHANCE · LEADER HIGH PERFORMANCE QUANTITATIVE TRADING SYSTEM SOLUTIONS',
 			targetCustomerItemtext: {
-				"text1": 'Private Equity Firm',
-				"text2": 'Mutual fund company',
+				"text1": 'Private Fund',
+				"text2": 'Mutual Fund',
 				"text3": 'Quantitative Trading Institution',
 				"text4": 'Professional Quantitative<br/>Trading Team'
 			},
@@ -102,9 +102,9 @@ export default class Home extends Component<any, any> {
 				text3: `Optimized binary protocol for market data dissemination`,
 				text4: `Top hardware (server and network infrastructure) and perfectly-tuned operating environment`,
 				text5: `Support stocks, futures and options trading`,
-				text6: `Global coverage & Single API`,
+				text6: `All-market coverage & Unified API`,
 				text7: `Optimized Market Data Chain, combining fiber and microwave technologies`,
-				text8: `Low-delay channels to Shanghai Stock Exchange and all futures exchanges in China`
+				text8: `Low-latency channels to all stock exchanges and futures exchanges in China`
 			},
 			weOfferBtnText: `View product introduction`
 		});

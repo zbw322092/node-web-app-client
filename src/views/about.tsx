@@ -61,11 +61,10 @@ export default class About extends Component<any, any> {
 				ceo: {
 					name: '吴学华	Joanna',
 					position: '首席执行官 CEO',
-					content: `吴学华女士，本科毕业于北方交通大学经济与工商管理学院。
-					在北电、西门子、微软等知名的IT与通讯跨国公司有近20年丰富的工作和管理经验。闪策成立之前，她曾在微软工
+					content: `吴学华女士，本科毕业于北方交通大学经济与工商管理学院。有近16年丰富的工作和管理经验。<br/>闪策成立之前，她曾在微软工
 					作了近八年，负责重要行业的战略拓展与大型金融机构的市场销售管理工作，在推动微软中国金融行业业务快速
 					增长与可持续发展方面取得了卓越业绩，屡获微软全球及大中华区嘉奖。具有全球化视野，在以科技创新为引领，
-					推动金融业务发展的探索和实践中积累了丰富的经验。工作之余，她曾多次在全国歌唱比赛中获奖。在2015年和2016年
+					推动金融业务发展的探索和实践中积累了丰富的经验。<br/>工作之余，她曾多次在全国歌唱比赛中获奖。在2015年和2016年
 					分别参加过纽约国际马拉松和芝加哥国际马拉松并取得优异成绩。`
 				},
 				cto: {
@@ -132,18 +131,17 @@ export default class About extends Component<any, any> {
 				ceo: {
 					name: 'Joanna Wu',
 					position: 'Chief Executive Officer',
-					content: `Joanna, graduated from Beijing Jiao Tong University, majored in 
-					Business and Economics, has around 20 years of working and management 
-					experience in multinational corporations in IT and communication, such as 
-					Nortel, Siemens and Microsoft.<br/>Before joining ShanCe, she worked for 
-					Microsoft for nearly 8 years, where she was responsible for the strategic 
-					expansion of major industries and the marketing management of large 
-					financial institutions. She achieved outstanding results in promoting the 
-					rapid growth and sustainable development of Microsoft China's financial industry, 
-					and was awarded by Microsoft many times. She has accumulated rich experience in 
-					technical innovation, global-perspective and finance business expansion.<br/>
-					She also has some achievement in Vocal Performance and Marathon 
-					(New York international marathon in 2015 & Chicago international marathon in 2016).`
+					content: `
+					Joanna graduated from School of Economics and Management of Northern Jiaotong University. <br/>
+					Prior to ShanCe, Joanna has 16 years of working and management experience in well-known 
+					MNCs in IT and Telecommunication Industry, such as Nortel, Siemens and Microsoft. 
+					She was a 7+ year veteran of Microsoft, responsible for strategic business development in key 
+					industries and sales management of top Financial Institutions in China. She delivered outstanding 
+					breakthroughs and sustainable results in Microsoft’s business growth in FSI China. Received a 
+					number of awards in Great China Region and globally. With a global vision, accumulated extensive 
+					experience of exploration and practice in driving business forward led by IT innovation. <br/>
+					She also won several awards in Vocal Contests, and attended NYC International Marathon and 
+					Chicago International Marathon in 2015 and 2016 separately.`
 				},
 				cto: {
 					name: 'Ke Liu',
