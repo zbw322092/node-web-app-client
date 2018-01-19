@@ -61,7 +61,7 @@ export default class About extends Component<any, any> {
 				ceo: {
 					name: '吴学华	Joanna',
 					position: '首席执行官 CEO',
-					content: `吴学华女士，本科毕业于北方交通大学经济与工商管理学院。有近16年丰富的工作和管理经验。<br/>闪策成立之前，她曾在微软工
+					content: `吴学华女士，本科毕业于北方交通大学经济与工商管理学院。有近20年丰富的工作和管理经验。<br/>闪策成立之前，她曾在微软工
 					作了近八年，负责重要行业的战略拓展与大型金融机构的市场销售管理工作，在推动微软中国金融行业业务快速
 					增长与可持续发展方面取得了卓越业绩，屡获微软全球及大中华区嘉奖。具有全球化视野，在以科技创新为引领，
 					推动金融业务发展的探索和实践中积累了丰富的经验。<br/>工作之余，她曾多次在全国歌唱比赛中获奖。在2015年和2016年
@@ -126,14 +126,14 @@ export default class About extends Component<any, any> {
 			sloganPanel2Botton: '闪策 · 岂止于快',
 			sloganPanel3Top: 'SHANCE · HONOR BEGINS WITH TRUST',
 			sloganPanel3Botton: '闪策 · 荣誉始于信任',
-			managementTeamTitle: 'Management Team',
+			managementTeamTitle: 'Leadership Team',
 			managementTeam: {
 				ceo: {
 					name: 'Joanna Wu',
 					position: 'Chief Executive Officer',
 					content: `
 					Joanna graduated from School of Economics and Management of Northern Jiaotong University. <br/>
-					Prior to ShanCe, Joanna has 16 years of working and management experience in well-known 
+					Prior to ShanCe, Joanna has 20 years of working and management experience in well-known 
 					MNCs in IT and Telecommunication Industry, such as Nortel, Siemens and Microsoft. 
 					She was a 7+ year veteran of Microsoft, responsible for strategic business development in key 
 					industries and sales management of top Financial Institutions in China. She delivered outstanding 
