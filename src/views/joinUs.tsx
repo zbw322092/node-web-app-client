@@ -196,6 +196,39 @@ export default class JoinUs extends Component<any, any> {
 						· 良好的中英文沟通技巧;<br />
 						· 良好的团队精神，积极参与团队讨论和分享;
 						`
+				},
+				job6: {
+					name: '业务拓展经理',
+					skills: '',
+					content: `
+						工作地点：上海<br /><br />
+						<span class="desc-sub-title">职位描述</span><br />
+						闪策希望寻找一名经验丰富的业务拓展经理，加入到我们这个成长中的团队，并参与到该团队的全方位工 作中。我们希望该候选人工作努力、积极进取，能适应快节奏的工作环境，具备多任务处理能力。<br /><br />
+						
+						<span class="desc-sub-title">岗位职责</span><br />
+						· 负责金融量化交易技术产品与服务业务拓展及销售推广;<br />
+						· 根据公司的销售目标，制订切实可行的销售计划和工作方案;<br />
+						· 能切实贯彻执行公司的销售策略、计划，并完成销售目标;<br />
+						· 分析客户需求，完成商务谈判合同签订等全流程推进工作;<br />
+						· 拓展与证券、期货交易所及其技术子公司，期货公司、券商等的合作伙伴关系;<br /><br />
+
+						<span class="desc-sub-title">素质要求</span><br />
+						· 全日制本科及以上学历，经济、金融、市场营销或计算机相关专业;<br />
+						· 两年以上相关行业工作经验，有金融软件实施、售前、售后服务经验，有一定的客户资源;<br />
+						· 具备较强的业务拓展能力，沟通能力及快速学习能力;<br />
+						· 对金融软件有较好的认识，有一定的产品演示讲解能力;<br />
+						· 客户导向，值得信赖;<br />
+						· 良好的团队协作能力，亲和力强;<br />
+						· 有期货、证券从业资格优先;<br /><br />
+
+						<span class="desc-sub-title">福利待遇</span><br />
+						· 15-20 天带薪休假;<br />
+						· 在一定限额内报销一切通讯费;<br />
+						· 具有市场竞争力的工资福利待遇、高端医疗补充保险;<br />
+						· 每年公司旅游，每周团队聚餐，每日水果茶歇;<br />
+						· 定期提供专业培训，提升工作能力、优化思维模式;<br />
+						· 倡导员工工作与生活的平衡;<br /><br />
+						`
 				}
 			},
 			jobContact: {
@@ -411,6 +444,38 @@ export default class JoinUs extends Component<any, any> {
 					· Good English and Chinese communication skills;<br />
 					· Team player, open to discussion and sharing of ideas;
 					`
+				},
+				job6: {
+					name: 'Business Development Specialist',
+					skills: '',
+					content: `
+					Location: Shanghai<br /><br />
+					<span class="desc-sub-title">About the Role</span><br />
+					ShanCe is looking for a seasoned Business Development Specialist to join the growing BD team and be involved in all aspects of the team. The right individual will be hardworking, motivated, and able to multi-task in a fast-paced work environment.<br /><br />
+
+					<span class="desc-sub-title">Key Responsibilities</span><br />
+					· Be responsible for the business development and sales of the financial technology products;<br />
+					· Establish the practical sales/business plan in accordance with the sales target of the company;<br />
+					· Implement the company's sales strategy/plan and complete the sales target;<br />
+					· Cover all counterparties by analyzing client needs, providing pricing and execution;<br /><br />
+					
+					<span class="desc-sub-title">Requirements</span><br />
+					· Bachelor degree or above, majored in Economics, Finance, Computer Science (or a related subject);<br />
+					· 2+ years’ experience of working on financial software implementation, pre-sales or client service in relevant industry with a certain amount of client resources;<br />
+					· Strong skills of business development, interpersonal communication and fast learning;<br />
+					· Profound insight into financial software and sound presentation skill of products;<br />
+					· Client-oriented and reliable;<br />
+					· Good team-worker with great affinity;<br />
+					· Futures qualification certificate/ Securities qualification certificate are preferred<br/><br />
+					
+					<span class="desc-sub-title">C&B</span><br />
+					· 15-20 days paid vacation;<br />
+					· Paid mobile expenses up to the maximum allowable amount;<br />
+					· Attractive C&B and fully paid health insurance premiums (half paid for the spouse or the kid);<br />
+					· Outing every year, free team lunch once a week and snacks and beverages daily available;<br />
+					· Regular training opportunities to promote working ability and optimize the mind-set;<br />
+					· Encourage work-life balance;
+					`
 				}
 			},
 			jobContact: {
@@ -449,7 +514,7 @@ export default class JoinUs extends Component<any, any> {
 		});
 	}
 
-	showJobDetail (index) {
+	showJobDetail(index) {
 		const jobDetailElement = document.getElementById('jobDetail');
 		if (jobDetailElement !== null) {
 			jobDetailElement.scrollIntoView({
@@ -471,19 +536,19 @@ export default class JoinUs extends Component<any, any> {
 				JobContainer.push(
 					<span className="jobs-container">
 						<span className="job job-1" onClick={this.showJobDetail.bind(this, 0)}>
-							<span className="red-text">{ i18n.t('job.job1.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job1.skills', { lng }) }</span>
+							<span className="red-text">{i18n.t('job.job1.name', { lng })}</span><span className="dark-text">{i18n.t('job.job1.skills', { lng })}</span>
 						</span>
 						<span className="job job-2" onClick={this.showJobDetail.bind(this, 1)}>
-							<span className="red-text">{ i18n.t('job.job2.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job2.skills', { lng }) }</span>
+							<span className="red-text">{i18n.t('job.job2.name', { lng })}</span><span className="dark-text">{i18n.t('job.job2.skills', { lng })}</span>
 						</span>
 						<span className="job job-3" onClick={this.showJobDetail.bind(this, 2)}>
-							<span className="red-text">{ i18n.t('job.job3.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job3.skills', { lng }) }</span>
+							<span className="red-text">{i18n.t('job.job3.name', { lng })}</span><span className="dark-text">{i18n.t('job.job3.skills', { lng })}</span>
 						</span>
 						<span className="job job-4" onClick={this.showJobDetail.bind(this, 3)}>
-							<span className="red-text">{ i18n.t('job.job4.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job4.skills', { lng }) }</span>
+							<span className="red-text">{i18n.t('job.job4.name', { lng })}</span><span className="dark-text">{i18n.t('job.job4.skills', { lng })}</span>
 						</span>
 						<span className="job job-5" onClick={this.showJobDetail.bind(this, 4)}>
-							<span className="red-text">{ i18n.t('job.job5.name', { lng }) }</span><span className="dark-text">{ i18n.t('job.job5.skills', { lng }) }</span>
+							<span className="red-text">{i18n.t('job.job5.name', { lng })}</span><span className="dark-text">{i18n.t('job.job5.skills', { lng })}</span>
 						</span>
 					</span>
 				);
@@ -522,8 +587,8 @@ export default class JoinUs extends Component<any, any> {
 							}
 						</div>
 						<div className="job-contact">
-							<div>{ i18n.t('jobContact.email', { lng }) }</div>
-							<div>{ i18n.t('jobContact.tel', { lng }) }</div>
+							<div>{i18n.t('jobContact.email', { lng })}</div>
+							<div>{i18n.t('jobContact.tel', { lng })}</div>
 						</div>
 					</div>
 
@@ -545,14 +610,14 @@ export default class JoinUs extends Component<any, any> {
 
 		const WorkEnvironment = () => {
 			return <div className="work-environment">
-				<div className="panel-slogan">{ i18n.t('workEnvironment.title', { lng }) }</div>
+				<div className="panel-slogan">{i18n.t('workEnvironment.title', { lng })}</div>
 				<div className="slogan-row">
 					<div className="img-container img-container-1">
 						<img className="slogan-unit unit-1"
 							src={require(`../assets/views/joinus/img-work-env-1.png`)}></img>
 						<div class="text-container">
-							<div class="main-text">{ i18n.t('workEnvironment.slogan1.mainText', { lng }) }</div>
-							<div class="sub-text">{ i18n.t('workEnvironment.slogan1.subText', { lng }) }</div>
+							<div class="main-text">{i18n.t('workEnvironment.slogan1.mainText', { lng })}</div>
+							<div class="sub-text">{i18n.t('workEnvironment.slogan1.subText', { lng })}</div>
 						</div>
 					</div>
 
@@ -560,8 +625,8 @@ export default class JoinUs extends Component<any, any> {
 						<img className="slogan-unit unit-2"
 							src={require(`../assets/views/joinus/img-work-env-2.png`)}></img>
 						<div class="text-container">
-							<div class="main-text">{ i18n.t('workEnvironment.slogan2.mainText', { lng }) }</div>
-							<div class="sub-text">{ i18n.t('workEnvironment.slogan2.subText', { lng }) }</div>
+							<div class="main-text">{i18n.t('workEnvironment.slogan2.mainText', { lng })}</div>
+							<div class="sub-text">{i18n.t('workEnvironment.slogan2.subText', { lng })}</div>
 						</div>
 					</div>
 				</div>
@@ -570,16 +635,16 @@ export default class JoinUs extends Component<any, any> {
 						<img className="slogan-unit unit-3"
 							src={require(`../assets/views/joinus/img-work-env-3.png`)}></img>
 						<div class="text-container">
-							<div class="main-text">{ i18n.t('workEnvironment.slogan3.mainText', { lng }) }</div>
-							<div class="sub-text">{ i18n.t('workEnvironment.slogan3.subText', { lng }) }</div>
+							<div class="main-text">{i18n.t('workEnvironment.slogan3.mainText', { lng })}</div>
+							<div class="sub-text">{i18n.t('workEnvironment.slogan3.subText', { lng })}</div>
 						</div>
 					</div>
 					<div className="img-container img-container-4">
 						<img className="slogan-unit unit-4"
 							src={require(`../assets/views/joinus/img-work-env-4.png`)}></img>
 						<div class="text-container">
-							<div class="main-text">{ i18n.t('workEnvironment.slogan4.mainText', { lng }) }</div>
-							<div class="sub-text">{ i18n.t('workEnvironment.slogan4.subText', { lng }) }</div>
+							<div class="main-text">{i18n.t('workEnvironment.slogan4.mainText', { lng })}</div>
+							<div class="sub-text">{i18n.t('workEnvironment.slogan4.subText', { lng })}</div>
 						</div>
 					</div>
 				</div>
@@ -612,6 +677,11 @@ export default class JoinUs extends Component<any, any> {
 				active: false,
 				jobTitle: i18n.t('job.job5.name', { lng }),
 				jobContent: i18n.t('job.job5.content', { lng })
+			},
+			{
+				active: false,
+				jobTitle: i18n.t('job.job6.name', { lng }),
+				jobContent: i18n.t('job.job6.content', { lng })
 			}
 		]
 
