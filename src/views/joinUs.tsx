@@ -446,12 +446,12 @@ export default class JoinUs extends Component<any, any> {
 					`
 				},
 				job6: {
-					name: 'Business Development Specialist',
+					name: 'Business Development Manager',
 					skills: '',
 					content: `
 					Location: Shanghai<br /><br />
 					<span class="desc-sub-title">About the Role</span><br />
-					ShanCe is looking for a seasoned Business Development Specialist to join the growing BD team and be involved in all aspects of the team. The right individual will be hardworking, motivated, and able to multi-task in a fast-paced work environment.<br /><br />
+					ShanCe is looking for a seasoned Business Development Manager to join the growing BD team and be involved in all aspects of the team. The right individual will be hardworking, motivated, and able to multi-task in a fast-paced work environment.<br /><br />
 
 					<span class="desc-sub-title">Key Responsibilities</span><br />
 					· Be responsible for the business development and sales of the financial technology products;<br />

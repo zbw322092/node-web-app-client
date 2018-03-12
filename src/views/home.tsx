@@ -72,7 +72,7 @@ export default class Home extends Component<any, any> {
 				text5: '对股票、期货、期权交易的支持',
 				text6: '全球覆盖，同一套通用API',
 				text7: '结合光纤和微波技术的优化的市场行情数据链',
-				text8: '与上海证券交易所及中国所有期货交易所的低延迟通道'
+				text8: '与中国所有证券交易所与期货交易所的低延迟通道'
 			},
 			weOfferBtnText: '查看产品介绍'
 		});
