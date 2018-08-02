@@ -1,6 +1,6 @@
-import Component from 'inferno-component'
-import './footer.less';
+import Component from 'inferno-component';
 import i18n from '../../../i18n';
+import './footer.less';
 
 declare function require(path: string);
 
@@ -13,17 +13,15 @@ export default class Footer extends Component<any, any> {
     };
   }
 
-	componentDidMount() {
+	public componentDidMount() {
 		i18n.on('languageChanged', this.onLanguageChanged.bind(this));
   }
-  
-	onLanguageChanged(lng) {
-		this.setState({
-			lng: lng
-		});
+
+	public onLanguageChanged(lng) {
+		this.setState({ lng });
   }
-  
-	componentWillMount() {
+
+	public componentWillMount() {
 		i18n.addResources('zh-CN', 'translation', {
       footerInfoAddress: '中国上海市浦东新区世纪大道1198号世纪汇一座1002单元',
       footerInfoEmail: 'info@shancetech.com',
@@ -33,8 +31,7 @@ export default class Footer extends Component<any, any> {
 		});
 
 		i18n.addResources('en-US', 'translation', {
-      footerInfoAddress: `Unit 1002 Century Link Tower 1,1198 Century Avenue 
-      Pudong, Shanghai, China`,
+      footerInfoAddress: `Unit 1002 Century Link Tower 1,1198 Century Avenue Pudong, Shanghai, China`,
       footerInfoEmail: 'info@shancetech.com',
       footerInfoTel1: 'HR & Admin：+86 21 6859 7600',
       footerInfoTel2: 'Product Marketing：+86 21 6859 7706',
@@ -44,14 +41,14 @@ export default class Footer extends Component<any, any> {
 		i18n.off('languageChanged', this.onLanguageChanged.bind(this))
 	}
 
-  render() {
-    let lng = this.state.lng;
+  public render() {
+    const lng = this.state.lng;
 
     return (
       <div className="footer">
         {/* <div className="footer-top"></div> */}
         <img className="footer-top"
-        src={require("../../assets/components/Footer/img-footer-top.png")}></img>
+        src={require('../../assets/components/Footer/img-footer-top.png')}></img>
         <div className="footer-middle">
           <div className="info-row">
             <div className="info-unit left-unit">

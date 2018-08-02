@@ -1,17 +1,17 @@
 import Component from 'inferno-component';
 import { Link } from 'inferno-router';
-import * as tingle from '../../lib/dialog/tingle';
 import i18n from '../../i18n';
+import * as tingle from '../../lib/dialog/tingle';
 
 declare function require(path: string);
 
 interface PlatformCharacteristicProps {
-	characteristicPropsArr: Array<CharacteristicProps>
+	characteristicPropsArr: CharacteristicProps[];
 }
 
 interface CharacteristicProps {
-	title: string,
-	subTitle: string,
+	title: string;
+	subTitle: string;
 	content: string;
 }
 
@@ -19,24 +19,23 @@ export default class Service extends Component<any, any> {
 
 	constructor(props) {
 		super(props);
-		this.state = { 
+		this.state = {
 			seletorActiveIndex: 0,
 			lng: i18n.language
 		};
 	}
 
-	componentDidMount() {
+	public componentDidMount() {
 		i18n.on('languageChanged', this.onLanguageChanged.bind(this));
 	}
 
-	componentWillMount() {
+	public componentWillMount() {
 		i18n.addResourceBundle('zh-CN', 'translation', {
 			serviceTop: {
 				textTop: `闪策通过开创性的新方法，设计下一代基于云的分析技术，
 				利用其大数据和超低延迟交易技术研究的经验，着力于构建未来的金融科技生态系统。`,
 				textBottom: `From pioneering new approaches to design the
-				next generation of cloud based analytics, ShanCe leverages its deep experience 
-				with big data and low latency trading technology to build Fin-tech ecosystems of the future.`
+				next generation of cloud based analytics, ShanCe leverages its deep experience with big data and low latency trading technology to build Fin-tech ecosystems of the future.`
 			},
 			serviceTitle: '平台服务',
 			serviceName: {
@@ -129,8 +128,7 @@ export default class Service extends Component<any, any> {
 		i18n.addResourceBundle('en-US', 'translation', {
 			serviceTop: {
 				textTop: `From pioneering new approaches to design the
-				next generation of cloud based analytics, ShanCe leverages its deep experience with big 
-				data and low latency trading technology to build Fin-tech ecosystems of the future.`,
+				next generation of cloud based analytics, ShanCe leverages its deep experience with big data and low latency trading technology to build Fin-tech ecosystems of the future.`,
 				textBottom: ''
 			},
 			serviceTitle: 'Platform and Services',
@@ -145,52 +143,37 @@ export default class Service extends Component<any, any> {
 			},
 			servicePopup: {
 				service1: `<div class="dialog-title">Strategy Development Interface</div><div class="close-sign"></div>
-				<div class="dialog-content">● ShanCe's system was developed based on advanced international standards and concepts, 
-				and the integrated Application Program Interface it provides enables you to focus on strategy development without 
-				worrying about the compatibility between different trading channel, platform, or code.<br/>
-				● During the strategy development, ShanCe provides strategy framework based on sample code to help you 
-				get started efficiently. In our API manual, you may find more about all the available tools and methods.</div>`,
+				<div class="dialog-content">● ShanCe's system was developed based on advanced international standards and concepts, and the integrated Application Program Interface it provides enables you to focus on strategy development without worrying about the compatibility between different trading channel, platform, or code.<br/>
+				● ShanCe provides strategy framework based on sample code to help you get started efficiently in strategy development.</div>`,
 
 				service2: `<div class="dialog-title">Technical Support</div><div class="close-sign"></div>
-				<div class="dialog-content">● ShanCe could provide you one-stop facilities and service starting from initial development 
-				through live trading at the exchanges.<br/>
+				<div class="dialog-content">● ShanCe could provide you one-stop facilities and service starting from initial development through live trading at the exchanges.<br/>
 				● ShanCe's technical supporting team will help you whenever you need during strategy development.<br/>
 				● ShanCe's technical consultants would help you discover and solve the problems in live trading.<br/>
 				● We offer various channels of bilingual consultancy service through hot-line, website, Wechat, and more.</div>`,
 
 				service3: `<div class="dialog-title">Back-Test & Simulation</div><div class="close-sign"></div>
-				<div class="dialog-content">● ShanCe's backtesting environment consolidated abundant historical data, which would help 
-				you test and optimize your new strategy.<br/>
-				● Simulation trading platform could perform inspection based on live trading environment. Supported by the log report & 
-				analysis tool, ShanCe's system would offer you better service on your needs.<br/>
-				● Deep integration of the backtesting, simulation and live trading system enables seamless switch between historical 
-				data backtesting environment and live production environment without changing code at all, which highly improves efficiency.</div>`,
+				<div class="dialog-content">● ShanCe's backtesting environment consolidated abundant historical data, which would help you test and optimize your new strategy.<br/>
+				● Simulation trading platform could perform inspection based on live trading environment. Supported by the log report & analysis tool, ShanCe's system would offer you better service on your needs.<br/>
+				● Deep integration of the backtesting, simulation and live trading system enables seamless switch between historical data backtesting environment and live production environment without changing code at all, which highly improves efficiency.</div>`,
 
 				service4: `<div class="dialog-title">High Efficient Trading System</div><div class="close-sign"></div>
-				<div class="dialog-content">● ShanCe's' colocated trading solution is a fully hosted, ultra high performance trading platform 
-				enabled with low latency direct feeds, an event based C++ API, cloud based simulation, and inter-colo groomed fiber networks.<br/>
-				● The tightly bound hardware and software, together with the continuous optimization effort to create an ultra-low latency channel 
-				will help you gain a head start.<br/>
+				<div class="dialog-content">● ShanCe's colocated trading solution is a fully hosted, ultra high performance trading platform enabled with low latency direct feeds, an event based C++ API, cloud based simulation, and inter-colo groomed fiber networks.<br/>
+				● The tightly bound hardware and software, together with the continuous optimization effort to create an ultra-low latency channel will help you gain a head start.<br/>
 				● ShanCe's stable and secure system tested and improved over the years will provide you an escort.</div>`,
 
 				service5: `<div class="dialog-title">Market Data</div><div class="close-sign"></div>
 				<div class="dialog-content">● ShanCe provides all-platform and multi-level real- time high speed trading market data.<br/>
-				● Unified standard format of market data will prevent you from the trouble of adapting to different pattern of data and thus 
-				help you save more time and effort to focus on strategy.</div>`,
+				● Unified standard format of market data will prevent you from the trouble of adapting to different pattern of data and thus help you save more time and effort to focus on strategy.</div>`,
 
 				service6: `<div class="dialog-title">Strict Risk Management</div><div class="close-sign"></div>
-				<div class="dialog-content">● ShanCe offers fully automated, inline risk checks, available in both 
-				hardware and software configurations. Its customized multi-level and account- managed risk control system is also 
-				designed to meet your requirement and minimize the trading risk.<br/>
+				<div class="dialog-content">● ShanCe offers fully automated, inline risk checks, available in both hardware and software configurations. Its customized multi-level and account- managed risk control system is also designed to meet your requirement and minimize the trading risk.<br/>
 				● ShanCe also provides visual real-time trading monitoring tools to supervise each action.</div>`,
 
 				service7: `<div class="dialog-title">Matching Engine</div><div class="close-sign"></div>
-				<div class="dialog-content">● ShanCe's matching engine (SCME) is a fully hosted, low latency solution, offering exceptional 
-				flexibility, scalability, and a suite of monitoring tools and analytics.<br/>
-				● SCME has powerful match analytics and order tracking tools to reduce troubleshooting delays, and it scales cost-effectively 
-				from small deployments to large deployments.<br/>
-				● SCME is highly customizable to allow a wide array of order types or matching logic. Extensive data analysis and visualization 
-				tools also allow operations personnel to quickly address customer needs and more efficiently research third party inquiries.</div>`
+				<div class="dialog-content">● ShanCe's matching engine (SCME) is a fully hosted, low latency solution, offering exceptional flexibility, scalability, and a suite of monitoring tools and analytics.<br/>
+				● SCME has powerful match analytics and order tracking tools to reduce troubleshooting delays, and it scales cost-effectively from small deployments to large deployments.<br/>
+				● SCME is highly customizable to allow a wide array of order types or matching logic. Extensive data analysis and visualization tools also allow operations personnel to quickly address customer needs and more efficiently research third party inquiries.</div>`
 			},
 			platformCharacteristicTitle: 'Platform Features',
 			platformCharacteristic: {
@@ -202,8 +185,7 @@ export default class Service extends Component<any, any> {
 					● Fastest Network: 10G optical fiber; Diversified network for highest perfomance and maximal up-time.<br/>
 					● Cutting-Edge Optimization: Trading server hardware and software optimization.<br/>
 					● Low Latency: Co-location, Direct Order Entry.<br/>
-					● The Most Comprehensive Exchange Connectivity: Low-latency co-located at all futures exchanges 
-					in China. Connectivity to major international sources. Support for equities, fixed-income, futures, and options trading.<br/>
+					● The Most Comprehensive Exchange Connectivity: Low-latency co-located at all futures exchanges in China. Connectivity to major international sources. Support for equities, fixed-income, futures, and options trading.<br/>
 					● High Throughput: Capable of processing tens of thousands of orders-per-seond.<br/>
 					● Depth: Level1, Level2, Trade Ticks.<br/>
 					● Uniformity: Normalized data across venues, lower development cost.`
@@ -211,15 +193,11 @@ export default class Service extends Component<any, any> {
 				feature2: {
 					title: 'STABLE',
 					subTitle: '',
-					content: `● ShanCe's platform system experienced strict test and live time trading and 
-					has developed into a mature and consistent platform supported by continuous optimization effort.<br/>
-					● Any encounter with unpredictable failure in core system would be backed-up by an automatically 
-					established re-connection to recover the order execution.<br/>
-					● Errors caused by the strategy programs would trigger systematic emergency measures to 
-					minimize the risk.<br/>
+					content: `● ShanCe's platform system experienced strict test and live time trading and has developed into a mature and consistent platform supported by continuous optimization effort.<br/>
+					● Any encounter with unpredictable failure in core system would be backed-up by an automatically established re-connection to recover the order execution.<br/>
+					● Errors caused by the strategy programs would trigger systematic emergency measures to minimize the risk.<br/>
 					● Real-time Monitor: The system supervises the actions in each module and guarantee smooth operation.<br/>
-					● Timely Feedback: Any abnormal issues would be detected and reported to ShanCe's operation and 
-					maintenance team and would be efficiently diagnosed and solved.<br/>
+					● Timely Feedback: Any abnormal issues would be detected and reported to ShanCe's operation and maintenance team and would be efficiently diagnosed and solved.<br/>
 					● Detailed Record: Systematic daily records would enable management team to refer and replay each process.`
 				},
 				feature3: {
@@ -235,8 +213,7 @@ export default class Service extends Component<any, any> {
 				feature4: {
 					title: 'CONVENIENT',
 					subTitle: '',
-					content: `● Event-Driven Architecture: With less code and simpler logic, clients can react to the live trading environment in real time, 
-					leading to higher productivity and less development time.<br/>
+					content: `● Event-Driven Architecture: With less code and simpler logic, clients can react to the live trading environment in real time, leading to higher productivity and less development time.<br/>
 					● C++API Interface: Higher performance comparing to scripting languages, C# and Java. Easy to write complex strategies.<br/>
 					● Binary protocol: Meet the different needs of different language users.<br/>
 					● Comprehensive Reference: Provide detailed API documents and sample strategy code, which intuitively showcase all features. Help clients get started easily.<br/>
@@ -248,12 +225,12 @@ export default class Service extends Component<any, any> {
 			}
 		});
 
-		i18n.off('languageChanged', this.onLanguageChanged.bind(this))
+		i18n.off('languageChanged', this.onLanguageChanged.bind(this));
 	}
 
-	servicePopup = (tag: string): void => {
-		let lng = this.state.lng;
-		let modal = new tingle.modal({
+	public servicePopup = (tag: string): void => {
+		const lng = this.state.lng;
+		const modal = new tingle.modal({
 			footer: false,
 			closeMethods: ['overlay', 'escape'],
 			cssClass: ['service-dialog'],
@@ -263,13 +240,13 @@ export default class Service extends Component<any, any> {
 		});
 
 		const contentMap = {
-			service1: i18n.t('servicePopup.service1', {lng}),
-			service2: i18n.t('servicePopup.service2', {lng}),
-			service3: i18n.t('servicePopup.service3', {lng}),
-			service4: i18n.t('servicePopup.service4', {lng}),
-			service5: i18n.t('servicePopup.service5', {lng}),
-			service6: i18n.t('servicePopup.service6', {lng}),
-			service7: i18n.t('servicePopup.service7', {lng})
+			service1: i18n.t('servicePopup.service1', { lng }),
+			service2: i18n.t('servicePopup.service2', { lng }),
+			service3: i18n.t('servicePopup.service3', { lng }),
+			service4: i18n.t('servicePopup.service4', { lng }),
+			service5: i18n.t('servicePopup.service5', { lng }),
+			service6: i18n.t('servicePopup.service6', { lng }),
+			service7: i18n.t('servicePopup.service7', { lng })
 		};
 
 		modal.setContent(contentMap[tag]);
@@ -280,129 +257,140 @@ export default class Service extends Component<any, any> {
 			modal.checkOverflow();
 		}, 500);
 
-		let dialogElement = document.querySelector('.close-sign');
+		const dialogElement = document.querySelector('.close-sign');
 		if (dialogElement) {
 			dialogElement.addEventListener('click', () => {
 				modal.close();
 			});
 		}
-		
+
 	}
 
-	selectorClickHandler = (index, e) => {
-		console.log(index);
+	public selectorClickHandler = (index, e) => {
 		this.setState({
 			seletorActiveIndex: index
 		});
 	}
 
-	onLanguageChanged(lng) {
-		this.setState({
-			lng: lng
-		});
+	public onLanguageChanged(lng) {
+		this.setState({ lng });
 	}
 
-	render() {
-		let lng = this.state.lng;
+	public render() {
+		const lng = this.state.lng;
 
-		let displayToggleStyle = {
+		const displayToggleStyle = {
 			display: this.state.lng === 'en-US' ? 'none' : 'block'
-		}
+		};
 
-		let enFontSize = {
+		const enFontSize = {
 			fontSize: this.state.lng === 'en-US' ? '18px' : '36px'
-		}
+		};
 
-		let platformServiceEn = this.state.lng === 'en-US' ? 'platform-service-en' : '';
+		const platformServiceEn = this.state.lng === 'en-US' ? 'platform-service-en' : '';
 
 		const TopPanel = (props) => {
-			return <div className="service-top-panel">
-				<div className="small-img-container">
-					<img className="panel-img-small" src={require(`../assets/views/service/img-top-panel-small.png`)} />
+			return (
+				<div className="service-top-panel">
+					<div className="small-img-container">
+						<img className="panel-img-small" src={require(`../assets/views/service/img-top-panel-small.png`)} />
+					</div>
+					<div className="panel-img">
+						<div className="brief-intro">{i18n.t('serviceTop.textTop', { lng })}</div>
+						<div className="separator" style={displayToggleStyle}></div>
+						<div className="brief-intro-en" style={displayToggleStyle}>{i18n.t('serviceTop.textBottom', { lng })}</div>
+					</div>
 				</div>
-				<div className="panel-img">
-					<div className="brief-intro">{i18n.t('serviceTop.textTop', {lng})}</div>
-					<div className="separator" style={displayToggleStyle}></div>
-					<div className="brief-intro-en" style={displayToggleStyle}>{i18n.t('serviceTop.textBottom', {lng})}</div>
-				</div>
-			</div>
+			);
 		};
 
 		const PlatformService = (props) => {
+			const areaList = [1, 2, 3, 4, 5, 6, 7, 8];
 			return <div className={`platform-service ${platformServiceEn}`}>
 				<div className="panel-wrapper">
 					<div className="icon-our-services">
 						<Link to="/product"></Link>
 					</div>
-					<div className="panel-title">{i18n.t('serviceTitle', {lng})}</div>
-					<div className="click-area area-1" onClick={this.servicePopup.bind(this,'service1')}></div>
-					<div className="click-area area-2" onClick={this.servicePopup.bind(this,'service2')}></div>
-					<div className="click-area area-3" onClick={this.servicePopup.bind(this,'service3')}></div>
-					<div className="click-area area-4" onClick={this.servicePopup.bind(this,'service4')}></div>
-					<div className="click-area area-5" onClick={this.servicePopup.bind(this,'service5')}></div>
-					<div className="click-area area-6" onClick={this.servicePopup.bind(this,'service6')}></div>
-					<div className="click-area area-7" onClick={this.servicePopup.bind(this,'service7')}></div>
+					<div className="panel-title">{i18n.t('serviceTitle', { lng })}</div>
+					{
+						areaList.map((item: number) => {
+							return (
+								<div className={`click-area area-${item}`} onClick={this.servicePopup.bind(this, `service${item}`)}>
+									<div className="hover-effect" />
+								</div>
+							);
+						})
+					}
+					{/* <div className="click-area area-1" onClick={this.servicePopup.bind(this, 'service1')}>
+						<div className="hover-effect" />
+					</div>
+					<div className="click-area area-2" onClick={this.servicePopup.bind(this, 'service2')}></div>
+					<div className="click-area area-3" onClick={this.servicePopup.bind(this, 'service3')}></div>
+					<div className="click-area area-4" onClick={this.servicePopup.bind(this, 'service4')}></div>
+					<div className="click-area area-5" onClick={this.servicePopup.bind(this, 'service5')}></div>
+					<div className="click-area area-6" onClick={this.servicePopup.bind(this, 'service6')}></div>
+					<div className="click-area area-7" onClick={this.servicePopup.bind(this, 'service7')}></div> */}
 				</div>
 				<div className="small-panel-container">
 					<div className="pure-g container-row">
 						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-1"
-						onClick={this.servicePopup.bind(this,'service1')}>
+							onClick={this.servicePopup.bind(this, 'service1')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
-								<div className="unit-title">{i18n.t('serviceName.service1', {lng})}</div>
+								<div className="unit-title">{i18n.t('serviceName.service1', { lng })}</div>
 							</div>
 						</div>
 						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-2"
-						onClick={this.servicePopup.bind(this,'service2')}>
+							onClick={this.servicePopup.bind(this, 'service2')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
-								<div className="unit-title">{i18n.t('serviceName.service2', {lng})}</div>
+								<div className="unit-title">{i18n.t('serviceName.service2', { lng })}</div>
 							</div>
 						</div>
 					</div>
 					<div className="pure-g container-row">
 						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-3"
-						onClick={this.servicePopup.bind(this,'service3')}>
+							onClick={this.servicePopup.bind(this, 'service3')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
-								<div className="unit-title">{i18n.t('serviceName.service3', {lng})}</div>
+								<div className="unit-title">{i18n.t('serviceName.service3', { lng })}</div>
 							</div>
 						</div>
 						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-4"
-						onClick={this.servicePopup.bind(this,'service4')}>
+							onClick={this.servicePopup.bind(this, 'service4')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
-								<div className="unit-title">{i18n.t('serviceName.service4', {lng})}</div>
+								<div className="unit-title">{i18n.t('serviceName.service4', { lng })}</div>
 							</div>
 						</div>
 					</div>
 					<div className="pure-g container-row">
 						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-5"
-						onClick={this.servicePopup.bind(this,'service5')}>
+							onClick={this.servicePopup.bind(this, 'service5')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
-								<div className="unit-title">{i18n.t('serviceName.service5', {lng})}</div>
+								<div className="unit-title">{i18n.t('serviceName.service5', { lng })}</div>
 							</div>
 						</div>
 						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-6"
-						onClick={this.servicePopup.bind(this,'service6')}>
+							onClick={this.servicePopup.bind(this, 'service6')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
-								<div className="unit-title">{i18n.t('serviceName.service6', {lng})}</div>
+								<div className="unit-title">{i18n.t('serviceName.service6', { lng })}</div>
 							</div>
 						</div>
 					</div>
 					<div className="pure-g container-row">
 						<div className="pure-u-1-2 pure-u-md-1-2 service-unit service-7"
-						onClick={this.servicePopup.bind(this,'service7')}>
+							onClick={this.servicePopup.bind(this, 'service7')}>
 							<div className="unit-container">
 								<div className="unit-icon"></div>
-								<div className="unit-title">{i18n.t('serviceName.service7', {lng})}</div>
+								<div className="unit-title">{i18n.t('serviceName.service7', { lng })}</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>;
 		};
 
 		const OurProductWhitePanel = (props) => {
@@ -410,25 +398,25 @@ export default class Service extends Component<any, any> {
 				<div className="panel-icon">
 					<Link to="/product"></Link>
 				</div>
-			</div>
+			</div>;
 		};
 
 		const PlatformCharacteristic = (props: PlatformCharacteristicProps) => {
 			return <div className="pure-g platform-characteristic">
 				<div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 left-panel">
-					<div className="panel-title">{i18n.t('platformCharacteristicTitle', {lng})}</div>
+					<div className="panel-title">{i18n.t('platformCharacteristicTitle', { lng })}</div>
 					<div className="four-selector-round">
 						{
 							props.characteristicPropsArr.map((item, i) => {
 								return <div
-									className={`selector-rectangle selector-${i + 1} 
+									className={`selector-rectangle selector-${i + 1}
 										${i === this.state.seletorActiveIndex ? 'rectangle-orange' : 'rectangle-transparent'}`}
 								>
 									<div className="title-container" onClick={this.selectorClickHandler.bind(this, i)}>
 										<div className="selector-title" style={enFontSize}>{item.title}</div>
 										<div className="selector-sub-title">{item.subTitle}</div>
 									</div>
-								</div>
+								</div>;
 							})
 						}
 						<div className="center-round"></div>
@@ -437,35 +425,35 @@ export default class Service extends Component<any, any> {
 				<div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2 right-panel">
 					<div className="characteristic-content">
 						<div className="content-text"
-							dangerouslySetInnerHTML={{ __html: props.characteristicPropsArr[this.state.seletorActiveIndex]['content'] }}></div>
+							dangerouslySetInnerHTML={{ __html: props.characteristicPropsArr[this.state.seletorActiveIndex].content }}></div>
 					</div>
 				</div>
 
-			</div>
+			</div>;
 		};
 
-		let characteristicPropsArr = [
+		const characteristicPropsArr = [
 			{
-				title: i18n.t('platformCharacteristic.feature1.title', {lng}),
-				subTitle: i18n.t('platformCharacteristic.feature1.subTitle', {lng}),
-				content: i18n.t('platformCharacteristic.feature1.content', {lng})
+				title: i18n.t('platformCharacteristic.feature1.title', { lng }),
+				subTitle: i18n.t('platformCharacteristic.feature1.subTitle', { lng }),
+				content: i18n.t('platformCharacteristic.feature1.content', { lng })
 			},
 			{
-				title: i18n.t('platformCharacteristic.feature2.title', {lng}),
-				subTitle: i18n.t('platformCharacteristic.feature2.subTitle', {lng}),
-				content: i18n.t('platformCharacteristic.feature2.content', {lng})
+				title: i18n.t('platformCharacteristic.feature2.title', { lng }),
+				subTitle: i18n.t('platformCharacteristic.feature2.subTitle', { lng }),
+				content: i18n.t('platformCharacteristic.feature2.content', { lng })
 			},
 			{
-				title: i18n.t('platformCharacteristic.feature3.title', {lng}),
-				subTitle: i18n.t('platformCharacteristic.feature3.subTitle', {lng}),
-				content: i18n.t('platformCharacteristic.feature3.content', {lng})
+				title: i18n.t('platformCharacteristic.feature3.title', { lng }),
+				subTitle: i18n.t('platformCharacteristic.feature3.subTitle', { lng }),
+				content: i18n.t('platformCharacteristic.feature3.content', { lng })
 			},
 			{
-				title: i18n.t('platformCharacteristic.feature4.title', {lng}),
-				subTitle: i18n.t('platformCharacteristic.feature4.subTitle', {lng}),
-				content: i18n.t('platformCharacteristic.feature4.content', {lng})
+				title: i18n.t('platformCharacteristic.feature4.title', { lng }),
+				subTitle: i18n.t('platformCharacteristic.feature4.subTitle', { lng }),
+				content: i18n.t('platformCharacteristic.feature4.content', { lng })
 			}
-		]
+		];
 
 		return <div className="view-service">
 			<TopPanel />
@@ -474,4 +462,4 @@ export default class Service extends Component<any, any> {
 			<PlatformCharacteristic characteristicPropsArr={characteristicPropsArr} />
 		</div>;
 	}
-};
+}

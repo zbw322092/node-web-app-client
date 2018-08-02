@@ -1,7 +1,7 @@
-import Component from 'inferno-component'
+import Component from 'inferno-component';
 import { Link } from 'inferno-router';
-import './header.less';
 import i18n from '../../../i18n';
+import './header.less';
 
 export default class Header extends Component<any, any> {
 
@@ -13,11 +13,11 @@ export default class Header extends Component<any, any> {
     };
   }
 
-	componentDidMount() {
+	public componentDidMount() {
 		i18n.on('languageChanged', this.onLanguageChanged.bind(this));
 	}
 
-	componentWillMount() {
+	public componentWillMount() {
 		i18n.addResources('zh-CN', 'translation', {
       home: '首页',
       product: '产品',
@@ -41,25 +41,23 @@ export default class Header extends Component<any, any> {
 		i18n.off('languageChanged', this.onLanguageChanged.bind(this))
 	}
 
-	onLanguageChanged(lng) {
-		this.setState({
-			lng: lng
-		});
+	public onLanguageChanged(lng) {
+		this.setState({ lng });
 	}
 
-  menuToggle = () => {
+  public menuToggle = () => {
     this.setState({
       menuOpen: !this.state.menuOpen
     });
   }
 
-  navHandler = () => {
+  public navHandler = () => {
     this.setState({
       menuOpen: false
     });
   }
 
-  changeToZh = () => {
+  public changeToZh = () => {
     this.setState({
       menuOpen: false,
       lng: 'zh-CN'
@@ -68,7 +66,7 @@ export default class Header extends Component<any, any> {
     localStorage.setItem('i18nextLng','zh-CN');
   }
 
-  changeToEn = () => {
+  public changeToEn = () => {
     this.setState({
       menuOpen: false,
       lng: 'en-US'
@@ -77,8 +75,8 @@ export default class Header extends Component<any, any> {
     localStorage.setItem('i18nextLng','en-US');
   }
 
-  render() {
-    let lng = this.state.lng;
+  public render() {
+    const lng = this.state.lng;
 
     return (
       <div className="header">
@@ -97,9 +95,9 @@ export default class Header extends Component<any, any> {
             <span className="slash">/</span><a className={`lang-en ${this.state.lng === 'en-US' ? 'blue' : ''}`} 
             onClick={this.changeToEn}>ENGLISH</a>
           </span>
-          <a 
-          className="login" 
-          target="_blank" 
+          <a
+          className="login"
+          target="_blank"
           href="http://202.101.23.226:81/xwiki/bin/login/XWiki/XWikiLogin;jsessionid=9A7F8A74DE73323DE99F02EC10200C29?srid=T3ou25o2&xredirect=%2Fxwiki%2Fbin%2Fview%2FMain%2F%3Fsrid%3DT3ou25o2"
           onClick={this.navHandler}
           >{i18n.t('login', { lng })}</a>

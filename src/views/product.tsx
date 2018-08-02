@@ -3,9 +3,8 @@ import i18n from '../../i18n';
 
 declare function require(path: string);
 
-
 interface ProductNavArr {
-	productArr: Array<ProductNavProps>
+	productArr: ProductNavProps[];
 }
 
 interface ProductNavProps {
@@ -16,18 +15,18 @@ interface ProductNavProps {
 
 interface ProductPanelProps {
 	productId: 'bosaidong' | 'zhice' | 'zhiyan' | 'shangceyun' | 'zhixu' | 'zhiyue';
-	productClassName: string,
-	bgColor: 'white' | 'lightGrey',
-	bgModel: 'leftRight' | 'stackUp',
-	bgImgClass: string,
-	bgImgPath: string,
-	productTitle: string,
-	productSubTitle: string,
-	productDesc: string
+	productClassName: string;
+	bgColor: 'white' | 'lightGrey';
+	bgModel: 'leftRight' | 'stackUp';
+	bgImgClass: string;
+	bgImgPath: string;
+	productTitle: string;
+	productSubTitle: string;
+	productDesc: string;
 }
 
 interface ProductPanelArr {
-	productPanelArr: Array<ProductPanelProps>
+	productPanelArr: ProductPanelProps[];
 }
 
 enum BgClassName {
@@ -44,8 +43,7 @@ export default class Product extends Component<any, any> {
 		};
 	}
 
-
-	componentWillMount() {
+	public componentWillMount() {
 		i18n.addResourceBundle('zh-CN', 'translation', {
 			productNameList: {
 				product1: '波塞东POSEIDON',
@@ -53,7 +51,7 @@ export default class Product extends Component<any, any> {
 				product3: '智衍INTELLIPRO',
 				product4: '尚策云INTELLICLOUD',
 				product5: '智旭INTELLICATOR',
-				product6: '智跃INTELLIDATA'
+				product6: '智喆INTELLIFEED'
 			},
 			productDetailList: {
 				product1: {
@@ -82,9 +80,9 @@ export default class Product extends Component<any, any> {
 					productDesc: `智旭期权量化交易系统（IntelliCator）是一个主打灵活、快速、可定制的金融衍生品交易系统，集成多来源优化行情、快速量化交易、多维度立体风控、实时报表反馈、高精度仿真回测等特性，旨在为专业的交易团队提供一站式、体验卓越的交易服务。`
 				},
 				product6: {
-					productTitle: '智跃INTELLIDATA',
+					productTitle: '智喆INTELLIFEED',
 					productSubTitle: '行情分发系统',
-					productDesc: `智跃行情分发系统（IntelliData）是上海闪策信息科技有限公司规划开发，与券商合作，基于上海证券交易所低延时行情发布系统（LDDS）和深圳证券交易所行情系统，为单一券商的众多客户提供公平、高效、高速的行情分发服务的系统。`
+					productDesc: `智喆行情分发系统（IntelliFeed）是上海闪策信息科技有限公司开发，与券商及期货公司合作，基于中国两大证券交易所与四大期货交易所低延时行情发布系统，为单一券商的众多客户提供公平、高效、高速的行情优化、转发服务的系统。`
 				}
 			}
 		});
@@ -102,71 +100,44 @@ export default class Product extends Component<any, any> {
 				product1: {
 					productTitle: 'POSEIDON',
 					productSubTitle: 'Low-latency Quantitative Trading System for Futures',
-					productDesc: `Poseidon is a quantitative trading system for Futures market. 
-					Poseidon has consolidated market data, high speed trading, historical 
-					backtesting, simulation, risk control, after-hour reports, customized technical 
-					support and more. `
+					productDesc: `Poseidon provides an integrated, comprehensive and multi-strategy quantitative trading solution for any trading professionals. It is certified by all China Futures Exchanges including DCE, SHFE, INE, CFFEX and CZCE. Poseidon optimizes and integrates multi-level real-time high-speed market data into the platform, which also comprises the back-testing module with high-degree simulations, the customizable multi-layer risk control module, and many user-friendly tools.`
 				},
 				product2: {
 					productTitle: 'INTELLIQUANT',
 					productSubTitle: 'PB Trading System for Stock and Futures',
-					productDesc: `IntelliQuant is an efficient and stable PB System, as an 
-					integrated professional solution, supporting inter-market and multi-product 
-					trading either by GUI or API or both.<br/>It allows clients to implement 
-					complex strategies trading through all futures exchanges and stock exchanges 
-					in China simultaneously.`
+					productDesc: `IntelliQuant is an efficient and stable prime brokerage system with GUI and API interfaces. As an integrated professional solution, it supports cross-market and multi-strategy trading across all China stock and futures exchanges. `
 				},
 				product3: {
 					productTitle: 'INTELLIPRO',
-					productSubTitle: 'Backtesting with Trend Optimization',
-					productDesc: `ShanCe Backtesting System IntelliPro has been envolving 
-					through years of international trading history. ShanCe's backtesting 
-					solution meets the professional demanding of strategy promotion and 
-					trading result analysis seamlessly.<br/> With a single parameter change, 
-					client trading strategy executable can be easily migrated from backtesting 
-					environment into production. That would minimize any  migration risk and 
-					complexity.`
+					productSubTitle: 'Back-testing System',
+					productDesc: `IntelliPro has been evolving through years of trading practice in global markets. It seamlessly integrates strategy R&D, promotion and post-trade analysis. A strategy can be migrated from simulation environment to the production with a single parameter change.`
 				},
 				product4: {
 					productTitle: 'INTELLICLOUD',
-					productSubTitle: 'Cloud Backtesting Solution Joint-Developed with SSE Info',
-					productDesc: `Intellicloud is a customized backtesting system developed by 
-					ShanCe for (SSE Info). Its cloud service and enterprise solution enrich the 
-					official historical market data of SSE Info, providing more accurate 
-					backtesting results in the true exchange matching logic.<br/>This solution 
-					helps private placements, public offerings, institutions and professional 
-					quantitative trading teams achieve optimal backtesting performance, develop 
-					and integrate new trading strategies, comply with regulatory requirements, 
-					test existing and new trading infrastructure tools and rationalise operating 
-					costs.`
+					productSubTitle: 'Cloud Back-testing Solution Joint-developed with SSE Info',
+					productDesc: `IntelliCloud is a customized back-testing system hosted in SSE cloud, enriching the official historical market data offerings by the exchange. It leverages the genuine exchange matching logic to achieve more accurate simulation results.`
 				},
 				product5: {
 					productTitle: 'INTELLICATOR',
 					productSubTitle: 'Options Trading System',
-					productDesc: `ShanCe Options Trading System IntelliCator is a flexible and 
-					professional platform that could provide low latency market data, high 
-					speed trading channel, and could support complex algorithm for financial 
-					derivatives. It also includes multiple dimensions of prior and post risk 
-					control.`
+					productDesc: `IntelliCator is a flexible and professional option trading platform that integrate low latency market data, high-speed order-entry and complex algorithms. It also has a comprehensive multi-layer pre and post trade risk control.`
 				},
 				product6: {
-					productTitle: 'INTELLIDATA',
+					productTitle: 'INTELLIFEED',
 					productSubTitle: 'Market Data Distribution System',
-					productDesc: `This market data multicast platform helps brokers market data 
-					distribution. It could be configured to fan-in multical market data sources, 
-					such as SSE (LDDS) and SZSE market data, into single multicast group.`
+					productDesc: `IntelliFeed provides market data distribution solutions for brokers. It leverages low-latency distribution systems of the exchanges, covering SSE, SZSE, CFFEX, SHFE, INE, DCE, and CZCE. IntelliFeed can be configured to fan in multiple market data sources and convert into a single multicast stream.`
 				}
 			}
 		});
 
-		i18n.off('languageChanged', this.onLanguageChanged.bind(this))
+		i18n.off('languageChanged', this.onLanguageChanged.bind(this));
 	}
 
-	componentDidMount() {
+	public componentDidMount() {
 		i18n.on('languageChanged', this.onLanguageChanged.bind(this));
 
 		// add media query listener
-		let narrowerThanSmall = matchMedia('only screen and (max-width: 48em)');
+		const narrowerThanSmall = matchMedia('only screen and (max-width: 48em)');
 		if (narrowerThanSmall.matches) {
 			this.setState({
 				displaySmallProductImg: 'block'
@@ -189,25 +160,23 @@ export default class Product extends Component<any, any> {
 		});
 	}
 
-	onLanguageChanged(lng) {
-		this.setState({
-			lng: lng
-		});
+	public onLanguageChanged(lng) {
+		this.setState({ lng });
 	}
 
-	navClickHandler = (productId:string): void => {	
-		let productElement = document.getElementById(productId);
+	public navClickHandler = (productId: string): void => {
+		const productElement = document.getElementById(productId);
 		if (productElement !== null) {
 			productElement.scrollIntoView({
 				behavior: 'smooth',
-				block: "start",
-				inline: "start"
+				block: 'start',
+				inline: 'start'
 			});
 		}
 	}
 
-	render() {
-		let lng = this.state.lng;
+	public render() {
+		const lng = this.state.lng;
 
 		const ProductNav = (props: ProductNavArr) => {
 			return <div className="product-nav">
@@ -217,11 +186,11 @@ export default class Product extends Component<any, any> {
 							return <div className="pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6 nav-unit" onClick={this.navClickHandler.bind(this, item.productId)}>
 								<div className={`nav-icon ${item.iconClass}`}></div>
 								<div className="nav-text">{item.productName}</div>
-							</div>
+							</div>;
 						})
 					}
 				</div>
-			</div>
+			</div>;
 		};
 
 		const ProductPanel = (props: ProductPanelArr) => {
@@ -231,10 +200,10 @@ export default class Product extends Component<any, any> {
 						let productImgPanel;
 						if (item.bgModel === 'leftRight') {
 							productImgPanel = <img className={`pure-image panel-img ${item.bgImgClass}`}
-								src={require(`../assets/views/product/img-product-bg-${i + 1}.png`)} ></img>
+								src={require(`../assets/views/product/img-product-bg-${i + 1}.png`)} ></img>;
 						} else if (item.bgModel === 'stackUp') {
-							productImgPanel = <img className={`pure-image panel-img ${item.bgImgClass}`} style={{ 'display': this.state.displaySmallProductImg }}
-								src={require(`../assets/views/product/img-product-bg-${i + 1}-small.png`)} ></img>
+							productImgPanel = <img className={`pure-image panel-img ${item.bgImgClass}`} style={{ display: this.state.displaySmallProductImg }}
+								src={require(`../assets/views/product/img-product-bg-${i + 1}-small.png`)} ></img>;
 						}
 
 						return <div
@@ -252,13 +221,13 @@ export default class Product extends Component<any, any> {
 									{productImgPanel}
 								</div>
 							</div>
-						</div>
+						</div>;
 					})
 				}
-			</div>
+			</div>;
 		};
 
-		const productNavArr: Array<ProductNavProps> = [
+		const productNavArr: ProductNavProps[] = [
 			{
 				productId: 'bosaidong',
 				iconClass: 'icon-product-nav-1',
@@ -291,7 +260,7 @@ export default class Product extends Component<any, any> {
 			}
 		];
 
-		const productPanelArr: Array<ProductPanelProps> = [
+		const productPanelArr: ProductPanelProps[] = [
 			{
 				productId: 'bosaidong',
 				productClassName: 'product-1-bosaidong',
@@ -365,4 +334,4 @@ export default class Product extends Component<any, any> {
 			<ProductPanel productPanelArr={productPanelArr} />
 		</div>;
 	}
-};
+}

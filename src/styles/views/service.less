@@ -193,11 +193,33 @@
         .narrowerThanMedium({
           display: none;
         });
+
+        .hover-effect {
+          visibility: hidden;
+          width: 80px;
+          height: 80px;
+          .background('views/service/icon-hover-effect.png');
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
+
+      .hover-effect(7);
+      .hover-effect(@n, @i: 1) when (@i =< @n) {
+        .area-@{i}:hover {
+          .hover-effect {
+            visibility: visible;
+          }
+        }
+
+        .hover-effect(@n, (@i + 1));
+      }
+
       .area-1 {
         top: 19vw;
         left: 33vw;
       }
+
       .area-2 {
         top: 19vw;
         right: 33vw;

@@ -11,7 +11,7 @@ interface SloganProps {
 }
 
 interface GreatTeamProps {
-	introArr: Array<TeamIntroObj>
+	introArr: TeamIntroObj[];
 }
 
 interface TeamIntroObj {
@@ -21,12 +21,12 @@ interface TeamIntroObj {
 }
 
 interface Partners {
-	parentsArr: Array<PartnersObj>
+	parentsArr: PartnersObj[];
 }
 
 interface PartnersObj {
-	className: 'string',
-	link: 'string'
+	className: string;
+	link: string;
 }
 
 export default class About extends Component<any, any> {
@@ -38,11 +38,11 @@ export default class About extends Component<any, any> {
 		};
 	}
 
-	componentDidMount() {
+	public componentDidMount() {
 		i18n.on('languageChanged', this.onLanguageChanged.bind(this));
 	}
 
-	componentWillMount() {
+	public componentWillMount() {
 		i18n.addResourceBundle('zh-CN', 'translation', {
 			whoWeAreTitle: '我们是谁',
 			whoWeAreIntro: `上海闪策信息科技有限公司是为中国证券与期货市场提供自动
@@ -90,9 +90,7 @@ export default class About extends Component<any, any> {
 					intro2: {
 						title: '90%',
 						subTitle: '90%以上来自知名企业',
-						content: `90%的成员加入公司前，曾在摩根士丹利、比利时KBC、彭博社、巴克莱资本、中金技术、
-						百度、腾讯、微软等知名企业从事软件开发、通讯与算法交易智能路由技术研究、低延时证券交易系统的
-						开发和管理工作。`
+						content: `90%的成员加入公司前，曾在摩根士丹利、比利时KBC、彭博社、巴克莱资本、中金技术、上期技术、百度、腾讯、微软等知名企业从事软件开发、通讯与算法交易智能路由技术研究、低延时证券交易系统的 开发和管理工作。`
 					},
 					intro3: {
 						title: '100%',
@@ -111,11 +109,8 @@ export default class About extends Component<any, any> {
 
 		i18n.addResourceBundle('en-US', 'translation', {
 			whoWeAreTitle: 'Who We Are',
-			whoWeAreIntro: `ShanCe aims to be the leading technology service provider in the 
-			equities and derivatives trading industry in China. We help our clients focus on 
-			their strategy research and development by offloading the technical and 
-			operational parts from their routine work with our expertise.<br/><br/><br/>
-			ShanCe is the Sponsor of 2017 Cooperation Program for 13th China (Shenzhen) International Derivatives Forum`,
+			whoWeAreIntro: `ShanCe is a professional FinTech company offering electronic trading infrastructure and services for equity and listed derivatives trading in China. Our mission is to become and act as the leading technology and service provider for professional trading institution and individuals. We help our clients to stay focus on their strategy R&D and alpha generation, with the technical and operational overhead taken care by our expertise.<br/><br/><br/>
+			ShanCe is the Silver Sponsor of the 13th China (Shenzhen) International Derivatives Forum`,
 			whoWeAreScrollDown: 'Slide down to meet us',
 			sloganPanel1Top: 'SHANCE · PURSUE EXCELLENCE · SUCCESS BY DISTINCTION',
 			sloganPanel1Botton: '闪策 · 为极致 · 做不同',
@@ -130,28 +125,14 @@ export default class About extends Component<any, any> {
 					position: 'Chief Executive Officer',
 					content: `
 					Joanna graduated from School of Economics and Management of Northern Jiaotong University. <br/>
-					Prior to ShanCe, Joanna has 20 years of working and management experience in well-known 
-					MNCs in IT and Telecommunication Industry, such as Nortel, Siemens and Microsoft. 
-					She was a 7+ year veteran of Microsoft, responsible for strategic business development in key 
-					industries and sales management of top Financial Institutions in China. She delivered outstanding 
-					breakthroughs and sustainable results in Microsoft’s business growth in FSI China. Received a 
-					number of awards in Great China Region and globally. With a global vision, accumulated extensive 
-					experience of exploration and practice in driving business forward led by IT innovation. <br/>
-					She also won several awards in Vocal Contests, and attended NYC International Marathon and 
-					Chicago International Marathon in 2015 and 2016 separately.`
+					Prior to ShanCe, Joanna has 20 years of working and management experience in well-known MNCs in IT and Telecommunication Industry, such as Nortel, Siemens and Microsoft.
+					She was a 7+ year veteran of Microsoft, responsible for strategic business development in key industries and sales management of top Financial Institutions in China. She delivered outstanding breakthroughs and sustainable results in Microsoft’s business growth in FSI China. Received a number of awards in Great China Region and globally. With a global vision, accumulated extensive experience of exploration and practice in driving business forward led by IT innovation. <br/>
+					She also won several awards in Vocal Contests, and attended NYC International Marathon and Chicago International Marathon in 2015 and 2016 separately.`
 				},
 				cto: {
 					name: 'Ke Liu',
 					position: 'Chief Technology Officer',
-					content: `Ke Liu, received his B.S from Fudan University, and Ph.D from 
-					State University of New York at Binghamton, both in Computer Science. He 
-					contributed to WiMedia UWB protocol during his Ph.D. research. Before 
-					joining ShanCe as the CTO, he worked for KBC Financial Holdings (US), 
-					Bloomberg L.P. (New York) and Barclay's Capital (US). He was the tech team 
-					lead for US equity and derivatives smart order router (SOR) at Barclay's 
-					Capital. He also participated in implementing multiple electronic trading 
-					systems such as Barclay's dark pool (LX2), Barclay's Algorithmic trading 
-					platform. `
+					content: `Ke Liu, received his B.S from Fudan University, and Ph.D from State University of New York at Binghamton, both in Computer Science. He contributed to WiMedia UWB protocol during his Ph.D. research. Before joining ShanCe as the CTO, he worked for KBC Financial Holdings (US), Bloomberg L.P. (New York) and Barclay's Capital (US). He was the tech team lead for US equity and derivatives smart order router (SOR) at Barclay's Capital. He also participated in implementing multiple electronic trading systems such as Barclay's dark pool (LX2), Barclay's Algorithmic trading platform. `
 				}
 			},
 			greatTeam: {
@@ -160,26 +141,17 @@ export default class About extends Component<any, any> {
 					intro1: {
 						title: '15 years',
 						subTitle: '15+Years of Management Experience',
-						content: `ShanCe management team has over 15 years of experience in 
-						product and project managing in large financial or IT enterprises. 
-						They have accumulated rich experience in technical innovation, 
-						Global-perspective and finance business expansion.`
+						content: `ShanCe’s management team has over 20 years of experience and expertise in large global renowned financial institutions or IT enterprises. Armed with a global vision and passion, they have built a proven track record driving the business forward by continuous IT innovations.`
 					},
 					intro2: {
 						title: '90%',
 						subTitle: '90%+ From Well-Known Enterprises',
-						content: `90% ShanCers worked for Morgan Stanley, KBC, Bloomberg, 
-						Barclays Capital, Baidu, Tencent, CFFEXIT, Microsoft and other famous 
-						companies before joining ShanCe. They have abundant experience in 
-						software development, communication, Intelligent Routing for algorithmic 
-						trading, low latency trading system development, and more.`
+						content: `90% of ShanCers worked for large institutions like Morgan Stanley, KBC, Bloomberg, Barclays Capital, Baidu, Tencent, CFFEXIT, SFIT before joining ShanCe. They have exceptional in-depth knowledge and experience in software engineering, low latency trading system development, algorithmic trading, and so on.`
 					},
 					intro3: {
 						title: '100%',
 						subTitle: '100% Graduated from Top Universities',
-						content: `ShanCe’s development and operation team graduated from top 
-						universities like Fudan, Jiaotong, Nanjing, Tongji, University of Chinese 
-						Academy of Sciences, and others. 90% of them have master degrees.`
+						content: `ShanCe’s development and operation team graduated from top universities like Fudan, Jiaotong, Nanjing, Tongji, University of Chinese Academy of Sciences, and others. 90% of them have master degrees.`
 					}
 				}
 			},
@@ -190,24 +162,22 @@ export default class About extends Component<any, any> {
 			}
 		});
 
-		i18n.off('languageChanged', this.onLanguageChanged.bind(this))
+		i18n.off('languageChanged', this.onLanguageChanged.bind(this));
 	}
 
-	onLanguageChanged(lng) {
-		this.setState({
-			lng: lng
-		});
+	public onLanguageChanged(lng) {
+		this.setState({ lng });
 	}
 
-	render() {
-		let lng = this.state.lng;
+	public render() {
+		const lng = this.state.lng;
 
-		let panelTitleEn = lng === 'en-US' ? 'panel-title-en' : '';
-		let aboutUsIntroEn = lng === 'en-US' ? 'about-us-intro-en' : '';
-		let manageTeamEn = lng === 'en-US' ? 'manage-team-en' : '';
-		// let manageTeamMd = lng === 'en-US' ? '' : 'pure-u-md-1-2';
-		let greatTeamIntroEn = lng === 'en-US' ? 'team-intro-en' : '';
-		let ourMissionEn = lng === 'en-US' ? 'our-mission-en' : '';
+		const panelTitleEn = lng === 'en-US' ? 'panel-title-en' : '';
+		const aboutUsIntroEn = lng === 'en-US' ? 'about-us-intro-en' : '';
+		// const manageTeamEn = lng === 'en-US' ? 'manage-team-en' : '';
+		// const manageTeamMd = lng === 'en-US' ? '' : 'pure-u-md-1-2';
+		const greatTeamIntroEn = lng === 'en-US' ? 'team-intro-en' : '';
+		const ourMissionEn = lng === 'en-US' ? 'our-mission-en' : '';
 
 		const WhoWeAre = (props: WhoWeAreProps) => {
 			return <div className="about-us-panel">
@@ -218,7 +188,7 @@ export default class About extends Component<any, any> {
 					<div className="scroll-text">{i18n.t('whoWeAreScrollDown', { lng })}</div>
 					<div className="scroll-icon"></div>
 				</div>
-			</div>
+			</div>;
 		};
 
 		const SloganPanel = (props: SloganProps) => {
@@ -229,36 +199,36 @@ export default class About extends Component<any, any> {
 					<div className="slogan-en"
 						dangerouslySetInnerHTML={{ __html: props.sloganEn }}></div>
 				</div>
-			</div>
+			</div>;
 		};
 
-		const ManagementTeam = (props) => {
-			return <div className={`management-team ${manageTeamEn}`}>
-				<div className="panel-icon"></div>
-				<div className="panel-title">{i18n.t('managementTeamTitle', { lng })}</div>
-				<div className="pure-g">
-					<div class={`pure-u-1 pure-u-lg-1-2 team-intro`}>
-						<div className="left-intro">
-							<div class="intro-wrapper">
-								<div className="intro-name">{i18n.t('managementTeam.ceo.name', { lng })}</div>
-								<div className="intro-position">{i18n.t('managementTeam.ceo.position', { lng })}</div>
-								<div className="intro-content" dangerouslySetInnerHTML={{ __html: i18n.t('managementTeam.ceo.content', { lng }) }}></div>
-							</div>
-						</div>
-					</div>
-					<div class={`pure-u-1 pure-u-lg-1-2 team-intro`}>
-						<div className="right-intro">
-							<div class="intro-wrapper">
-								<div className="intro-name">{i18n.t('managementTeam.cto.name', { lng })}</div>
-								<div className="intro-position">{i18n.t('managementTeam.cto.position', { lng })}</div>
-								<div className="intro-content" dangerouslySetInnerHTML={{ __html: i18n.t('managementTeam.cto.content', { lng }) }}></div>
-							</div>
-						</div>
-					</div>
-				</div>
+		// const ManagementTeam = (props) => {
+		// 	return <div className={`management-team ${manageTeamEn}`}>
+		// 		<div className="panel-icon"></div>
+		// 		<div className="panel-title">{i18n.t('managementTeamTitle', { lng })}</div>
+		// 		<div className="pure-g">
+		// 			<div class={`pure-u-1 pure-u-lg-1-2 team-intro`}>
+		// 				<div className="left-intro">
+		// 					<div class="intro-wrapper">
+		// 						<div className="intro-name">{i18n.t('managementTeam.ceo.name', { lng })}</div>
+		// 						<div className="intro-position">{i18n.t('managementTeam.ceo.position', { lng })}</div>
+		// 						<div className="intro-content" dangerouslySetInnerHTML={{ __html: i18n.t('managementTeam.ceo.content', { lng }) }}></div>
+		// 					</div>
+		// 				</div>
+		// 			</div>
+		// 			<div class={`pure-u-1 pure-u-lg-1-2 team-intro`}>
+		// 				<div className="right-intro">
+		// 					<div class="intro-wrapper">
+		// 						<div className="intro-name">{i18n.t('managementTeam.cto.name', { lng })}</div>
+		// 						<div className="intro-position">{i18n.t('managementTeam.cto.position', { lng })}</div>
+		// 						<div className="intro-content" dangerouslySetInnerHTML={{ __html: i18n.t('managementTeam.cto.content', { lng }) }}></div>
+		// 					</div>
+		// 				</div>
+		// 			</div>
+		// 		</div>
 
-			</div>
-		};
+		// 	</div>
+		// };
 
 		const GreatTeam = (props: GreatTeamProps) => {
 			return <div class="great-team">
@@ -277,15 +247,15 @@ export default class About extends Component<any, any> {
 									<div className="intro-content"
 										dangerouslySetInnerHTML={{ __html: item.content }}></div>
 								</div>
-							</div>
+							</div>;
 
 						})
 					}
 				</div>
-			</div>
+			</div>;
 		};
 
-		const Partners = (props: Partners) => {
+		const Partner = (props: Partners) => {
 			return <div className="partners">
 				<div className="panel-icon"></div>
 				<div className="panel-title">{i18n.t('partnersTitle', { lng })}</div>
@@ -294,11 +264,11 @@ export default class About extends Component<any, any> {
 						props.parentsArr.map((item) => {
 							return <div className={`icon-partners ${item.className}`}>
 								<a target="_blank" href={item.link} />
-							</div>
+							</div>;
 						})
 					}
 				</div>
-			</div>
+			</div>;
 		};
 
 		const partnersArr = [
@@ -322,20 +292,20 @@ export default class About extends Component<any, any> {
 				className: 'partner-5',
 				link: 'http://www.zszq.com/'
 			}
-		]
+		];
 
 		const OurMission = (props) => {
 			return <div className={`our-mission ${ourMissionEn}`}>
 				<div className="panel-title">{i18n.t('ourMission.title', { lng })}</div>
 				<div className="panel-sub-title">{i18n.t('ourMission.slogan', { lng })}</div>
-			</div>
+			</div>;
 		};
 
 		const whoWeAreIntro = {
 			intro: i18n.t('whoWeAreIntro', { lng })
 		};
 
-		const teamIntroArr: Array<TeamIntroObj> = [
+		const teamIntroArr: TeamIntroObj[] = [
 			{
 				title: i18n.t('greatTeam.teamIntro.intro1.title', { lng }),
 				subTitle: i18n.t('greatTeam.teamIntro.intro1.subTitle', { lng }),
@@ -353,13 +323,12 @@ export default class About extends Component<any, any> {
 			}
 		];
 
-
 		return <div class="view-about">
 			<WhoWeAre intro={whoWeAreIntro.intro} />
-			<SloganPanel
+			{/* <SloganPanel
 				sloganCn={i18n.t('sloganPanel1Top', { lng })}
-				sloganEn={i18n.t('sloganPanel1Botton', { lng })} />
-			<ManagementTeam />
+				sloganEn={i18n.t('sloganPanel1Botton', { lng })} /> */}
+			{/* <ManagementTeam /> */}
 			<SloganPanel
 				sloganCn={i18n.t('sloganPanel2Top', { lng })}
 				sloganEn={i18n.t('sloganPanel2Botton', { lng })} />
@@ -367,8 +336,11 @@ export default class About extends Component<any, any> {
 			<SloganPanel
 				sloganCn={i18n.t('sloganPanel3Top', { lng })}
 				sloganEn={i18n.t('sloganPanel3Botton', { lng })} />
-			<Partners parentsArr={partnersArr} />
+			<Partner parentsArr={partnersArr} />
+			<SloganPanel
+				sloganCn={i18n.t('sloganPanel1Top', { lng })}
+				sloganEn={i18n.t('sloganPanel1Botton', { lng })} />
 			<OurMission />
 		</div>;
 	}
-};
+}
